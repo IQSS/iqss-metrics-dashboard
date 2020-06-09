@@ -1,0 +1,48 @@
+Speakers	Title	Description	YouTube ID
+CIMMYT	Prototype 2 for Auto-completion based on existing database values for the field Keyword. #6154	"A demo for the second of two proposals for enhancing Dataverse's ability to handle controlled vocabularies. See <a href=""https://github.com/IQSS/dataverse/issues/6154#issuecomment-590953255"">#6154</a>."
+CIMMYT	Prototype 1 for Auto-completion based on existing database values for the field Keyword. #6154	"A demo for the first of two proposals for enhancing Dataverse's ability to handle controlled vocabularies. See <a href=""https://github.com/IQSS/dataverse/issues/6154#issuecomment-590953255"">#6154</a>."
+Kaitlin Newson	The Dataverse Data Curation Tool	Learn how data owners and curators can create and edit metadata at the variable level, view summary statistics and charts about their data, and more! 
+Mercè Crosas	Dataverse: A Software, a Community, a Network of Repositories	Presentation at the NIH worksop on Establishing a FAIR Biomedical Data Ecosystem: The Role of Generalist  and Institutional Repositories to Enhance Data Discoverability and Reuse. Starts at 2:24:38.
+Philip Durbin	Advancing science with Dataverse	A talk at FOSDEM where Dataverse and FAIR data principles are introduced to open source developers.	yjJUTIOfFMo
+Harvard Dataverse	What is Harvard Dataverse?	A brief introduction to sharing, finding, and exploring data using Harvard Dataverse.	MPQ0Tpgaxt0
+Craig Willis	Whole Tale (v0.8) as Dataverse External Tool	"Short demonstration (video-only) of how Whole Tale can be used as an external tool to explore and compute on existing replication datasets. See the <a href=""https://bit.ly/386M1jo"">integration notes</a> for additional details."	AoSpQ3A7poY
+Craig Willis	Registering Data from Dataverse in Whole Tale v0 8	"Short demonstration (video-only) of how to analyze source data from Dataverse in Whole Tale. See the <a href=""https://bit.ly/386M1jo"">integration notes</a>"	oWEcFpEUmrU
+Eugene Barsky, Mark Goodwin, Paul Dante	Geodisy	Eugene Barsky, Research Data Services Librarian at the University of British Columbia Library, will address their current work on GeoBlacklight integration with Dataverse.	B3IZnMRhdqA
+Jonathan Crabtree	Research Data Curation, Management, Sharing and Archiving	Jonathan Crabtree keynote at University of Aveiro	xqEOFY8BV-0
+Jonathan Crabtree	Jonathan Crabtree interview at the University of Aveiro	Jonathan Crabtree, co-leader of the Global Dataverse Community Consortium discusses research data and cyber infrastructure.	ZvQQi2Z3hzI
+Slava Tykhonov	European Dataverse Workshop 2020 invitation from Slava	Official invitation from Slava Tykhonov (DANS-KNAW) to join European Dataverse Workshop which will be held in Tromsø, Norway, January 23-24, 2020.	ju8bdwTVRSQ
+Mercè Crosas	Recommendations for Implementing Open Science	Keynote at the Swiss Open Science Action Plan Kick-off at EPFL.
+Bertram Ludäscher, Craig Willis	Developing, Packing, and Sharing Reproducible Research Objects: The Whole Tale Approach	In this DataONE webinar, existing and planned integrations between Whole Tale and Dataverse were described.
+Ana Trisovic	Building reproducible workflows for earth sciences - Responding to reproducibility challenges from physics to social sciences	"Keynote at the workshop ""Building reproducible workflows for earth sciences"" at ECMWF"
+Philip Durbin	Turing Way Collaboration Cafe	Phil introduces Dataverse reproducibility initiatives to The Turing Way community.	HIIJvDZ8pzw
+The Odum Crew	Dataverse Community Meeting 2019 montage	Clips from the conference set to music	y_1IdJ-nYY0
+Sonia M. Barbosa	Topics in Research Data Management #6	Sonia M. Barbosa, Manager of Data Curation and Acquisition for the Harvard Dataverse Project and Manager of the Murray Research Archive, will discuss outreach to researchers to get more buy in and gatekeeping submissions to avoid messy metadata and private or sensitive data
+Slava, Philipp	Dataverse in the European Open Science Cloud	Updates on DataverseEU, Weblate, developement process, and more.	vAPpKuDQUDY
+Jonathan Crabtree	Topics in Research Data Management #5	Jonathan Crabtree, Assistant Director for Cyberinfrastructure at The Odum Institute of UNC Chapel Hill, discusses remote storage for Dataverse	MKsrsV6KWsQ
+Gustavo, Matthew	Make Data Count Repository Implementation Webinar	Zenodo, Dataverse, and Dryad join MDC to talk about their process implementing standardized data usage metrics
+Amy Nurnberger	Topics in Research Data Management #4	Amy Nurnberger, Program Head, Data Management Services at MIT Libraries, discusses how to leverage campus connections for RDM	7ekgsIALWfE
+Eric Kaltman	Topics in Research Data Management #3	Eric Kaltman, CLIR Fellow for Data Curation in the Sciences at Carnegie Mellon University Libraries, shares liaison workflows.	mwwisrH2YBk
+Sherry Lake	Topics in Research Data Management #2	Sherry Lake, Scholarly Repository Librarian at University of Virginia Libraries, discusses Open Science Framework (OSF) integration with Dataverse.	_CTNF88G_WQ
+Joel Simpson	Integrating Archivematica with Dataverse	Joel describes Archivematica's integration with Dataverse and demonstrates how to preserve Dataverse materials for long-term storage.	T9o5tzzDliA
+Sara Stonehouse	Publishing datasets in Dataverse	This video is a quick guide on how to publish datasets in Dataverse.	K9gVgja61Ww
+Sara Stonehouse	Publishing a dataverse	This video is a quick guide on how to create, edit or publish a dataverse.	jEJHIXdPjfU
+Sara Stonehouse	Finding and exploring data	This video provides a brief overview on how to use Dataverse to find and explore data. 	SA5YiWp-MVU
+Amber Leahey	Topics in Research Data Management #1	Amber Leahey, University of Toronto Libraries, discusses recent grant funding and new features in Dataverse in the coming year.	yQ8ajC2FAKk
+Philip Durbin	Reproducibility and Dataverse	Current and future efforts to improve scientific reproducibility in the Dataverse ecosystem.	SuyQTsOGugc
+Kristi Park	Texas Data Repository - A Year in Review	The Texas Data Repository (TDR) is a consortial data repository using the Dataverse platform. In this presentation we discuss ongoing efforts to develop the TDR as a shared service. The presenters include TDR liaisons from participating institutions. We reflect on the past year of using the TDR and speak from diverse perspectives: the experience of small and large institutions; institutions with varying capacity to provide data services; and institutions implementing different outreach strategies, policies and workflows. We discuss the progress of the TDR, the value of participating in a consortial repository service, successes and challenges, and future goals.	FB6TmQa88A4
+Tilburg University	Tilburg University awarded CoreTrustSeal	Tilburg University is the first Dutch university awarded the Data Seal of Approval, now known as the CoreTrustSeal.	n5vPOo3Uy5I
+Sami Shahin	Dataverse and Spark	Implementation of the Open Service Broker specification for connecting Dataverse to OpenShift on the Mass Open Cloud (MOC). Also demonstrated a sample application running an Apache Spark cluster.	6G86wwgJHnc
+Patrick Dillon	Scaling Dataverse	Our project is to advance this initial containerization work toward making Dataverse more scalable.
+Texas State University	Texas State University Dataverse Launch	We are pleased to announce the official launch of the Texas State University Dataverse, a repository for research datasets created by Texas State researchers.	9PSvlmcPP-o
+Philip Durbin	Introducing Dataverse to LibrePlanet	An introduction to Dataverse for the free and open source software community.	-GUr-cd_OWQ
+Diana Morganti	Research Data Management Basics	This is an introduction to the concept of Research Data Management and to the Data Management Plan with a very short introduction to the Texas State University Dataverse.	KlcIKwuF-jI
+Odum Institute	Managing permissions and restrictions	In this video learn how to manage permissions and restrictions in your dataverse.	PIYUoTArozI
+Odum Institute	Publishing datasets	In this video learn how to publish datasets to your dataverse.	wercsv-VItE
+Odum Institute	Dataverse customization	In this video learn how to customize your Dataverse.	e9a_YBfBxH0
+Odum Institute	Dataverse overview	This video provides a broad overview of Dataverse and some of the new capabilities found in Dataverse 4.	4eSh9OaCqGU
+RSpace	RSpace ELN and Dataverse Integration	How to send selected work from RSpace to your preferred Dataverse archive.	avf3tEbcNvQ
+Eugene Barsky	Best Practices for Research Data Management	In Canada, as in many developed countries, requirements for data management are being established across a wide range of scholarly disciplines. In this presentation, Eugene Barsky from the University of British Columbia's ARC Team will offer UBC Library expertise in managing thousands of data files with Dataverse software.	sIm9CZipNYo
+Tamir Bennatan	Data Visualisations for TwoRavens	A tool to augment TwoRavens, a data analysis tool for Dataverse, to give it visualization capability.	OzrECzPf95g
+UiT Norges arktiske universitet	TROLLing - why linguists need it	TROLLing is a research database for linguists. See how it can be useful for you in your research.	uEf0c0NT9_A
+Gustavo, Steve, Bob	Bean Validation: Practical Examples from a Real-World Java EE 7 Application	How Dataverse uses bean validation.	xg9A3q-fRyo
+Alex Garnett	OJS - Dataverse Plugin Demonstration	This video demonstrates a new plugin linking OJS to Dataverse.	ftK1_IvWaVc

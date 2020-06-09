@@ -1,0 +1,63 @@
+<template id="info-box">
+    <div class="col-sm-4 col-xs-12">
+        <div class="info-box bg-aqua">
+            <span class="info-box-icon"><i class="fa fa-bookmark"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text metric"></span>
+                <span class="info-box-number value"></span>
+                <span class="info-box-text unit"></span>
+
+            </div><!-- /.info-box-content -->
+        </div><!-- /.info-box -->
+    </div><!-- /.col -->
+</template>
+
+<template id="info-box-solid">
+    <!-- Apply any bg-* class to to the info-box to color it -->
+    <div class="info-box bg-red">
+        <span class="info-box-icon"><i class="fa fa-comments-o"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text">Likes</span>
+            <span class="info-box-number">41,410</span>
+            <!-- The progress section is optional -->
+            <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+            </div>
+            <span class="progress-description">
+                70% Increase in 30 Days
+            </span>
+        </div>
+        <!-- /.info-box-content -->
+    </div>
+    <!-- /.info-box -->
+</template>
+
+
+<template id="metrics-template">
+    <div class="card border-primary mb-3">
+        <div class="card-header group"></div>
+        <div class="card-body">
+            <p class="card-title metric"></p>
+            <h1 class="card-value value"></h1>
+            <p class="card-text unit"></p>
+        </div>
+    </div>
+</template>
+
+
+<template id="iq-info-box">
+    <div class="col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3">
+        <a class="info-url" href="#">
+            <div class="info-box" style="max-height:90px;">
+                <span class="info-box-icon">
+                    <span class="fa fa-globe" aria-hidden="true"></span>
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-group">Dataverse Worldwide</span>
+                    <span class="info-box-value">60</span>
+                    <p class="info-box-unit">Dataverse installations Worldwide</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</template>

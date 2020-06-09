@@ -1,0 +1,181 @@
+---
+layout: default
+title: Dataverse
+---
+
+<h3>Dataverse Worldwide</h3>
+
+<div class="row">
+    <div class="card card-primary card-outline col-lg-6">
+        <div class="card-header">
+            <h3 class="card-title">
+                Installations
+            </h3>
+        </div>
+        <div class="card-body">
+            <div id="mapid"></div>
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Top 10 Dataverse Installations by Country
+                </h3>
+            </div>
+
+            <canvas id="dvCountryInstallations"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="row">
+    <canvas id="dvLineChart"></canvas>
+</div> -->
+
+
+<h3>Dataverse Metrics</h3>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Total Dataverses
+                </h3>
+            </div>
+            <div id="dataverses-to-month" class="card-body viz">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Dataverses by Category
+                </h3>
+            </div>
+            <div class="card-body">
+                <div id="dataverses-by-category" class="card-body viz"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Total Datasets
+                </h3>
+            </div>
+            <div id="datasets-to-month" class="card-body viz"></div>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Dataverses by Subject
+                </h3>
+            </div>
+            <div class="card-body">
+                <div id="datasets-by-subject" class="card-body viz"></div>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-xs-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <!-- <i class="fas fa-edit"></i> -->
+                    Total Files
+                </h3>
+            </div>
+            <div id="files-to-month" class="card-body viz">
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+
+    <div class="col-md-6 col-xs-12">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    <!-- <i class="fas fa-edit"></i> -->
+                    Total File Downloads
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="downloads-to-month" class="card-body"></canvas>
+
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>
+
+
+</div>
+<script src="https://d3plus.org/js/d3.js"></script>
+<script src="https://d3plus.org/js/d3plus.js"></script>
+<script src="{{site.baseurl}}assets/js/dataverse_plots.js"></script>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+<script src="{{site.baseurl}}assets/js/maps.js"></script>
+
+<script>
+    d3.tsv("{{site.baseurl}}assets/data/dataverse_installations.tsv", function (data) {
+        let labels = []
+        let d = [];
+        for (var i = 0; i < 10; i++) {
+            labels.push(data[i].country);
+            d.push(parseInt(data[i].count));
+        }
+
+        horizontalBarChart('dvCountryInstallations', {
+            x: labels,
+            y: d,
+            title: 'Number of installations',
+            color: iqss_orange
+        });
+
+    });
+
+    d3.tsv("{{site.baseurl}}assets/data/downloads-toMonth.tsv", function (data) {
+
+        let labels = []
+        let d = [];
+
+        for (var i = data.length - 12; i < data.length; i++) {
+            labels.push(data[i].month);
+            d.push(parseInt(data[i].count));
+        }
+
+        lineChart('downloads-to-month', {
+            label_x: 'Month',
+            label_y: 'Downloads',
+            x: labels,
+            y: d,
+            title: 'Number of downloads',
+            color: iqss_orange
+        });
+    });
+
+    // this section needs to be pushed forward since the {{site.baseurl}} is not handled in the 
+    // javascript file
+    path = "{{site.baseurl}}/assets/data/"
+</script>

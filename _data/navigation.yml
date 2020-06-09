@@ -1,0 +1,18 @@
+- name: IQSS
+  link: /
+  icon: th
+- name: Business Operations
+  link: bo.html
+  icon: dollar-sign
+- name: Dataverse
+  link: dataverse.html
+  icon: book-open
+- name: CGA
+  link: cga.html
+  icon: map-marked-alt
+- name: CSS
+  link: css.html
+  icon: table
+- name: DSS
+  link: dss.html
+  icon: table

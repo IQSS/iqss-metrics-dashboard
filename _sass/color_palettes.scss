@@ -1,0 +1,160 @@
+// https: //colorbrewer2.org/#type=qualitative&scheme=Paired&n=4
+
+// Sequential
+.Blues .q0-9 {
+    fill: rgb(247, 251, 255)
+}
+
+.Blues .q1-9 {
+    fill: rgb(222, 235, 247)
+}
+
+.Blues .q2-9 {
+    fill: rgb(198, 219, 239)
+}
+
+.Blues .q3-9 {
+    fill: rgb(158, 202, 225)
+}
+
+.Blues .q4-9 {
+    fill: rgb(107, 174, 214)
+}
+
+.Blues .q5-9 {
+    fill: rgb(66, 146, 198)
+}
+
+.Blues .q6-9 {
+    fill: rgb(33, 113, 181)
+}
+
+.Blues .q7-9 {
+    fill: rgb(8, 81, 156)
+}
+
+.Blues .q8-9 {
+    fill: rgb(8, 48, 107)
+}
+
+// cp_seq_blues = ['#f7fbff','#deebf7','#c6dbef','#9ecae1','#6baed6','#4292c6','#2171b5','#08519c','#08306b']
+
+
+.Oranges .q0-9 {
+    fill: rgb(255, 245, 235)
+}
+
+.Oranges .q1-9 {
+    fill: rgb(254, 230, 206)
+}
+
+.Oranges .q2-9 {
+    fill: rgb(253, 208, 162)
+}
+
+.Oranges .q3-9 {
+    fill: rgb(253, 174, 107)
+}
+
+.Oranges .q4-9 {
+    fill: rgb(253, 141, 60)
+}
+
+.Oranges .q5-9 {
+    fill: rgb(241, 105, 19)
+}
+
+.Oranges .q6-9 {
+    fill: rgb(217, 72, 1)
+}
+
+.Oranges .q7-9 {
+    fill: rgb(166, 54, 3)
+}
+
+.Oranges .q8-9 {
+    fill: rgb(127, 39, 4)
+}
+
+// cp_seq_oranges ['#fff5eb','#fee6ce','#fdd0a2','#fdae6b','#fd8d3c','#f16913','#d94801','#a63603','#7f2704']
+
+//  Qualitative
+
+//3
+.Paired .q0-3 {
+    fill: rgb(166, 206, 227)
+}
+
+.Paired .q1-3 {
+    fill: rgb(31, 120, 180)
+}
+
+.Paired .q2-3 {
+    fill: rgb(178, 223, 138)
+}
+
+// cp_qual_3 = ['#a6cee3','#1f78b4','#b2df8a']
+
+
+//4 
+.Paired .q0-4 {
+    fill: rgb(166, 206, 227)
+}
+
+.Paired .q1-4 {
+    fill: rgb(31, 120, 180)
+}
+
+.Paired .q2-4 {
+    fill: rgb(178, 223, 138)
+}
+
+.Paired .q3-4 {
+    fill: rgb(51, 160, 44)
+}
+
+// DIVERGING
+
+.RdYlBu .q0-11 {
+    fill: rgb(165, 0, 38)
+}
+
+.RdYlBu .q1-11 {
+    fill: rgb(215, 48, 39)
+}
+
+.RdYlBu .q2-11 {
+    fill: rgb(244, 109, 67)
+}
+
+.RdYlBu .q3-11 {
+    fill: rgb(253, 174, 97)
+}
+
+.RdYlBu .q4-11 {
+    fill: rgb(254, 224, 144)
+}
+
+.RdYlBu .q5-11 {
+    fill: rgb(255, 255, 191)
+}
+
+.RdYlBu .q6-11 {
+    fill: rgb(224, 243, 248)
+}
+
+.RdYlBu .q7-11 {
+    fill: rgb(171, 217, 233)
+}
+
+.RdYlBu .q8-11 {
+    fill: rgb(116, 173, 209)
+}
+
+.RdYlBu .q9-11 {
+    fill: rgb(69, 117, 180)
+}
+
+.RdYlBu .q10-11 {
+    fill: rgb(49, 54, 149)
+}

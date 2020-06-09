@@ -1,0 +1,15 @@
+---
+layout: default
+title: IQSS
+---
+<!-- templates for the widgets -->
+{% include templates.html %}
+
+
+<div id="mainmetrics"></div>
+
+<script src="https://d3plus.org/js/d3.js"></script>
+<script>
+    createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
+</script>

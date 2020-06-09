@@ -1,0 +1,69 @@
+</html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="{{site.baseurl}}assets/plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="{{site.baseurl}}assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <link rel="stylesheet" href="{{site.baseurl}}assets/css/styles.css">
+
+    <!-- Javascript libraries -->
+    <script src="{{site.baseurl}}assets/plugins/jquery/jquery.min.js"></script>
+    <script src="https://d3plus.org/js/d3.js"></script>
+    <script src="{{site.baseurl}}assets/plugins/chart.js/Chart.min.js"></script>
+
+    <!-- Javascript scripts -->
+    <script src="{{site.baseurl}}assets/js/metrics.js"></script>
+    <script src="{{site.baseurl}}assets/js/plot.js"></script>
+
+
+    <title>Metrics | {{ page.title }}</title>
+</head>
+
+<body class="layout-top-nav" style="height: auto;">
+    <div class="wrapper" role="main">
+        <!-- Content Header (Page header) -->
+        {% include navigation.html %}
+
+        <!-- optional include side bar here: include sidebar.html from jeykyll _include -->
+
+        <div class="content-wrapper ">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-12">
+                            <h1 class="m-0 text-dark" role="banner">{{ page.title }}</h1>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <div class="content">
+                <div class="container-fluid">
+                    {{ content }}
+                </div><!-- /.container-fluid -->
+            </div>
+
+        </div>
+
+        <!-- optional include control sidebar here controlesidebar.html from jekyll _include-->
+
+
+    </div>
+
+    <!-- Javscritp libraries -->
+
+    <script src="{{site.baseurl}}assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{site.baseurl}}assets/js/adminlte.min.js"></script>
+
+</body>
+
+</html>

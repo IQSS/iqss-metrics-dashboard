@@ -1,0 +1,189 @@
+/******************************************************************************/
+/*** CSS file for dssd3graphics                                               */
+/******************************************************************************/
+
+
+div.research_output {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 35rem;
+    margin: 5rem auto 0 auto;
+}
+
+div.consulting_services {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 110rem;
+    margin: 5rem auto 0 auto;
+}
+
+div.year_quarter {
+    display: block;
+    position: relative;
+    height: 500px;
+    width: 80%;
+    margin: 0 auto 5rem auto;
+}
+
+div.timeseriesCommunity {
+    display: block;
+    position: relative;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto 5rem auto;
+}
+
+div.patron_community,
+div.request_type {
+    display: block;
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 42%;
+    margin: 0 2rem 5rem 1.5rem;
+}
+
+
+div.training_services {
+    display: block;
+    position: relative;
+    width: 100%;
+    /* min-height: 1130px; */
+    margin: 5rem auto;
+}
+
+div.research_publications {
+    display: block;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.workshops,
+div.dataFest {
+    display: block;
+    position: relative;
+    height: 21rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+div.dataFest {
+    margin: 0 auto auto 4.5rem;
+}
+
+span.workshopAttendance,
+span.dataFestAttendance {
+    display: block;
+    position: relative;
+    float: left;
+    height: 250px;
+    width: 42%;
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+span.workshopNumber,
+span.dataFestNumber {
+    display: block;
+    position: relative;
+    float: left;
+    height: 250px;
+    width: 42%;
+    margin: 0 auto 0 3.5rem;
+}
+
+span#dataFestA {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 1rem auto 3rem 1rem;
+    float: left;
+    text-align: left;
+    
+    font-weight: 300;
+    font-size: 0.70rem;
+}
+
+
+span.resOutputDepts,
+span.resOutputYears {
+    display: block;
+    position: relative;
+    float: left;
+    height: 23rem;
+    width: 42%;
+    margin: 0 auto 0 3.5rem;
+}
+
+
+p#under_construction {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 1rem auto 3rem 1rem;
+    text-align: left;
+    
+    font-weight: 300;
+}
+
+/* Add an @media section */
+
+
+@media (max-width:780px) {
+
+    div.consulting_services {
+        min-height: 134rem;
+    }
+
+    div.patron_community,
+    div.request_type {
+        display: block;
+        float: none;
+        height: 500px;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    div.workshops,
+    div.dataFest {
+        height: 38rem;
+        margin: 5rem auto 0 auto;
+    }
+
+    span.workshopAttendance,
+    span.dataFestAttendance {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    span.workshopNumber,
+    span.dataFestNumber {
+        width: 80%;
+        margin: 2rem auto 0 auto;
+    }
+
+
+}
+
+@media (max-width:815px) {
+
+    div.workshops,
+    div.dataFest {
+        height: 38rem;
+        margin: 5rem auto 0 auto;
+    }
+
+    span.workshopAttendance,
+    span.dataFestAttendance {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    span.workshopNumber,
+    span.dataFestNumber {
+        width: 80%;
+        margin: 2rem auto 0 auto;
+    }
+}

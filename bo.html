@@ -1,0 +1,32 @@
+---
+layout: default
+title: Business Operations
+---
+<!-- templates for the widgets -->
+{% include templates.html %}
+
+<!-- This is "preparation" for the real metric that will be updated 
+this reads form _data direct, as opposed to the update of the data itself (from _site/assets/data -->
+<h2>Sponsored Research Administration</h2>
+<div id="sponsored_research" class=row></div>
+
+<h2>Finance & Administration</h2>
+<div id="finance"></div>
+
+<!-- <h4>Social Media</h4> -->
+<!-- <div id="socialmedia" class="row"></div> -->
+
+<script>
+    var file = "{{site.baseurl}}assets/data/sponsored_research_administration.tsv";
+    loadBusinessOperationsMetrics(file, 'sponsored_research');
+
+    file = "{{site.baseurl}}assets/data/finance_and_administration.tsv";
+    createUniqueGroupDivs(file, 'finance', 'Group')
+    loadBusinessOperationsMetrics(file, '');
+
+    // var file = "{{site.baseurl}}assets/data/business_operations.tsv";
+    // createUniqueGroupDivs(file, 'mainmetrics', 'Group')
+    // loadBusinessOperationsMetrics(file, '');
+
+    // loadSocialMediaMetrics("assets/data/social_media.tsv", 'socialmedia');
+</script>

@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Questrial&display=swap');
+
+// IQSS settings
+:root {
+    --iqss-orange: #d16103;
+    --iqss-dark-blue: #152844;
+    --iqss-grey: #555555;
+    --iqss-lighter-blue: #215990;
+    --harvard-red: #A41034;
+    --harvard-crimson: #A41034;
+    --harvard-black: #000000;
+    --harvard-dark-grey: #808285;
+    --harvard-light-grey: #B6B6B6;
+    --card-height: 160px;
+}
+
+
+
+// Overrides
+body {
+    font-family: 'Montserrat',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif !important;
+    background-color: #fff;
+}
+
+
+.navbar-nav {
+    width: 100%;
+}
+
+.info-box {
+    min-height: var(--card-height) !important;
+    max-height: var(--card-height);
+    padding: 0px !important;
+}
+
+.info-box-content {
+    padding-top: 12px !important;
+
+    // margin-left: 100px;
+}
+
+
+/*Icon*/
+.info-box-icon {
+    width: 100px !important;
+    // height: var(--card-height);
+    font-size: 60px !important;
+    line-height: var(--card-height);
+    background: rgba(0, 0, 0, .2);
+}
+
+
+
+/* Title */
+.info-box-text,
+.info-box-unit {
+    font-size: 0.8em !important;
+    text-transform: unset;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+    line-height: 1em;
+    font-weight: normal;
+
+}
+
+.info-box-group,
+.info-box-title {
+    font-size: 1em !important;
+    text-transform: unset;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+    line-height: 1em;
+
+}
+
+
+/* Metric */
+.info-box-number,
+.info-box-value {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    line-height: 2em;
+}
+
+
+/* Unit */
+.info-box-content>p {
+    font-size: 0.9em;
+    line-height: 1.5em;
+    /* padding-left: 1em; */
+}
+
+
+
+.bg-iqss-orange {
+    background-color: var(--iqss-orange) !important;
+    color: white !important;
+}
+
+.bg-iqss-blue {
+    background-color: var(--iqss-dark-blue) !important;
+    color: white !important;
+}
+
+.bg-iqss-black {
+    background-color: var(--iqss-grey) !important;
+    color: white !important;
+}
+
+.bg-iqss-light-blue {
+    background-color: var(--iqss-lighter-blue) !important;
+    color: white !important;
+}
+
+.bg-harvard-red,
+.bg-iqss-red {
+    background-color: var(--harvard-red) !important;
+    color: white !important;
+}
+
+.bg-iqss-red {
+    background-color: var(--harvard-red) !important;
+    color: white !important;
+}
+
+
+.bg-iqss-yellow,
+.bg-iqss-aqua,
+.bg-iqss-green,
+.bg-iqss-navy,
+.bg-iqss-teal,
+.bg-iqss-olive,
+.bg-iqss-lime,
+.bg-iqss-fuchsia,
+.bg-iqss-purple,
+.bg-iqss-maroon {
+    background-color: var(--harvard-dark-grey) !important;
+    color: white !important;
+}
+
+
+
+.alert-info,
+.bg-iqss-aqua,
+.callout.callout-info,
+.label-info,
+.modal-info .modal-body {
+    background-color: var(--iqss-lighter-blue) !important;
+}
+
+.content-wrapper {
+    // background: #f4f6f9;
+    background: #fff !important;
+    // padding-top: 56px !important;
+}
+
+.main-header {
+    border-bottom: none !important;
+}
+
+.current {
+    color: rgb(141, 73, 17) !important;
+    border-bottom: rgb(141, 73, 17) 2px solid;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Questrial',
+        Arial,
+        Helvetica,
+        sans-serif !important;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 2rem !important;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+@media print {
+
+    .nobreak {
+        // page-break-inside: avoid;
+    }
+
+    h4 {
+        page-break-inside: avoid;
+        page-break-before: auto;
+        // page-break-before: always;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        margin-top: 3.5rem;
+    }
+
+
+
+    h2 {
+        page-break-before: always;
+        page-break-after: avoid !important; //never is not available
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        margin-top: 3rem;
+
+    }
+
+    h4 {
+        //     page-break-after: never !important;
+        //     page-break-before: avoid;
+        // }
+
+        div {
+            page-break-before: never;
+        }
+
+    }
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+// .navbar {
+//     position: fixed !important;
+//     top: 0;
+//     width: 100%;
+// }
+
+
+
+.plot {
+    min-height: 500px;
+}
+
+
+// Dataverse styling
+.viz {
+    height: 500px;
+    margin: 1em 1em 2em 1em;
+    padding: 1em;
+}
+
+/* http://guides.dataverse.org/en/4.11/style/foundations.html#link-colors */
+a {
+    color: #337AB7;
+}
+
+a:hover {
+    color: #23527C;
+}
+
+
+#mapid {
+    height: 100%;
+    // width: 90%;
+    max-height: 600px;
+    min-height: 400px;
+    // max-width: 980px;
+    min-width: 350px;
+
+}

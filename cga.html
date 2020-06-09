@@ -1,0 +1,133 @@
+---
+layout: default
+title: Center for Geographical Analysis
+---
+<h3>CGA Events</h3>
+
+<div class="row">
+    <div class="card card-primary card-outline col-lg-6">
+        <div class="card-header">
+            <h3 class="card-title">
+                Number of Requests the last 12 months
+            </h3>
+        </div>
+        <div class="card-body">
+            <canvas id="cgaRequests"></canvas>
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Number of requests
+                </h3>
+            </div>
+
+            <canvas id="cgaStatusRequests"></canvas>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="card card-primary card-outline col-lg-6">
+        <div class="card-header">
+            <h3 class="card-title">
+                Registration for Training last 12 months
+            </h3>
+        </div>
+        <div class="card-body">
+            <canvas id="cgaTraining"></canvas>
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Workshop Evaluations (Average score on scale of 1 to 5)
+                </h3>
+            </div>
+
+            <canvas id="cga_workshop_evaluations"></canvas>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    d3.tsv("{{site.baseurl}}assets/data/cga_contact.tsv", function (data) {
+        let labels = []
+        let d = [];
+        for (var i = 0; i < data.length; i++) {
+            labels.push(data[i].date);
+            d.push(parseInt(data[i].count));
+        }
+        lineChart('cgaRequests', {
+            x: labels,
+            y: d,
+            title: 'Total Requests',
+            color: iqss_orange,
+            label_x: "Month",
+            label_y: "Number of requests",
+            line_tension: 0
+        });
+    });
+
+    d3.tsv("{{site.baseurl}}assets/data/cga_contact_status.tsv", function (data) {
+        let labels = []
+        let d = [];
+        for (var i = 0; i < data.length; i++) {
+            labels.push(data[i]["Harvard status/Appointment"]);
+            d.push(parseInt(data[i].count));
+        }
+        horizontalBarChart('cgaStatusRequests', {
+            x: labels,
+            y: d,
+            title: 'Total Requests',
+            color: iqss_orange,
+            label_x: "Month",
+            label_y: "Number of requests",
+            line_tension: 0
+        });
+    });
+
+    d3.tsv("{{site.baseurl}}assets/data/cga_training.tsv", function (data) {
+        let labels = []
+        let d = [];
+        for (var i = 0; i < data.length; i++) {
+            labels.push(data[i].course);
+            d.push(parseInt(data[i].count));
+        }
+        horizontalBarChart('cgaTraining', {
+            x: labels,
+            y: d,
+            title: 'Number of registrations',
+            color: iqss_color_pallette,
+            label_x: "Training",
+            label_y: "Number of registrations"
+        });
+    });
+
+
+    d3.tsv("{{site.baseurl}}assets/data/cga_workshop_evaluations.tsv", function (data) {
+        let labels = [];
+        let d = [];
+        for (var i = 0; i < data.length; i++) {
+            labels.push(data[i].metric);
+            d.push(parseFloat(data[i].mean));
+        }
+        console.log(d)
+        pointChart('cga_workshop_evaluations', {
+            x: labels,
+            y: d,
+            title: 'Average score',
+            color: iqss_orange,
+            label_x: "Metric",
+            label_y: "Average Score"
+        });
+    })
+</script>

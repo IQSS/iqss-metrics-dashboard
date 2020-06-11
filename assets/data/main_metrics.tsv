@@ -1,6 +1,6 @@
 group	metric	title	value	unit	icon	color	url
 Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	blue	
 Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	red	https://iqss.github.io/dataverse-tv/
-Dataverse	GitHub Watchers	Dataverse on GitHub	517	Watchers	fab fa-github	orange	
-Dataverse	GitHub Open Issues	Dataverse on GitHub	981	Open Issues	fab fa-github	orange	
+Dataverse	GitHub Watchers	Dataverse on GitHub	519	Watchers	fab fa-github	orange	
+Dataverse	GitHub Open Issues	Dataverse on GitHub	987	Open Issues	fab fa-github	orange	
 Dataverse	GitHub Subscribers	Dataverse on GitHub	63	Subscribers	fab fa-github	orange	

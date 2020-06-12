@@ -10,10 +10,11 @@ title: IQSS
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<div id="mainmetrics"></div>
+<div id="mainmetrics" class="row"></div>
 
 <script src="https://d3plus.org/js/d3.js"></script>
 <script>
-    createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
-    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
+    // createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
+    // loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics');
 </script>

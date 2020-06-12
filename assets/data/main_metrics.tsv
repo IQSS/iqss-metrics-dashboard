@@ -1,7 +1,16 @@
 group	metric	title	value	unit	icon	color	url
+Sponsored Research Support	Grants Applications Submitted 	Grants Applications Submitted 	13	the first half of FY19		orange	bo.html
+IQSS Computer Lab	New accounts	New accounts	955	FY18-20		orange	css.html
+Harvard Dataverse	Searchable Datasets	Searchable Datasets	97639			orange	dataverse.html
+IT Client Support Services	Tickets resolved	Tickets resolved	3895	FY20		orange	css.html
+Administration & Finance	Travel Grants Awarded	Travel Grants Awarded	24	FY19		orange	bo.html
+RCE Batch	Increase in RCE Batch Users	Increase in RCE Batch Users	0.12	FY18		orange	rc.html
+Dataverse Worldwide	Installations Worldwide	Installations Worldwide	60			orange	dataverse.html
+Data Management & Curation	Datasets Curated	Datasets Curated	25			orange	dataverse.html
+Data Science Services	Data Consulting requests	Data Consulting requests	621	2018		orange	dss.html
+RCE Interactive	Increase in RCE Interactive Tier Users	Increase in RCE Interactive Tier Users	9%	FY18		orange	rc.html
+Center for Geographic Analysis	Increase in CGA Staff Work Time	Increase in CGA Staff Work Time	7%			orange	cga.html
+Program on Survey Research	PSR Advisees 	PSR Advisees 	108	2018		orange	psr.html
 Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	blue	
 Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	red	https://iqss.github.io/dataverse-tv/
-Dataverse	GitHub Watchers	Dataverse on GitHub	519	Watchers	fab fa-github	orange	
-Dataverse	GitHub Open Issues	Dataverse on GitHub	982	Open Issues	fab fa-github	orange	
-Dataverse	GitHub Subscribers	Dataverse on GitHub	63	Subscribers	fab fa-github	orange	
 CGA	Number of Registrations for CGA Conference	CGA Events	112	Registrations for CGA Conference 2020	fa fa-calendar-alt	blue	

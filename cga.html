@@ -35,7 +35,7 @@ title: Center for Geographical Analysis
     <div class="card card-primary card-outline col-lg-6">
         <div class="card-header">
             <h3 class="card-title">
-                Registration for Training last 12 months
+                Number of registrations of workshops in the last 12 months
             </h3>
         </div>
         <div class="card-body">
@@ -99,14 +99,14 @@ title: Center for Geographical Analysis
         let labels = []
         let d = [];
         for (var i = 0; i < data.length; i++) {
-            labels.push(data[i].course);
-            d.push(parseInt(data[i].count));
+            labels.push(data[i].course.split("#"));
+            d.push(parseInt(data[i].registration_count));
         }
         horizontalBarChart('cgaTraining', {
             x: labels,
             y: d,
             title: 'Number of registrations',
-            color: iqss_color_pallette,
+            color: iqss_blue,
             label_x: "Training",
             label_y: "Number of registrations"
         });
@@ -120,7 +120,7 @@ title: Center for Geographical Analysis
             labels.push(data[i].metric);
             d.push(parseFloat(data[i].mean));
         }
-        console.log(d)
+
         pointChart('cga_workshop_evaluations', {
             x: labels,
             y: d,

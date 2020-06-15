@@ -1,9 +1,5 @@
-course	count
-"Cartography Workshop
-(Apr 2020)"	11
-"Basic Introduction to GIS
-(Jan 2020)"	59
-"Basic Introduction to GIS
-(Sep 2019)"	33
-"GIS for Humanities and Social Sciences
-(Dec 2019)"	33
+id	course	registration_count
+0	Basic Introduction to GIS#(Sep 2019)	33
+1	GIS for Humanities and Social Sciences#(Dec 2019)	33
+2	Basic Introduction to GIS#(Jan 2020)	59
+3	Cartography Workshop#(Apr 2020)	11

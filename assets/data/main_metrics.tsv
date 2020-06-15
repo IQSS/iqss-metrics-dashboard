@@ -11,4 +11,7 @@ Dataverse	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-
 Program on Survey Research	Program on Survey Research	Program on Survey Research	108	PSR Advisees in Calendar 2018	fa fa-poll	orange	psr.html
 Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	orange	
 Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	orange	https://iqss.github.io/dataverse-tv/
+Dataverse	GitHub Watchers	Dataverse on GitHub	519	Watchers	fab fa-github	orange	
+Dataverse	GitHub Open Issues	Dataverse on GitHub	984	Open Issues	fab fa-github	orange	
+Dataverse	GitHub Subscribers	Dataverse on GitHub	63	Subscribers	fab fa-github	orange	
 CGA	Number of Registrations for CGA Conference	CGA Events	112	Registrations for CGA Conference 2020	fa fa-calendar-alt	blue	

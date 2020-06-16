@@ -2,7 +2,7 @@
 layout: default
 title: Center for Geographical Analysis
 ---
-<h3>CGA Events</h3>
+<h3>CGA Requests</h3>
 
 <div class="row">
     <div class="card card-primary card-outline col-lg-6">
@@ -30,12 +30,13 @@ title: Center for Geographical Analysis
     </div>
 </div>
 
+<h3>CGA Training and Workshops</h3>
 
 <div class="row">
     <div class="card card-primary card-outline col-lg-6">
         <div class="card-header">
             <h3 class="card-title">
-                Number of registrations of workshops in the last 12 months
+                Training Last 12 Months
             </h3>
         </div>
         <div class="card-body">
@@ -56,6 +57,35 @@ title: Center for Geographical Analysis
         </div>
     </div>
 </div>
+
+
+<h3>More CGA</h3>
+<div class="row">
+    <div class="card card-primary card-outline col-lg-6">
+        <div class="card-header">
+            <h3 class="card-title">
+                Registrations most recent CGA Conference
+            </h3>
+        </div>
+        <div class="card-body">
+            <canvas id="cgaConference2"></canvas>
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Top 10 License Request the Last 12 Months
+                </h3>
+            </div>
+
+            <canvas id="cga_license_requests"></canvas>
+        </div>
+    </div>
+</div>
+
 
 
 <script>
@@ -130,4 +160,43 @@ title: Center for Geographical Analysis
             label_y: "Average Score"
         });
     })
+
+    //harvard/non haravard
+    d3.tsv("{{site.baseurl}}assets/data/cga_conference_schools.tsv", function (data) {
+        let labels = []
+        let d = [];
+
+        for (var i = 0; i < data.length; i++) {
+            labels.push(data[i]["School Affiliation"]);
+            d.push(parseInt(data[i].count));
+        }
+        barChart('cgaConference2', {
+            x: labels,
+            y: d,
+            title: 'Number of Registrations',
+            color: [harvard_black, harvard_red],
+            label_x: "School Affiliation",
+            label_y: "Number of Registrations",
+            line_tension: 0
+        });
+    });
+
+    // Top 10 License Request
+    d3.tsv("{{site.baseurl}}assets/data/cga_license_req_last_12_months.tsv", function (data) {
+        let labels = []
+        let d = [];
+
+        for (var i = 0; i < data.length; i++) {
+            labels.push(data[i]["Software product"]);
+            d.push(parseInt(data[i].count));
+        }
+        horizontalBarChart('cga_license_requests', {
+            x: labels,
+            y: d,
+            title: 'Number of License Request',
+            color: iqss_orange,
+            label_x: "Software product",
+            label_y: "Number of License Requests"
+        });
+    });
 </script>

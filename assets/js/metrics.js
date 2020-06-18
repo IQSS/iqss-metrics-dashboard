@@ -20,12 +20,22 @@ function addMetric(fields, div_id) {
     const metricTemplate = document.getElementById("iq-info-box");
 
     const metricInstance = document.importNode(metricTemplate.content, true);
+    if (fields[7].length > 1) {
 
+        if (fields[7].substring(0, 4) == 'http') {
+            metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
+            metricInstance.querySelector(".info-url").setAttribute('target', "_blank")
+            // add _self
+        } else {
+            metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
+        }
+    }
     metricInstance.querySelector(".info-box").classList.add("bg-iqss-" + fields[6]);
-    metricInstance.querySelector(".info-box-icon").innerHTML = "<i class='" + fields[5] + "'></i>";
+    metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[5] + "'></span>";
     metricInstance.querySelector(".info-box-group").innerHTML = fields[2];
     metricInstance.querySelector(".info-box-value").innerHTML = fields[3];
     metricInstance.querySelector(".info-box-unit").innerHTML = fields[4];
+    // metricInstance.querySelector(".info-box-unit").innerHTML = fields[];
     if (div_id !== "") {
         document.getElementById(div_id).appendChild(metricInstance);
     } else {
@@ -58,7 +68,7 @@ function addSocialMediaMetric(fields, div_id) {
     const metricInstance = document.importNode(metricTemplate.content, true);
 
     metricInstance.querySelector(".info-box").classList.add("bg-iqss-" + fields[7]);
-    metricInstance.querySelector(".info-box-icon").innerHTML = "<i class='" + fields[6] + "'></i>";
+    metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[6] + "'></span>";
     metricInstance.querySelector(".info-box-group").innerHTML = fields[3];
     metricInstance.querySelector(".info-box-value").innerHTML = fields[4];
     metricInstance.querySelector(".info-box-unit").innerHTML = fields[5];
@@ -99,7 +109,7 @@ function addBOMetric(fields, div_id) {
     const metricInstance = document.importNode(metricTemplate.content, true);
 
     metricInstance.querySelector(".info-box").classList.add("bg-iqss-" + fields[4]);
-    metricInstance.querySelector(".info-box-icon").innerHTML = "<i class='" + fields[2] + "'></i>";
+    metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[2] + "'></span>";
     metricInstance.querySelector(".info-box-group").innerHTML = fields[1];
     metricInstance.querySelector(".info-box-value").innerHTML = fields[6];
     metricInstance.querySelector(".info-box-unit").innerHTML = fields[5];

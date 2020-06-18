@@ -7,12 +7,12 @@
 - name: Dataverse
   link: dataverse.html
   icon: book-open
-- name: CGA
+- name: Center for Geographical Analysis
   link: cga.html
   icon: map-marked-alt
-- name: CSS
-  link: css.html
-  icon: table
-- name: DSS
-  link: dss.html
-  icon: table
+# - name: Client Support Services
+#   link: css.html
+#   icon: table
+# - name: Data Science Services
+#   link: dss.html
+#   icon: table

@@ -1,6 +1,6 @@
 - name: IQSS
-  link: /
-  icon: th
+  link: index.html
+  icon:
 - name: Business Operations
   link: bo.html
   icon: dollar-sign

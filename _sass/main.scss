@@ -273,6 +273,7 @@ a:hover {
 
 }
 
+/* Accessibility 'skip to main content' */
 .skipnav {
     text-align: left;
 }
@@ -293,4 +294,25 @@ a:hover {
     height: auto;
     overflow: visible;
     text-decoration: underline;
+}
+
+
+/* border color on the card*/
+.card-iqss-primary {
+    border-top: 3px solid var(--iqss-dark-blue);
+}
+
+.card-iqss-secondary {
+    border-top: 3px solid var(--iqss-orange);
+}
+
+.card-iqss-tertiary {
+    border-top: 3px solid var(--iqss-grey);
+}
+
+
+.card-iqss-title {
+    font-size: 1.2em;
+    color: var(--iqss-grey);
+
 }

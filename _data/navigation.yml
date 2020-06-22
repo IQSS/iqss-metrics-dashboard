@@ -10,6 +10,9 @@
 - name: Center for Geographical Analysis
   link: cga.html
   icon: map-marked-alt
+- name: Research Computing
+  link: rc.html
+  icon: map-marked-alt
 # - name: Client Support Services
 #   link: css.html
 #   icon: table

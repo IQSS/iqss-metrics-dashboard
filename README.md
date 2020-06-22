@@ -22,3 +22,18 @@ The page is add to the page with an `iframe` with a large height, so scroll bars
     </iframe>
 ```
 
+
+
+
+
+## Frameworks
+
+
+
+The dashboard is build on a couple of framework. The components can be used in the layout and presentation of the metrics:
+
+- [Bootstrap](https://getbootstrap.com/docs)
+- [AdminLTE](https://adminlte.io): A collection of libraries, components. The layout is based on this system. Some parts of the layout are omitted suchas the sidebar. If you need something look here first what component is similar to whay you want.
+- [Chartjs](https://www.chartjs.org/)
+- [D3js](https://d3js.org/) 
+- [D3plus](https://d3plus.org/)

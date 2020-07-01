@@ -1,7 +1,7 @@
-Group	Metric	Icon	URL	Homepage	Color	Period	Total	Updated
-Sponsored Research Administration	Direct Expenditures	fa fa-dollar-sign	bo.html		orange	Last 12 months	$3,521,563	June 2020
-Sponsored Research Administration	Indirects Collected	fa fa-funnel-dollar	bo.html		orange	Last 12 months	$884,312	
-Sponsored Research Administration	Grant Applications Submitted	fa fa-share	bo.html		orange	Most Recent 12-month Period	40	
-Sponsored Research Administration	Active Grants Managed by IQSS	fa fa-tasks	bo.html	x	orange	Most Recent 12-month Period	32	
-Sponsored Research Administration	Number of unique PIs using IQSS sponsored research services	fa fa-user-alt	bo.html		orange	Most Recent 12-month Period	23	
-Sponsored Research Administration	Number of unique Harvard Departments using IQSS sponsored research services	fa fa-university	bo.html		orange	Most Recent 12-month Period	6	
+Group	Metric	Icon	URL	Color	Period	Total	Updated	Homepage
+Sponsored Research Administration	Direct Expenditures	fa fa-dollar-sign	bo.html	orange	Last 12 months	$3,521,563	June 2020	
+Sponsored Research Administration	Indirects Collected	fa fa-funnel-dollar	bo.html	orange	Last 12 months	$884,312		
+Sponsored Research Administration	Grant Applications Submitted	fa fa-share	bo.html	orange	Most Recent 12-month Period	40		
+Sponsored Research Administration	Active Grants Managed by IQSS	fa fa-tasks	bo.html	orange	Most Recent 12-month Period	32		x
+Sponsored Research Administration	Number of unique PIs using IQSS sponsored research services	fa fa-user-alt	bo.html	orange	Most Recent 12-month Period	23		
+Sponsored Research Administration	Number of unique Harvard Departments using IQSS sponsored research services	fa fa-university	bo.html	orange	Most Recent 12-month Period	6		

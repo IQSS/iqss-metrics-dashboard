@@ -9,9 +9,16 @@ title: Business Operations
 this reads form _data direct, as opposed to the update of the data itself (from _site/assets/data -->
 <h2>Sponsored Research Administration</h2>
 <div id="sponsored_research" class=row></div>
+<!-- <div class="update">
+    Last update:&nbsp;<span id="last_update_date1"></span>
+</div> -->
 
 <h2>Finance & Administration</h2>
 <div id="finance"></div>
+
+<div class="update">
+    Last update:&nbsp;<span id="last_update_date2"></span>
+</div>
 
 <!-- <h4>Social Media</h4> -->
 <!-- <div id="socialmedia" class="row"></div> -->
@@ -24,6 +31,14 @@ this reads form _data direct, as opposed to the update of the data itself (from 
     createUniqueGroupDivs(file, 'finance', 'Group')
     loadBusinessOperationsMetrics(file, '');
 
+
+
+    d3.tsv("{{site.baseurl}}assets/data/update_dates.tsv", function (data) {
+
+        last_update = data[0]["Last Update"] = "June 2020"
+        // document.getElementById("last_update_date1").innerHTML = last_update;
+        document.getElementById("last_update_date2").innerHTML = last_update;
+    })
     // var file = "{{site.baseurl}}assets/data/business_operations.tsv";
     // createUniqueGroupDivs(file, 'mainmetrics', 'Group')
     // loadBusinessOperationsMetrics(file, '');

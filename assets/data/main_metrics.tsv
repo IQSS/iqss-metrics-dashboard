@@ -1,6 +1,4 @@
 group	metric	title	value	unit	icon	color	url
-Business Operations	Sponsored Research Support	Sponsored Research Support	13	Grants Applications Submitted  the first half of FY19	fa fa-share	orange	bo.html
-Business Operations	Travel Grants Awarded	Administration & Finance	24	Travel Grants Awarded FY19	fa fa-plane-departure	orange	bo.html
 Data Science Services	Data Consulting Requests	Data Science Services	706	Data Consulting requests 2019	fa fa-question	orange	https://www.iq.harvard.edu/data-science-services/performance-metrics
 Customer Support Services	IQSS Computer Lab	IQSS Computer Lab	955	New accounts FY18-20	fa fa-user-plus	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/public_labs_metrics.pdf
 Research Computing	RCE Batch	RCE Batch	12%	Increase in RCE Batch Users FY18	fa fa-server	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/rce_batch_tier_metrics.pdf
@@ -9,9 +7,4 @@ Dataverse	Searchable Datasets	Harvard Dataverse	97,639	Searchable Datasets	fa fa
 Client Support Services	Tickets resolved	IT Client Support Services	3895	Tickets resolved FY20	fa fa-ticket-alt	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/it_client_support_services_metrics.pdf
 Dataverse	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-check	orange	dataverse.html
 Program on Survey Research	Program on Survey Research	Program on Survey Research	108	PSR Advisees in Calendar 2018	fa fa-poll	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/psrpreliminrymetrics2018_downloaded_from_site.pdf
-Dataverse	Dataverse Installations	Dataverse Worldwide	59	Number of Installations	fa fa-globe	orange	dataverse.html
-Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	orange	https://iqss.github.io/dataverse-tv/
-CGA	Number of Registrations for CGA Conference	CGA Events	112	Registrations for CGA Conference 2020	fa fa-calendar-alt	blue	cga.html
-CGA	GIS Institute Applications	CGA Applications	12	Applications for GIS institute 2020 YTD	fa fa-university	blue	cga.html
-CGA	Number of Access requests	CGA Requests	35	Access Requests in 2020 YTD	fa fa-key	blue	cga.html
 Sponsored Research Administration	Active Grants Managed by IQSS	Active Grants Managed by IQSS	32	Most Recent 12-month Period	fa fa-tasks	orange	bo.html

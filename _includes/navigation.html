@@ -14,7 +14,7 @@
             <li class="nav-item d-sm-inline-block">
                 <div class="menu-link">
 
-                    <a href="{{site.baseurl}}{{ item.link }}" 
+                    <a href="{{ item.link }}" 
                     
                     {% if page.url == current_url %}
                     class="nav-link current"
@@ -22,6 +22,8 @@
                     class="nav-link" {% endif %}>
                     <!-- {{item.name}} -->
                     {{current_url}} 
+                    <br>
+                    {{item.link}}
                 </a>
                 </div>
             </li>

@@ -8,8 +8,8 @@
     <ul class="navbar-nav collapse navbar-collapse" id="navbar-items">
 
         {% for item in site.data.navigation %}
-            {%if item.link == "/" %} 
-                {% assign current_url = item.link %}
+            {%if item.link == "./" %} 
+                {% assign current_url = "/" %}
             {% else %}
                 {% assign current_url = '/' | append: item.link %}
             {% endif %}

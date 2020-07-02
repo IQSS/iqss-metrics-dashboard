@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log(path)
     loadJSON(function (response) {
         var config = JSON.parse(response);
         dataversesToMonth(config);

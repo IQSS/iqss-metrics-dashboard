@@ -2,17 +2,29 @@
 
     <div id="navbar-hamburger" class="nav-item navbar-toggle d-block d-md-none" data-toggle="collapse"
         data-target="#navbar-items">
-        <a class="nav-link" role="button"><span class="fas fa-bars"></span></a>
+        <a class="nav-link hamburger" role="button"><span class="fas fa-bars"></span></a>
     </div>
 
     <ul class="navbar-nav collapse navbar-collapse" id="navbar-items">
 
         {% for item in site.data.navigation %}
-        <li class="nav-item d-sm-inline-block">
-            <a href="{{site.baseurl}}{{ item.link }}" {% if page.url == item.link %}class="nav-link current"
-                {% else %}class="nav-link" {% endif %}>{{ item.name }}</a>
-        </li>
+
+            {% assign current_url = site.baseurl | append: item.link%}
+
+            <li class="nav-item d-sm-inline-block">
+                <div class="menu-link">
+
+                    <a href="{{site.baseurl}}{{ item.link }}" 
+                    
+                    {% if page.url == current_url %}
+                    class="nav-link current"
+                    {% else %}
+                    class="nav-link" {% endif %}>
+                    {{item.name}}</a>
+                </div>
+            </li>
         {% endfor %}
+
     </ul>
 
 </nav>

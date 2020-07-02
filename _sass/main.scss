@@ -93,6 +93,7 @@ body {
 }
 
 
+
 /* Unit */
 .info-box-content>p {
     font-size: 0.9em;
@@ -166,12 +167,45 @@ body {
 
 .main-header {
     border-bottom: none !important;
+    height: unset; 
+}
+
+
+
+/* Navigation styling: underline, thick underline for current items */
+.nav-link {
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Questrial',
+    Arial,
+    Helvetica,
+    sans-serif !important;
+    border-bottom:var(--iqss-orange) 1px solid;
+    
 }
 
 .current {
-    color: rgb(141, 73, 17) !important;
-    border-bottom: rgb(141, 73, 17) 2px solid;
+    color: var(--iqss-dark-blue) !important;
+    border-bottom:var(--iqss-orange) 4px solid;
 }
+
+/* Don't underline hamburger menu */
+.hamburger {
+    border-bottom: none;
+}
+
+/* make sure all item have 100% height*/
+.nav-item {
+    align-self: stretch;
+}
+
+.menu-link>a {
+    height: 100% !important;
+}
+
+
+
+
 
 h1,
 h2,

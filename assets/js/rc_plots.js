@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log(path)
     generateRCPlot(path, 'interactive', 'department');
     generateRCPlot(path, 'interactive', 'school');
     generateRCPlot(path, 'batch', 'department');

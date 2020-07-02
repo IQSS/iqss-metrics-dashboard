@@ -9,7 +9,7 @@
 
         {% for item in site.data.navigation %}
 
-            {% assign current_url = site.baseurl | append: item.link%}
+            {% assign current_url = site.baseurl | append: item.link %}
 
             <li class="nav-item d-sm-inline-block">
                 <div class="menu-link">
@@ -20,11 +20,14 @@
                     class="nav-link current"
                     {% else %}
                     class="nav-link" {% endif %}>
-                    {{item.name}}</a>
+                    <!-- {{item.name}} -->
+                    {{current_url}} 
+                </a>
                 </div>
             </li>
-            {{current_url}}
+            
         {% endfor %}
+        {{page.url}}
 
     </ul>
 

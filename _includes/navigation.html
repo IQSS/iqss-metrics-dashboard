@@ -8,18 +8,21 @@
     <ul class="navbar-nav collapse navbar-collapse" id="navbar-items">
 
         {% for item in site.data.navigation %}
-
-            {% assign current_url = '/' | append: item.link %}
-
+            {%if item.link == "/" %} 
+                {% assign current_url = item.link %}
+            {% else %}
+                {% assign current_url = '/' | append: item.link %}
+            {% endif %}
             <li class="nav-item d-sm-inline-block">
                 <div class="menu-link">
 
                     <a href="{{ item.link }}" 
                     
                     {% if page.url == current_url %}
-                    class="nav-link current"
+                        class="nav-link current"
                     {% else %}
-                    class="nav-link" {% endif %}>
+                        class="nav-link" 
+                    {% endif %}>
                     <!-- {{item.name}} -->
                     
                     {{current_url}} 

@@ -1,6 +1,10 @@
 // ----------REGULAR/MAIN METRICS -----------------
 
-function loadMainMetrics(url, div_id) {
+function loadMainMetrics(url, div_id, group) {
+
+    if( group === undefined) {
+        group = ''
+    }
     fetch(url)
         .then((response) => response.text())
         .then((data) => {
@@ -9,8 +13,10 @@ function loadMainMetrics(url, div_id) {
             for (let i = 1; i < x.length; i++) {
                 let fields = x[i].split(/\t/);
                 if (fields[0] != undefined && fields[0] != "") {
-
-                    addMetric(fields, div_id);
+                    console.log(fields)
+                    if (group === '' || group === fields[0]) {
+                        addMetric(fields, div_id);
+                    }
                 }
             }
         });

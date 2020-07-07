@@ -2,10 +2,10 @@
 
 // IQSS settings
 :root {
-    // --iqss-orange: #d16103; //original
+    --iqss-lighter-orange: #d16103; //original
     // --iqss-orange: #C35902;
     --iqss-orange: #B84D00;
-    // --iqss-orange: #B65302;
+    // --iqss-orange-lighter: #B65302;
     --iqss-dark-blue: #152844;
     --iqss-grey: #555555;
     --iqss-lighter-blue: #215990;
@@ -15,7 +15,30 @@
     --harvard-dark-grey: #808285;
     --harvard-light-grey: #B6B6B6;
     --card-height: 160px;
+
+    --blue: --var(--iqss-dark-blue);
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: var(--harvard-red);
+    --orange: var(--iqss-orange);
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #ffffff;
+    --gray: --(--iqss-grey);
+    --gray-dark: #343a40;
+    --primary: var(--iqss-orange);
+    --secondary: var(--iqss-dark-blue);
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
 }
+
 
 
 
@@ -45,6 +68,44 @@ body {
     // margin-left: 100px;
 }
 
+.btn-primary {
+
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+
+    background-color: var(--iqss-lighter-orange);
+    border-color: var(--iqss-lighter-orange);
+}
+
+.btn-primary:active {
+
+    background-color: var(--iqss-lighter-blue);
+    border-color: var(--iqss-lighter-blue);
+
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+
+    background-color: var(--iqss-lighter-blue);
+    border-color: var(--iqss-lighter-blue);
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    // transform: translateY(2px);
+}
 
 /*Icon*/
 .info-box-icon {
@@ -167,7 +228,7 @@ body {
 
 .main-header {
     border-bottom: none !important;
-    height: unset; 
+    height: unset;
 }
 
 
@@ -177,16 +238,16 @@ body {
     font-size: 1.2em;
     text-align: center;
     font-family: 'Questrial',
-    Arial,
-    Helvetica,
-    sans-serif !important;
-    border-bottom:var(--iqss-orange) 1px solid;
-    
+        Arial,
+        Helvetica,
+        sans-serif !important;
+    border-bottom: var(--iqss-orange) 1px solid;
+
 }
 
 .current {
     color: var(--iqss-dark-blue) !important;
-    border-bottom:var(--iqss-orange) 4px solid;
+    border-bottom: var(--iqss-orange) 4px solid;
 }
 
 /* Don't underline hamburger menu */
@@ -197,14 +258,24 @@ body {
 /* make sure all item have 100% height*/
 .nav-item {
     align-self: stretch;
+
+    // height: 100%;
 }
 
+// TODO: This is still not working on all browsers
+// Works on Firefox and Chrome
+// Doesn't work well on Safari and MS Edge.
 .menu-link>a {
+    min-height: 2em;
+    max-height: 4em;
     height: 100% !important;
 }
 
 
-
+.nav-link {
+    font-size: 1.1em;
+    line-height: normal;
+}
 
 
 h1,
@@ -349,4 +420,45 @@ a:hover {
     font-size: 1.2em;
     color: var(--iqss-grey);
 
+}
+
+.card-image {
+    object-fit: cover;
+    height: 200px;
+    border-radius: .25rem !important;
+}
+
+
+.card-bg-icon {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    color: white;
+    opacity: 0.5;
+}
+
+.card-img-title {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.card-header-image {
+    padding: 0 !important;
+
+}
+
+.card-primary:not(.card-outline)>.card-header {
+    background-color: white;
+    color: var(--iqss-orange);
+    // border:;
 }

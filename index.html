@@ -1,23 +1,56 @@
 ---
 layout: default
-title: IQSS
+title: IQSS metrics
 description: |
     The __Institute for Quantitative Social Science (IQSS)__ is the university's largest social science research center and an integral part of the Harvard administration. 
-
 ---
-<!-- templates for the widgets -->
-{% include templates.html %}
-<div class="alert alert-danger alert-dismissible fade show" role="alert" aria-atomic="true">
-    This site is still <strong>UNDER CONSTRUCTION</strong>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close alert">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
-<div id="mainmetrics" class="row"></div>
 
-<script src="https://d3plus.org/js/d3.js"></script>
-<script>
-    // createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
-    // loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
-    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics');
-</script>
+
+<div class="row">
+
+    {% for item in site.data.navigation %}
+        {%if item.link != "./" %} 
+
+        
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card card-primary">
+                <div class="card-header card-header-image">
+                    <img src="{{item.image}}"  
+                        style = "opacity: 1;"
+                        class="card-img-top card-image" alt="Image for {{item.name}}">
+                           <span class="card_bg_icon">
+                               <span class="fa fa-{{item.icon}} fa-6x " aria-hidden="true"></span>
+                           </span>
+                        <h1 class="card-img-title">
+                           {{item.name}}
+                        </h1>    
+                    <!-- <h3 class="card-title"><span class="fa fa-{{item.icon}}" aria-hidden="true"></span>&nbsp;{{item.name}}</h3> -->
+                    <!-- <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                        </button>
+                    </div> -->
+                    <!-- /.card-tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    
+                    {{item.description | markdownify}}
+                    
+                    <a href="{{item.link}}"><button class="btn btn btn-block btn-primary">See the Metrics...</button></a>
+                </div>
+                
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        
+        {% endif %}
+    {% endfor %}
+
+
+
+
+
+   
+  </div>
+  

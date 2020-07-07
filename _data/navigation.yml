@@ -1,21 +1,42 @@
-- name: IQSS
+- name: Metrics Home
   link: ./
-  icon:
+  icon: home
+  description:  The __Institute for Quantitative Social Science (IQSS)__ is the university's largest social science research center and an integral part of the Harvard administration. 
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
+- name: Dataverse
+  link: dataverse.html
+  icon: database
+  description: | 
+    __Dataverse__ is an open source web application to share, preserve, cite, explore and analyze research data. 
+  # image: https://dataverse.org/files/dataverseorg/files/dataverse_r_project.png
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/events-9_01.jpg?m=1559844260&itok=Gf0eI5aN
+- name: Scientific programs
+  link: cga.html
+  icon: flask
+  description: |
+    __Scientific programs__ focus on areas of inquiry that are of particular interest to their faculty directors and enjoy a close working relationship with IQSS administrative, development, and technical staff. 
+  image: https://projects.iq.harvard.edu/files/styles/os_files_large/public/harvard-iqss/files/data-science-5.jpg?m=1556913818&itok=JPQMYXZO
+- name: Research Computing
+  link: rc.html
+  icon: server
+  description: |
+    The __Research Computing Environment (RCE)__ is a large powerful computer cluster that you can use for computations that are too large to be conveniently done on a personal computer.
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/rce-banner.jpg?m=1588093363&itok=VMaAOCju
 - name: Business Operations
   link: bo.html
   icon: dollar-sign
-- name: Dataverse
-  link: dataverse.html
-  icon: book-open
-- name: Center for Geographical Analysis
-  link: cga.html
-  icon: map-marked-alt
-- name: Research Computing
-  link: rc.html
-  icon: map-marked-alt
-# - name: Client Support Services
-#   link: css.html
-#   icon: table
-# - name: Data Science Services
-#   link: dss.html
-#   icon: table
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
+  description: | 
+    __Business operations__ is dedicated to supporting social scientists' research by providing exceptional services throughout the lifecycle of a sponsored project.
+- name: Data Science Services
+  link: dss.html
+  icon: table
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/data-science-hero.png?m=1585859089&itok=lpmQBFfi
+  description: __Data Science Services (DSS)__ assists researchers in the Harvard community working on publication research in overcoming obstacles at every stage of the research process. 
+- name: IT Support
+  link: css.html
+  icon: desktop
+  color: warning
+  description: |
+    __Client Support Services (CSS)__ provides support for all of your hardware and software needs. 
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/comp-lab-hero.jpg?m=1589549154&itok=JAbg7Usc

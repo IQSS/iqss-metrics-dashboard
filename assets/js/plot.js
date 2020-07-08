@@ -52,6 +52,17 @@ var cp_div_11 = ['#a50026',
     '#313695'
 ]
 
+//TODO: 
+// Add to canvas element aria-label="Hello ARIA World" role="img">
+// Add fallback text in canvas element <p>Hello Fallback World</p>
+
+function addAccessibilityItems(div_id, title) {
+    var elm = document.getElementById(div_id);
+    elm.innerHTML += '<p>Plot ' + title + '</p>';
+    elm.setAttribute("aria-label", title);
+    elm.setAttribute("role", "img"); 
+}
+
 
 function pieChart(div_id, data) {
     // data.x: labels
@@ -69,7 +80,9 @@ function pieChart(div_id, data) {
                 backgroundColor: iqss_color_pallette
             }]
         },
-        // options: options
+        options: {
+            aspectRatio:1
+        }
     });
 }
 
@@ -80,6 +93,7 @@ function barChart(div_id, data) {
     // data.color
 
     var ctx = document.getElementById(div_id).getContext('2d');
+    addAccessibilityItems(div_id, data.title);
 
     new Chart(ctx, {
         type: "bar",
@@ -137,6 +151,7 @@ function horizontalBarChart(div_id, data) {
     // data.color
 
     var ctx = document.getElementById(div_id).getContext('2d');
+    addAccessibilityItems(div_id, data.title);
 
     new Chart(ctx, {
         type: "horizontalBar",
@@ -187,6 +202,7 @@ function horizontalBarChart(div_id, data) {
 function multiLineChart(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
+    addAccessibilityItems(div_id, data.title);
 
     // add default settings to the dataset.
     d2 = []
@@ -263,7 +279,8 @@ function multiLineChart(div_id, data) {
 function lineChart(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
-
+    addAccessibilityItems(div_id, data.title);
+    
     new Chart(ctx, {
         type: "line",
         data: {
@@ -330,7 +347,8 @@ function lineChart(div_id, data) {
 function pointChart(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
-
+    addAccessibilityItems(div_id, data.title);
+    
     new Chart(ctx, {
         type: "line",
         data: {

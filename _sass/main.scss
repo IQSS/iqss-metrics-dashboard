@@ -290,6 +290,8 @@ h4 {
     margin-top: 1rem;
 }
 
+
+
 h1 {
     font-size: 2rem !important;
     font-weight: bold;
@@ -297,8 +299,22 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
+    color: var(--iqss-dark-blue);
 }
 
+h2::after {
+    content: ' ';
+    width: 30px;
+    height: 3px;
+    display: block;
+    margin: 18px 0 0 0;
+    background: #d16103;
+    margin-bottom: 1em;
+}
+
+h3 {
+    color: var(--iqss-dark-blue)
+}
 @media print {
 
     .nobreak {
@@ -322,8 +338,10 @@ h2 {
         margin-bottom: 1rem;
         font-size: 3rem;
         margin-top: 3rem;
+        color: var(--iqss-lighter-blue)
 
     }
+
 
     h4 {
         //     page-break-after: never !important;
@@ -462,3 +480,4 @@ a:hover {
     color: var(--iqss-orange);
     // border:;
 }
+

@@ -44,7 +44,12 @@
                         <div class="col-sm-12">
                             <h1 id="main_title" class="m-0 text-dark" role="banner" aria-label="main-title">
                                 {{ page.title }}</h1>
-                                <p>{{ page.description | markdownify}}</p>
+                                <!-- <p>{{ page.description | markdownify}}</p> -->
+                                <!-- {{ page.title  }} -->
+
+                                {% assign current_site = site.data.navigation | where: "name", page.title %}
+                                <div>{{ current_site[0].description}}</div>
+                                
                         </div>
 
                     </div>

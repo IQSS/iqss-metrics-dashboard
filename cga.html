@@ -1,13 +1,12 @@
 ---
 layout: default
-title: Center for Geographical Analysis
-description: |
-  The __Center for Geographic Analysis (CGA)__ supports research and teaching across all disciplines in the University as
-  they relate to geospatial technology and methods.
+title: Scientific Programs
 ---
 <!-- templates for the widgets -->
 {% include templates.html %}
-
+<h1></h1>
+<h2>Center for Geographical Analysis (CGA)</h2>
+{{ page.description | markdownify }}
 
 <h3>CGA Contact</h3>
 
@@ -23,7 +22,6 @@ description: |
         </div>
         <!-- /.card -->
     </div>
-
     <div class="col-lg-6">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
@@ -36,24 +34,30 @@ description: |
         </div>
     </div>
 
-    <div class="col-lg-8">
+    
+</div>
+<div class="row">
+    <div class="col-lg-6">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">
                     Helpdesk requests by affiliated school (Last 12 Months)
                 </h3>
             </div>
-    
+            
             <canvas id="cga_contact_last_12_months_by_school"></canvas>
         </div>
     </div>
-
+    
+    
+    
+    
     
 </div>
 
 
 <h3>CGA metrics</h3>
-<div id="mainmetrics" class="row"></div>
+<div id="mainmetrics"></div>
 
 <h3>CGA Training and Workshops</h3>
 
@@ -273,5 +277,5 @@ description: |
 
     // createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
     // loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
-    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "CGA");
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "CGA", "col-lg-6");
 </script>

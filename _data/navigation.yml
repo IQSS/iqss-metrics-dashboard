@@ -27,7 +27,7 @@
   color: warning
   description: |
     Client Support Services (CSS) provides desktop IT support and assistance with all of our affiliates' hardware and software needs.
-  image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/comp-lab-hero.jpg?m=1589549154&itok=JAbg7Usc
+  image: https://projects.iq.harvard.edu/files/styles/os_files_xlarge/public/harvard-iqss/files/img_0029-1.jpg?m=1585862380&itok=YwcMagf1
 - name: Research Computing
   link: rc.html
   icon: server

@@ -3,8 +3,8 @@ id	school	count	fraction	percentage
 1	Graduate School of Arts and Sciences (GSAS)	45	0.15306122448979592	15%
 2	Harvard School of Public Health (HSPH)	28	0.09523809523809523	10%
 3	FAS Social Science Division	22	0.07482993197278912	7%
-4	Harvard Medical School (HMS)	17	0.05782312925170068	6%
-5	Harvard Kennedy School of Government (HKS)	17	0.05782312925170068	6%
+4	Harvard Kennedy School of Government (HKS)	17	0.05782312925170068	6%
+5	Harvard Medical School (HMS)	17	0.05782312925170068	6%
 6	Harvard Graduate School of Design (GSD)	17	0.05782312925170068	6%
 7	FAS Division of Continuing Education (DCE)	16	0.05442176870748299	5%
 8	Harvard College	14	0.047619047619047616	5%
@@ -12,8 +12,8 @@ id	school	count	fraction	percentage
 10	HUIT, Libraries, UPO, other Harvard centers or programs	10	0.034013605442176874	3%
 11	FAS other units	8	0.027210884353741496	3%
 12	FAS Arts and Humanities Division	7	0.023809523809523808	2%
-13	Harvard Graduate School of Education (GSE)	6	0.02040816326530612	2%
-14	Harvard School of Engineering and Applied Sciences (SEAS)	6	0.02040816326530612	2%
+13	Harvard School of Engineering and Applied Sciences (SEAS)	6	0.02040816326530612	2%
+14	Harvard Graduate School of Education (GSE)	6	0.02040816326530612	2%
 15	FAS Science Division	5	0.017006802721088437	2%
 16	Radcliffe Institute for Advanced Study	4	0.013605442176870748	1%
 17	Harvard Law School (HLS)	2	0.006802721088435374	1%

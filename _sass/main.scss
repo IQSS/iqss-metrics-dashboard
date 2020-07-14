@@ -481,3 +481,14 @@ a:hover {
     // border:;
 }
 
+// override bootstrap to align button on the bottom of the landing page
+.card-body::after {
+    content: unset;
+
+}
+
+.card-distribute-items{
+    justify-content:space-between;
+    display: flex; 
+    flex-direction: column;
+}

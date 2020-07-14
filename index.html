@@ -10,7 +10,7 @@ title: IQSS Metrics
         {%if item.link != "./" %} 
 
         
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex align-items-stretch">
             <div class="card card-primary">
                 <div class="card-header card-header-image">
                     <img src="{{item.image}}"  
@@ -22,19 +22,17 @@ title: IQSS Metrics
                         <h1 class="card-img-title">
                            {{item.name}}
                         </h1>    
-                    <!-- <h3 class="card-title"><span class="fa fa-{{item.icon}}" aria-hidden="true"></span>&nbsp;{{item.name}}</h3> -->
-                    <!-- <div class="card-tools">
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                        </button>
-                    </div> -->
-                    <!-- /.card-tools -->
+
                 </div>
                 <!-- /.card-header -->
-                <div class="card-body">
+                <div class="card-body card-distribute-items" >
+                                                               
+                        <div>{{item.description | markdownify}}</div>
+                        <a href="{{item.link}}" ><button class="btn btn btn-block btn-primary" >See the Metrics...</button>
+                            </a>
+
+            
                     
-                    {{item.description | markdownify}}
-                    
-                    <a href="{{item.link}}"><button class="btn btn btn-block btn-primary">See the Metrics...</button></a>
                 </div>
                 
                 <!-- /.card-body -->

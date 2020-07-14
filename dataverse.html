@@ -4,10 +4,10 @@ title: Dataverse
 description: | 
     __Dataverse__ is an open source web application to share, preserve, cite, explore and analyze research data. 
 ---
-
+{% include templates.html %}
 <h3>Dataverse Worldwide</h3>
 
-<div class="row">
+<div class="row d-flex align-items-stretch">
     <div class="col-md-6">
 
         <div class="card card-iqss-primary card-outline">
@@ -22,7 +22,7 @@ description: |
         </div>
     </div>
 
-    <div class="col-md-6">
+    <div class="col-md-6 align-items-stretch">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title card-iqss-title">
@@ -35,12 +35,15 @@ description: |
     </div>
 </div>
 
-<!-- <div class="row">
-    <canvas id="dvLineChart"></canvas>
-</div> -->
+<h3>Metrics</h3>
 
 
-<h3>Dataverse Metrics</h3>
+
+    <div id="mainmetrics" class="row"></div>
+
+
+
+<h3>Dataverse Content</h3>
 
 <div class="row">
     <div class="col-md-6 col-xl-4">
@@ -131,6 +134,7 @@ description: |
 <script src="https://d3plus.org/js/d3.js"></script>
 <script src="https://d3plus.org/js/d3plus.js"></script>
 <script src="{{site.baseurl}}assets/js/dataverse_plots.js"></script>
+
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
@@ -177,4 +181,6 @@ description: |
     // this section needs to be pushed forward since the {{site.baseurl}} is not handled in the 
     // javascript file
     path = "{{site.baseurl}}assets/data/"
+    
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "Dataverse", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
 </script>

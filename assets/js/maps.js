@@ -1,14 +1,16 @@
 const markerFillColor = '#C55B28';
 const markerBorderColor = '#FFFFFF';
 
+const baseDir = "https://iqss.github.io/dataverse-installations/"
+const dataverseMetricsURL = "https://iqss.github.io/iqss-metrics-dashboard/dataverse.html"
+
 const markerStyle = `
   background-color: ${markerFillColor};
   border-radius: 50%;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 1rem;
+  height: 1rem;
   display: block;
-  transform: rotate(45deg);
-  border: 1px solid ${markerBorderColor}
+  border: 2px solid ${markerBorderColor}
 `;
 
 const icon = L.divIcon({
@@ -24,7 +26,7 @@ var mymap = L.map('mapid', {
     attributionControl: true,
     zoomControl: false,
     zoomSnap: 0.25,
-}).setView([20, 10], 1.87);
+}).setView([20, 10], 1.2);
 
 /* There are many, many map styles to choose from and
  * https://leaflet-extras.github.io/leaflet-providers/preview/
@@ -37,8 +39,11 @@ var mymap = L.map('mapid', {
  * - https://wiki.openstreetmap.org/wiki/Tile_servers
  * - https://wiki.openstreetmap.org/wiki/Standard_tile_layer
  */
+
+// const mapStyle = "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+const mapStyle = "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
 // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+L.tileLayer(mapStyle, {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     subdomains: 'abcd',
     maxZoom: 19
@@ -50,7 +55,7 @@ L.control
     })
     .addTo(mymap);
 
-fetch('https://iqss.github.io/dataverse-installations/data/data.json')
+fetch(`${baseDir}data/data.json`)
     .then(function (response) {
         return response.json();
     })
@@ -86,10 +91,9 @@ fetch('https://iqss.github.io/dataverse-installations/data/data.json')
                 seal_urls = [];
                 for (var j = 0; j < core_trust_seals.length; ++j) {
                     seal_url = core_trust_seals[j];
-                    link =
-                        '<a target="_blank" rel="noopener noreferrer" href="' +
-                        seal_url +
-                        '"><img src="images/coretrustseal.jpg" width="20px"></a>';
+                    link = `<a target="_blank" rel="noopener noreferrer" 
+                        href="${seal_url}"><img src="${baseDir}images/coretrustseal.jpg" 
+                        width="20px"></a>`;
                     seal_urls.push(link);
                 }
                 core_trust_seal_note = '<br><br>CoreTrustSeal certifications: ' + seal_urls.join(' ');
@@ -123,13 +127,15 @@ fetch('https://iqss.github.io/dataverse-installations/data/data.json')
             gdcc_member_note = '';
             if (gdcc_member) {
                 gdcc_member_note =
-                    '<br><br><img src="images/gdcc-logo.png" width="20px"> <a target="_blank" rel="noopener noreferrer" href="http://dataversecommunity.global">Global Dataverse Community Consortium</a> member';
+                    `<br><br><img src="${baseDir}images/gdcc-logo.png" width="20px"> 
+                    <a target="_blank" rel="noopener noreferrer" href="http://dataversecommunity.global">
+                    Global Dataverse Community Consortium</a> member`;
             }
             metrics_note = '';
             on_metrics = items[i].metrics;
             if (on_metrics) {
                 metrics_note =
-                    '<br><br>Included in <a target="_blank" rel="noopener noreferrer" href="https://dataverse.org/metrics">dataverse.org/metrics</a>';
+                    `<br><br>Included in <a target="_blank" rel="noopener noreferrer" href="${dataverseMetricsURL}">IQSS Dataverse metrics</a>`;
             }
             L.marker([lat, lng], {
                     icon: icon

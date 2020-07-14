@@ -3,13 +3,11 @@ Data Science Services	Data Consulting Requests	Data Science Services	706	Data Co
 Customer Support Services	IQSS Computer Lab	IQSS Computer Lab	955	New accounts FY18-20	fa fa-user-plus	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/public_labs_metrics.pdf
 Research Computing	RCE Batch	RCE Batch	12%	Increase in RCE Batch Users FY18	fa fa-server	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/rce_batch_tier_metrics.pdf
 Research Computing	Increase usage RCE Interactive	RCE Interactive	9%	Increase in RCE Interactive Tier Users FY18	fa fa-mouse-pointer	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/rce_interactive_tier_metrics.pdf
-Dataverse	Searchable Datasets	Harvard Dataverse	97,639	Searchable Datasets	fa fa-database	orange	dataverse.html
+Dataverse (old)	Searchable Datasets	Harvard Dataverse	97,639	Searchable Datasets	fa fa-database	orange	dataverse.html
 Client Support Services	Tickets resolved	IT Client Support Services	3895	Tickets resolved FY20	fa fa-ticket-alt	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/it_client_support_services_metrics.pdf
-Dataverse	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-check	orange	dataverse.html
+Dataverse (old)	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-check	orange	dataverse.html
 Program on Survey Research	Program on Survey Research	Program on Survey Research	108	PSR Advisees in Calendar 2018	fa fa-poll	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/psrpreliminrymetrics2018_downloaded_from_site.pdf
 Dataverse	Dataverse Installations	Dataverse Worldwide	59	Number of Installations	fa fa-globe	orange	dataverse.html
 Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	orange	https://iqss.github.io/dataverse-tv/
-Dataverse	GitHub Watchers	Dataverse on GitHub	525	Watchers	fab fa-github	orange	dataverse.html
-Dataverse	GitHub Subscribers	Dataverse on GitHub	62	Subscribers	fab fa-github	orange	dataverse.html
 CGA	GIS Institute Applications	CGA Applications	13	Applications for GIS institute 2020 YTD	fa fa-university	blue	cga.html
 Sponsored Research Administration	Active Grants Managed by IQSS	Active Grants Managed by IQSS	32	Most Recent 12-month Period	fa fa-tasks	orange	bo.html

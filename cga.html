@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Scientific Programs
+description: The Center for Geographic Analysis (CGA) supports research and teaching across all disciplines in the University as they relate to geospatial technology and methods. 
 ---
 <!-- templates for the widgets -->
 {% include templates.html %}
@@ -196,26 +197,6 @@ title: Scientific Programs
             label_y: "Average Score"
         });
     })
-
-    //harvard/non haravard
-    // d3.tsv("{{site.baseurl}}assets/data/cga_conference_schools.tsv", function (data) {
-    //     let labels = []
-    //     let d = [];
-
-    //     for (var i = 0; i < data.length; i++) {
-    //         labels.push(data[i]["School Affiliation"]);
-    //         d.push(parseInt(data[i].count));
-    //     }
-    //     barChart('cgaConference2', {
-    //         x: labels,
-    //         y: d,
-    //         title: 'Number of Registrations',
-    //         color: [harvard_black, harvard_red],
-    //         label_x: "School Affiliation",
-    //         label_y: "Number of Registrations",
-    //         line_tension: 0
-    //     });
-    // });
 
     // Top 10 License Request
     d3.tsv("{{site.baseurl}}assets/data/cga_license_req_last_12_months.tsv", function (data) {

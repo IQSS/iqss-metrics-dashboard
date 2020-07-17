@@ -1,5 +1,7 @@
+let fontFamily = "Montserrat";
+
 $(document).ready(function () {
-    console.log(path)
+    // console.log(path)
     loadJSON(function (response) {
         var config = JSON.parse(response);
         dataversesToMonth(config);
@@ -54,6 +56,7 @@ function dataversesToMonth(config) {
                     }
                 },
             })
+            .font({ "family": fontFamily})
             .resize(true)
             .draw();
     });
@@ -88,7 +91,9 @@ function dataversesByCategory(config) {
                         return d3plus.string.title(text, params);
                     }
                 },
+               
             })
+            .font({ "family": fontFamily})
             .legend(false)
             .resize(true)
             .draw();
@@ -136,6 +141,7 @@ function datasetsToMonth(config) {
                     }
                 },
             })
+            .font({ "family": fontFamily})
             .resize(true)
             .draw();
     });
@@ -175,6 +181,7 @@ function datasetsBySubject(config) {
                     }
                 },
             })
+            .font({ "family": fontFamily})
             .legend(false)
             .resize(true)
             .draw();
@@ -222,6 +229,7 @@ function filesToMonth(config) {
                     }
                 },
             })
+            .font({ "family": fontFamily})
             .resize(true)
             .draw();
     });
@@ -268,6 +276,7 @@ function downloadsToMonth(config) {
                     }
                 },
             })
+            .font({ "family": fontFamily})
             .resize(true)
             .draw();
     });

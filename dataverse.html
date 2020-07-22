@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Dataverse
-description: | 
-    __Dataverse__ is an open source web application to share, preserve, cite, explore and analyze research data. 
+description: |
+    __Dataverse__ is an open source web application to share, preserve, cite, explore and analyze research data.
 ---
+
 {% include templates.html %}
-<h3>Dataverse Worldwide</h3>
+<h2>Dataverse Worldwide</h2>
 
 <div class="row d-flex align-items-stretch">
     <div class="col-md-6">
@@ -39,7 +40,7 @@ description: |
 
 
 
-    <div id="mainmetrics" class="row"></div>
+<div id="mainmetrics" class="row"></div>
 
 
 
@@ -130,8 +131,12 @@ description: |
 </div>
 
 
-</div>
-<script src="https://d3plus.org/js/d3.js"></script>
+<!-- <h2>Harvard Dataverse</h2>
+<div>TBD</div>
+<h2>Data Management & Curation</h2>
+<div>TBD</div> -->
+
+
 <script src="https://d3plus.org/js/d3plus.js"></script>
 <script src="{{site.baseurl}}assets/js/dataverse_plots.js"></script>
 
@@ -181,6 +186,7 @@ description: |
     // this section needs to be pushed forward since the {{site.baseurl}} is not handled in the 
     // javascript file
     path = "{{site.baseurl}}assets/data/"
-    
-    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "Dataverse", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
+
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "Dataverse",
+        "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
 </script>

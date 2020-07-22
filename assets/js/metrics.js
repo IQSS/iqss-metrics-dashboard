@@ -1,6 +1,8 @@
 // ----------REGULAR/MAIN METRICS -----------------
 
-function loadMainMetrics(url, div_id, group) {
+
+
+function loadMainMetrics(url, div_id, group, class_override) {
 
     if( group === undefined) {
         group = ''
@@ -13,16 +15,22 @@ function loadMainMetrics(url, div_id, group) {
             for (let i = 1; i < x.length; i++) {
                 let fields = x[i].split(/\t/);
                 if (fields[0] != undefined && fields[0] != "") {
-                    console.log(fields)
+                    // console.log(fields)
                     if (group === '' || group === fields[0]) {
-                        addMetric(fields, div_id);
+                        addMetric(fields, div_id, class_override);
                     }
                 }
             }
         });
 }
 
-function addMetric(fields, div_id) {
+function addMetric(fields, div_id, class_override) {
+
+    if(class_override === undefined ) {
+        class_override = 'col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3'
+    }
+
+
     const metricTemplate = document.getElementById("iq-info-box");
 
     const metricInstance = document.importNode(metricTemplate.content, true);
@@ -36,11 +44,13 @@ function addMetric(fields, div_id) {
             metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
         }
     }
-    metricInstance.querySelector(".info-box").classList.add("bg-iqss-" + fields[6]);
+    
     metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[5] + "'></span>";
     metricInstance.querySelector(".info-box-group").innerHTML = fields[2];
     metricInstance.querySelector(".info-box-value").innerHTML = fields[3];
     metricInstance.querySelector(".info-box-unit").innerHTML = fields[4];
+    metricInstance.querySelector(".info-box-div").className = class_override;
+    metricInstance.querySelector(".info-box").classList.add("bg-iqss-" + fields[6]);
     // metricInstance.querySelector(".info-box-unit").innerHTML = fields[];
     if (div_id !== "") {
         document.getElementById(div_id).appendChild(metricInstance);

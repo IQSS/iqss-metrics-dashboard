@@ -10,7 +10,7 @@ function generateRCPlot(path, name, type) {
     let div = `rc-${name}-by-${type}`
     d3.tsv(path + div + ".tsv", function (data) {
 
-        console.log(div)
+        // console.log(div)
         let labels = []
         let values = []
         let year = data[0]["year"];
@@ -27,7 +27,7 @@ function generateRCPlot(path, name, type) {
             title: title
         }
 
-        console.log(dataset)
+        // console.log(dataset)
         pieChart(div, dataset);
         document.getElementById(div + "-year").innerHTML = year;
     })

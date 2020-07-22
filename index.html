@@ -16,9 +16,9 @@ title: IQSS Metrics
                     <img src="{{item.image}}"  
                         style = "opacity: 1;"
                         class="card-img-top card-image" alt="Image for {{item.name}}">
-                           <span class="card-bg-icon">
+                           <!-- <span class="card-bg-icon">
                                <span class="fa fa-{{item.icon}} fa-6x " aria-hidden="true"></span>
-                           </span>
+                           </span> -->
                         <h1 class="card-img-title">
                            {{item.name}}
                         </h1>    
@@ -28,7 +28,7 @@ title: IQSS Metrics
                 <div class="card-body card-distribute-items" >
                                                                
                         <div>{{item.description | markdownify}}</div>
-                        <a href="{{item.link}}" ><button class="btn btn btn-block btn-primary" >See the Metrics...</button>
+                        <a href="{{item.link}}" ><button class="btn btn btn-block btn-primary" >See {{item.name}} metrics</button>
                             </a>
 
             

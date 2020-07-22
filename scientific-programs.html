@@ -12,7 +12,7 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
 <h3>CGA Contact</h3>
 
 <div class="row">
-    <div class="card card-iqss-primary card-outline col-lg-6">
+    <div class="card card-iqss-primary card-outline col-lg-8">
         <div class="card-header">
             <h3 class="card-title">
                 Virtual help desk requests last 12 months
@@ -23,7 +23,15 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
         </div>
         <!-- /.card -->
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-4">
+    <div id="mainmetrics"></div>
+</div>
+
+    
+</div>
+<div class="row">
+
+    <div class="col-md-6">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">
@@ -35,10 +43,7 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
         </div>
     </div>
 
-    
-</div>
-<div class="row">
-    <div class="col-lg-6">
+    <div class="col-md-6">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">
@@ -145,22 +150,47 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
     });
 
     d3.tsv("{{site.baseurl}}assets/data/cga_contact_status.tsv", function (data) {
+        
         let labels = []
         let d = [];
         for (var i = 0; i < data.length; i++) {
-            labels.push(data[i]["Harvard status/Appointment"]);
+            labels.push(`${data[i]["Your Harvard status/appointment"]} (${data[i]["percentage"]})`);
             d.push(parseInt(data[i].count));
         }
-        horizontalBarChart('cgaStatusRequests', {
+
+        pieChart('cgaStatusRequests', {
             x: labels,
             y: d,
             title: 'Total Contact requests',
             color: iqss_orange,
             label_x: "Month",
-            label_y: "Number of requests",
-            line_tension: 0
+            label_y: "Number of requests"
         });
     });
+
+    // cga_contact_last_12_months_by_school
+
+    d3.tsv("{{site.baseurl}}assets/data/cga_contact_last_12_months_by_school.tsv", function (data) {
+                
+                let labels = []
+                let d = [];
+        
+                console.log(data.length)
+                
+                for (var i = 0; i < data.length; i++) {
+                    labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
+                    d.push(parseInt(data[i].count));
+                }
+                pieChart('cga_contact_last_12_months_by_school', {
+                    x: labels,
+                    y: d,
+                    title: 'Total Requests',
+                    color: iqss_blue,
+                    label_x: "Harvard status",
+                    label_y: "Number of License Requests"
+                });
+            });
+
 
     d3.tsv("{{site.baseurl}}assets/data/cga_training.tsv", function (data) {
         let labels = []
@@ -223,7 +253,8 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
         let d = [];
 
         for (var i = 0; i < data.length; i++) {
-            labels.push(data[i]["harvard_status"]);
+            // labels.push(data[i]["Your primary affiliated school at Harvard"]);
+            labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
             d.push(parseInt(data[i].count));
         }
         pieChart('cga_license_request_last_12_months_by_status', {
@@ -236,27 +267,9 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
         });
     });
 
-    // cga_contact_last_12_months_by_school
 
-    d3.tsv("{{site.baseurl}}assets/data/cga_contact_last_12_months_by_school.tsv", function (data) {
-        let labels = []
-        let d = [];
-
-        for (var i = 0; i < data.length; i++) {
-            labels.push(data[i]["school"]);
-            d.push(parseInt(data[i].count));
-        }
-        barChart('cga_contact_last_12_months_by_school', {
-            x: labels,
-            y: d,
-            title: 'Total Requests',
-            color: iqss_blue,
-            label_x: "Harvard status",
-            label_y: "Number of License Requests"
-        });
-    });
 
     // createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
     // loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
-    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "CGA", "col-lg-6");
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "CGA", "col-lg-12");
 </script>

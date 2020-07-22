@@ -1,14 +1,10 @@
-Harvard status/Appointment	count
-Non-Harvard	53
-Graduate student: Doctorate	53
-Graduate student: Masters	44
-Staff	32
-Research fellow	30
-Undergraduate student	15
-Post doctoral research associate	15
-Faculty	14
-Research assistant	13
-Non-degree student	8
-Other Affliate	6
-Visitor	6
-Alum or Emeritus	5
+id	Your Harvard status/appointment	count	fraction	percentage
+0	Graduate student: Doctorate	53	0.22	22%
+2	Graduate student: Masters	44	0.18	18%
+3	Staff	32	0.13	13%
+4	Research fellow	30	0.12	12%
+5	Undergraduate student	15	0.06	6%
+6	Post doctoral research associate	15	0.06	6%
+7	Faculty	14	0.06	6%
+8	Research assistant	13	0.05	5%
+0	Other	25	0.09000000000000001	9%

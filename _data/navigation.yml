@@ -4,13 +4,13 @@
   description:  We work hard to make social science research better, faster, and more collaborative. To keep our efforts on track, we collect metrics—which you can explore in the categories below.
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
 - name: Business Operations
-  link: bo.html
+  link: business-operations.html
   icon: dollar-sign
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
   description: | 
     Business operations provides IQSS' programs and teams with administrative and financial support, as well as general services to the IQSS community.
 - name: Data Science Services
-  link: dss.html
+  link: data-science-services.html
   icon: table
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/data-science-hero.png?m=1585859089&itok=lpmQBFfi
   description: Data Science Services (DSS) assists researchers in the Harvard community in overcoming obstacles at every stage of the research and publication process.
@@ -22,20 +22,20 @@
   # image: https://dataverse.org/files/dataverseorg/files/dataverse_r_project.png
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/events-9_01.jpg?m=1559844260&itok=Gf0eI5aN
 - name: IT Support
-  link: css.html
+  link: it-support.html
   icon: desktop
   color: warning
   description: |
     Client Support Services (CSS) provides desktop IT support and assistance with all of our affiliates' hardware and software needs.
   image: https://projects.iq.harvard.edu/files/styles/os_files_xlarge/public/harvard-iqss/files/img_0029-1.jpg?m=1585862380&itok=YwcMagf1
 - name: Research Computing
-  link: rc.html
+  link: research-computing.html
   icon: server
   description: |
     The Research Computing Environment (RCE) is a powerful computer cluster that you can use to run jobs that are too large for a personal workstation.
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/rce-banner.jpg?m=1588093363&itok=VMaAOCju
 - name: Scientific Programs
-  link: cga.html
+  link: scientific-programs.html
   icon: flask
   description: |
     IQSS is home to many faculty-led scientific programs that focus on specialized qualitative and quantitative social science topics of interest.

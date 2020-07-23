@@ -1,13 +1,19 @@
 ---
 layout: default
 title: Scientific Programs
-description: The Center for Geographic Analysis (CGA) supports research and teaching across all disciplines in the University as they relate to geospatial technology and methods. 
+toplinks: 
+  - id: cga
+    name: CGA
+  - id: psr
+    name: Program on Survey Research
 ---
-<!-- templates for the widgets -->
+
 {% include templates.html %}
-<h1></h1>
-<h2>Center for Geographical Analysis (CGA)</h2>
-{{ page.description | markdownify }}
+{% include toplinks.html %}
+
+<h2 id="cga">Center for Geographical Analysis (CGA)</h2>
+The <span class="font-weight-bold">Center for Geographic Analysis (CGA)</span> supports research and teaching across all
+disciplines in the University as they relate to geospatial technology and methods.
 
 <h3>CGA Contact</h3>
 
@@ -24,10 +30,10 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
         <!-- /.card -->
     </div>
     <div class="col-lg-4">
-    <div id="mainmetrics"></div>
-</div>
+        <div id="mainmetrics"></div>
+    </div>
 
-    
+
 </div>
 <div class="row">
 
@@ -50,15 +56,15 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
                     Helpdesk requests by affiliated school (Last 12 Months)
                 </h3>
             </div>
-            
+
             <canvas id="cga_contact_last_12_months_by_school"></canvas>
         </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
 </div>
 
 
@@ -129,6 +135,12 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
 
 </div>
 
+<h2 id="psr">Program on Survey Research</h2>
+<p>The <span class="font-weight-bold">Program on Survey Research</span> encourages and facilitates research and instruction
+in the theory and practice of survey research, with a mission of enhancing the quality of teaching and research at
+Harvard.</p>
+<p>TBD </p>
+
 
 <script>
     d3.tsv("{{site.baseurl}}assets/data/cga_contact.tsv", function (data) {
@@ -150,7 +162,7 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
     });
 
     d3.tsv("{{site.baseurl}}assets/data/cga_contact_status.tsv", function (data) {
-        
+
         let labels = []
         let d = [];
         for (var i = 0; i < data.length; i++) {
@@ -171,25 +183,25 @@ description: The Center for Geographic Analysis (CGA) supports research and teac
     // cga_contact_last_12_months_by_school
 
     d3.tsv("{{site.baseurl}}assets/data/cga_contact_last_12_months_by_school.tsv", function (data) {
-                
-                let labels = []
-                let d = [];
-        
-                console.log(data.length)
-                
-                for (var i = 0; i < data.length; i++) {
-                    labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
-                    d.push(parseInt(data[i].count));
-                }
-                pieChart('cga_contact_last_12_months_by_school', {
-                    x: labels,
-                    y: d,
-                    title: 'Total Requests',
-                    color: iqss_blue,
-                    label_x: "Harvard status",
-                    label_y: "Number of License Requests"
-                });
-            });
+
+        let labels = []
+        let d = [];
+
+        console.log(data.length)
+
+        for (var i = 0; i < data.length; i++) {
+            labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
+            d.push(parseInt(data[i].count));
+        }
+        pieChart('cga_contact_last_12_months_by_school', {
+            x: labels,
+            y: d,
+            title: 'Total Requests',
+            color: iqss_blue,
+            label_x: "Harvard status",
+            label_y: "Number of License Requests"
+        });
+    });
 
 
     d3.tsv("{{site.baseurl}}assets/data/cga_training.tsv", function (data) {

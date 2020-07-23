@@ -1,0 +1,9 @@
+{% if page.toplinks %}
+<div class="mb-5">
+    {% for link in page.toplinks %}
+    <a href="#{{link.id}}">
+        <button type="button" class="btn btn-primary">Go to {{link.name}}</button>
+    </a>
+    {% endfor %}
+</div>
+{% endif %}    

@@ -3,10 +3,19 @@ layout: default
 title: Dataverse
 description: |
     __Dataverse__ is an open source web application to share, preserve, cite, explore and analyze research data.
----
+toplinks: 
+    - id: dv
+      name: Dataverse Worldwide
+    - id: hdv
+      name: Harvard Dataverse
+    - id: dmc
+      name: Data Management & Curation
 
+---
 {% include templates.html %}
-<h2>Dataverse Worldwide</h2>
+{% include toplinks.html %}
+
+<h2 id="dv">Dataverse Worldwide</h2>
 
 <div class="row d-flex align-items-stretch">
     <div class="col-md-6">
@@ -131,13 +140,15 @@ description: |
 </div>
 
 
-<!-- <h2>Harvard Dataverse</h2>
+<h2 id="hdv">Harvard Dataverse</h2>
 <div>TBD</div>
-<h2>Data Management & Curation</h2>
-<div>TBD</div> -->
+<h2 id="dmc">Data Management & Curation</h2>
+<div>TBD</div>
 
 
 <script src="https://d3plus.org/js/d3plus.js"></script>
+
+<!-- D3 plus plots -->
 <script src="{{site.baseurl}}assets/js/dataverse_plots.js"></script>
 
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"

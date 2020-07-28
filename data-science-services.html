@@ -3,48 +3,123 @@ layout: default
 title: Data Science Services
 ---
 
+<h3 id="consulting_services">Consulting</h3>
 <div class="row">
+    <div class="col-xl-6">
 
-    <div class="consulting_services">
-        <h4 id="consulting_services">Consulting</h4>
-        <div class="year_quarter"></div>
-        <div class="timeseriesCommunity"></div>
-        <div class="patron_community"></div>
-        <div class="request_type"></div>
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Number of New Help Requests
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="year_quarter viz"></div>
+            </div>
+        </div>
     </div>
+
+    <div class="col-xl-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Cumulative Number of Requests (Top Users)
+                </h3>
+            </div>
+            <div class="card-body">
+                
+                    <div class="timeseriesCommunity viz"></div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="col-xl-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Number of Help Requests by Affiliation
+                </h3>
+            </div>
+            <div class="card-body">                
+                    <div class="patron_community viz"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Number of Help Requests by Type
+                </h3>
+            </div>
+            <div class="card-body">
+                
+                    <div class="request_type viz"></div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
+<h4 id="training_services">Training</h4>
 <div class="row">
+    <div class="col-xl-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Regular Workshops
+                </h3>
+            </div>
+            <div class="card-body">
+                
+                    <div class="workshopAttendance viz"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Cumulative Number of Requests (Top Users)
+                </h3>
+            </div>
+            <div class="card-body">
+                
+                    <div class="workshopNumber viz"></div>
+            </div>
+        </div>
+    </div> -->
 
     <div class="training_services">
-        <h4 id="training_services">Training</h4>
-        <h5>Regular Workshops</h5>
+        
         <div class="workshops">
-            <span class="workshopAttendance"></span>
-            <span class="workshopNumber"></span>
+        
+            <!-- <span class=""></span> -->
         </div>
-        <h5>DataFest *)</h5>
+        <!-- <h5>DataFest *)</h5>
         <div class="dataFest">
             <span class="dataFestAttendance"></span>
             <span class="dataFestNumber"></span>
             <span id="dataFestA">
                 <p>*) DataFest is a collaborative effort with other units at Harvard</p>
             </span>
-        </div>
+        </div> -->
     </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
 
     <div class="research_output">
         <h4>Research Output (known to us)</h4>
         <div class="research_publications">
             <span class="resOutputYears"></span>
             <span class="resOutputDepts"></span>
-            <!-- <p id="under_construction">Under construction</p> -->
         </div>
     </div>
 
-</div>
-<script src="https://d3plus.org/js/d3plus.js"></script>
+</div> -->
+<!-- <script src="https://d3plus.org/js/d3plus.js"></script> -->
+<script src="{{site.baseurl}}assets/js/plot.js"></script>
 <script src="{{site.baseurl}}assets/js/dss_plots.js"></script>

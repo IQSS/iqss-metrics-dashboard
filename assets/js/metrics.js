@@ -1,7 +1,5 @@
 // ----------REGULAR/MAIN METRICS -----------------
 
-
-
 function loadMainMetrics(url, div_id, group, class_override) {
 
     if( group === undefined) {
@@ -119,7 +117,6 @@ function loadBusinessOperationsMetrics(url, div_id) {
 
 
 function addBOMetric(fields, div_id) {
-
     const metricTemplate = document.getElementById("iq-info-box");
 
     const metricInstance = document.importNode(metricTemplate.content, true);
@@ -138,8 +135,7 @@ function addBOMetric(fields, div_id) {
 }
 
 function createUniqueGroupDivs(file, main_div, group_field) {
-
-    d3.tsv(file, function (data) {
+    d3.tsv(file, function(data) {
         groups = []
         data.forEach(element => {
             group = element[group_field]
@@ -153,5 +149,6 @@ function createUniqueGroupDivs(file, main_div, group_field) {
             div.innerHTML += `<h4>${element}</h4>`;
             div.innerHTML += `<div id="${element}" class="row"></div>`;
         });
-    });
+      });
+
 }

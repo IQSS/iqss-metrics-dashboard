@@ -60,7 +60,7 @@ function addAccessibilityItems(div_id, title) {
     var elm = document.getElementById(div_id);
     elm.innerHTML += '<p>Plot ' + title + '</p>';
     elm.setAttribute("aria-label", title);
-    elm.setAttribute("role", "img"); 
+    elm.setAttribute("role", "img");
 }
 
 
@@ -81,7 +81,7 @@ function pieChart(div_id, data) {
             }]
         },
         options: {
-            aspectRatio:1
+            aspectRatio: 1
         }
     });
 }
@@ -280,7 +280,7 @@ function lineChart(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    
+
     new Chart(ctx, {
         type: "line",
         data: {
@@ -348,7 +348,7 @@ function pointChart(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    
+
     new Chart(ctx, {
         type: "line",
         data: {
@@ -413,4 +413,47 @@ function pointChart(div_id, data) {
             },
         },
     });
+}
+
+
+// Helper function for DSS
+function create_rest_category(data, fraction, numfield, charfield) {
+
+    // get total
+    const reducer = (accumulator, currentValue) => accumulator + parseInt(currentValue.n);
+    const total = data.reduce(reducer, 0)
+
+    // Sort
+    data.sort(function (a, b) {
+        return b[numfield] - a[numfield]
+    })
+
+
+    let data_aggr = []
+    let rest = 0
+    let i = 0
+
+    const threshold = fraction * total
+
+    for (d of data) {
+        // console.log(d)
+
+        if (d[numfield] < threshold) {
+            rest = rest + d.n
+        } else {
+            let d2 = d;
+            d2["order"] = i;
+            data_aggr.push(d2)
+            i++;
+        }
+    }
+
+    let new_record = data[0]
+    new_record[numfield] = rest
+    new_record[charfield] = "Other"
+    new_record["order"] = i
+
+    data_aggr.push(new_record);
+
+    return data_aggr;
 }

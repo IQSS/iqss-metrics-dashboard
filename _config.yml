@@ -55,5 +55,5 @@ exclude:
   - vendor/ruby/
 
 title: IQSS Metrics Dashboard
-url: 127.0.0.1:4000
-baseurl: "/"
+url: iqss.github.io
+baseurl: "/iqss-metrics-dashboard/"

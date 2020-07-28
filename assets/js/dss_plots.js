@@ -6,7 +6,6 @@ let path = "assets/data/dss/";
 let fontFamily = "Montserrat";
 
 
-
 $(document).ready(function () {
     year_quarter(); //1
     timeSeriesCommunity(); //2
@@ -89,6 +88,7 @@ function year_quarter() {
     });
 };
 
+
 //#OK (2)
 function timeSeriesCommunity() {
     d3.csv(path + "timeseries_community_quarter.csv", function (error, data) {
@@ -121,7 +121,7 @@ function timeSeriesCommunity() {
             .legend({
                 "order": {
                     "sort": "asc",
-                    "value": "patron_community"
+                    // "value": "patron_community"
                 },
                 "size": 75,
                 // "text": "patron_community",
@@ -180,7 +180,7 @@ function patron_community() {
 
 
 
-// Request Type
+// Request Type (4)
 function request_type() {
     d3.csv(path + "request_types.csv", function (error, data) {
         if (error) return console.error(error);
@@ -189,7 +189,7 @@ function request_type() {
         var myNumData = coerceToNum(data, "n");
 
         let data_aggr = create_rest_category(myNumData, 0.01, "n", "request_type")
-        console.log(data_aggr)
+
 
         d3plus.viz()
             .container(".request_type")

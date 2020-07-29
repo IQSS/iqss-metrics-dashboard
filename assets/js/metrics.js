@@ -34,16 +34,18 @@ function addMetric(fields, div_id, class_override) {
     const metricTemplate = document.getElementById("iq-info-box");
 
     const metricInstance = document.importNode(metricTemplate.content, true);
-    if (fields[7].length > 1) {
 
-        if (fields[7].substring(0, 4) == 'http') {
-            metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
-            metricInstance.querySelector(".info-url").setAttribute('target', "_blank")
-            // add _self
-        } else {
-            metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
-        }
-    }
+    //  At the moment we do not use the URL
+    // if (fields[7].length > 1) {
+
+    //     if (fields[7].substring(0, 4) == 'http') {
+    //         metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
+    //         metricInstance.querySelector(".info-url").setAttribute('target', "_blank")
+    //         // add _self
+    //     } else {
+    //         metricInstance.querySelector(".info-url").setAttribute('href', fields[7])
+    //     }
+    // }
     
     metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[5] + "'></span>";
     metricInstance.querySelector(".info-box-group").innerHTML = fields[2];

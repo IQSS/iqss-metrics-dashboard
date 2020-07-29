@@ -374,13 +374,13 @@ h3 {
     padding: 1em;
 }
 
-/* http://guides.dataverse.org/en/4.11/style/foundations.html#link-colors */
 a {
-    color: #337AB7;
+    color: var(--iqss-lighter-blue); 
 }
 
-a:hover {
-    color: #23527C;
+a:focus, a:hover {
+    color: var(--iqss-dark-blue);
+    text-decoration: underline;
 }
 
 

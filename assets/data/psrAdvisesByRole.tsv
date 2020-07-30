@@ -1,7 +1,7 @@
-Role	Number of Advisees	Cumulative Advisees	Order	Period
-Undergraduate Student	24	24	1	January 2019 - May 2020
-Graduate Student (Masters Level)	5	29	2
-PhD / MD Student	38	67	3
-Post Doctoral and Visiting Fellows	7	74	4
-Faculty Members	34	108	5
-Professional and Academic Staff	30	138	6
+Role	Number of Advisees	Cumulative Advisees	Percentage	Order	Period
+Undergraduate Student	24	24	17%	1	January 2019 - May 2020
+Graduate Student (Masters Level)	5	29	4%	2
+PhD / MD Student	38	67	28%	3
+Post Doctoral and Visiting Fellows	7	74	5%	4
+Faculty Members	34	108	25%	5
+Professional and Academic Staff	30	138	22%	6

@@ -19,7 +19,7 @@ var olive = "#BCBD22"
 var cyan = "#17BECF"
 
 // chartJS default settings
-Chart.defaults.global.defaultFontSize = 16;
+Chart.defaults.global.defaultFontSize = 14;
 Chart.defaults.global.defaultFontFamily = "Montserrat";
 Chart.defaults.global.defaultFontColor = "#000";
 
@@ -83,6 +83,14 @@ function pieChart(div_id, data) {
         },
         options: {
             aspectRatio: 1,
+            legend: {
+                position: 'bottom',
+                labels: {
+                    // fontColor: 'rgb(255, 99, 132)',
+                    fontSize: 13
+                }
+                // display: false,
+            },
             tooltips: {
                 callbacks: {
                     label: function(tooltipItem, data) {
@@ -198,19 +206,37 @@ function horizontalBarChart(div_id, data) {
                 xAxes: [{
                     ticks: {
                         beginAtZero: true,
-                    }
+                    },
+                      scaleLabel: {
+                        display: true,
+                        labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
                 }],
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
                     },
                     display: true,
-                }]
+                }],
+                
+               
+                    // gridLines: false,
+                
             },
             legend: {
                 // position: 'right',
                 display: false,
             },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            }
             // title: {
             //     display: true,
             //     text: 'Chart.js Horizontal Bar Chart'
@@ -333,6 +359,8 @@ function lineChart(div_id, data) {
                     scaleLabel: {
                         display: true,
                         labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     // gridLines: false,
                 }, ],
@@ -340,6 +368,8 @@ function lineChart(div_id, data) {
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     ticks: {
                         beginAtZero: true,
@@ -386,12 +416,15 @@ function mixedChart(div_id, data) {
             },
             legend: {
                 display: true,
+                position: 'bottom'
             },
             scales: {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     // gridLines: false,
                 }, ],
@@ -399,6 +432,8 @@ function mixedChart(div_id, data) {
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     ticks: {
                         beginAtZero: true,
@@ -457,11 +492,21 @@ function pointChart(div_id, data) {
             legend: {
                 display: false,
             },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 10,
+                    top: 0,
+                    bottom: 0
+                }
+            },
             scales: {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     // gridLines: false,
                 }, ],
@@ -469,6 +514,8 @@ function pointChart(div_id, data) {
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     ticks: {
                         min: 1,

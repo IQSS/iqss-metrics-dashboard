@@ -1,12 +1,12 @@
 $(document).ready(function () {
     console.log(path)
-    generateRCPlot(path, 'interactive', 'department');
-    generateRCPlot(path, 'interactive', 'school');
-    generateRCPlot(path, 'batch', 'department');
-    generateRCPlot(path, 'batch', 'school');
+    generatePSRPlot(path, 'interactive', 'department');
+    generatePSRPlot(path, 'interactive', 'school');
+    generatePSRPlot(path, 'batch', 'department');
+    generatePSRPlot(path, 'batch', 'school');
 });
 
-function generateRCPlot(path, name, type) {
+function generatePSRPlot(path, name, type) {
     let div = `rc-${name}-by-${type}`
     d3.tsv(path + div + ".tsv", function (data) {
 
@@ -17,7 +17,8 @@ function generateRCPlot(path, name, type) {
         let title = "RCE " + name + "by" + type + " in " + year // not used
 
         for (i = 0; i < data.length; i++) {
-            labels.push(`${data[i][type]} (${data[i]["percentage"]})`);
+            // labels.push(`${data[i][type]} (${data[i]["percentage"]})`);
+            labels.push(`${data[i][type]}`);
             values.push(data[i]["count"]);
         }
 

@@ -140,6 +140,8 @@ disciplines in the University as they relate to geospatial technology and method
 
 </div>
 
+<!--  Program on Survey Research -->
+
 <h2 id="psr">Program on Survey Research</h2>
 <p>The <span class="font-weight-bold">Program on Survey Research</span> encourages and facilitates research and
     instruction
@@ -147,6 +149,69 @@ disciplines in the University as they relate to geospatial technology and method
     Harvard.</p>
 <div class="alert alert-info" role="alert">
     This section is still under construction
+</div>
+
+
+<h3>Advisees by School</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    PSR Advisees by School <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-school" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Distribution of PSR Advisees by School <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-school-distribution" class="viz"></canvas>
+            </div>       
+        </div>
+    </div>
+</div>
+
+<h3>Advisees by Primary Role</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    PSR Advisees by Primary Role <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-role" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Distribution of PSR Primary Role <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-role-distribution" class="viz"></canvas>
+            </div>       
+        </div>
+    </div>
+
 </div>
 
 
@@ -174,7 +239,8 @@ disciplines in the University as they relate to geospatial technology and method
         let labels = []
         let d = [];
         for (var i = 0; i < data.length; i++) {
-            labels.push(`${data[i]["Your Harvard status/appointment"]} (${data[i]["percentage"]})`);
+            // labels.push(`${data[i]["Your Harvard status/appointment"]} (${data[i]["percentage"]})`);
+            labels.push(`${data[i]["Your Harvard status/appointment"]}`);
             d.push(parseInt(data[i].count));
         }
 
@@ -198,7 +264,8 @@ disciplines in the University as they relate to geospatial technology and method
         console.log(data.length)
 
         for (var i = 0; i < data.length; i++) {
-            labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
+            labels.push(`${data[i]["Your primary affiliated school at Harvard"]}`);
+            // labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
             d.push(parseInt(data[i].count));
         }
         pieChart('cga_contact_last_12_months_by_school', {
@@ -273,8 +340,8 @@ disciplines in the University as they relate to geospatial technology and method
         let d = [];
 
         for (var i = 0; i < data.length; i++) {
-            // labels.push(data[i]["Your primary affiliated school at Harvard"]);
-            labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
+            labels.push(data[i]["Your primary affiliated school at Harvard"]);
+            // labels.push(`${data[i]["Your primary affiliated school at Harvard"]} (${data[i]["percentage"]})`);
             d.push(parseInt(data[i].count));
         }
         pieChart('cga_license_request_last_12_months_by_status', {
@@ -293,3 +360,9 @@ disciplines in the University as they relate to geospatial technology and method
     // loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
     loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "CGA", "col-lg-12");
 </script>
+
+<script>
+    path = "{{site.baseurl}}assets/data/"
+</script>
+
+<script src="/assets/js/psr_plots.js"></script>

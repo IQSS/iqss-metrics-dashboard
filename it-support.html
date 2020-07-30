@@ -5,21 +5,69 @@ title: IT Support
 
 
 <h2>Client Support Services</h2>
-<div class="row">
-    <h4>Quartly tickets</h4>
-    <canvas id="quarterly_tickets"></canvas>
 
-    <h4>Call by device type over the years</h4>
-    <canvas id="device_type"></canvas>
-
-    <h4>Calls by device type <span id="FYpie">latest FY</span></h4>
-    <canvas id="device_type-pie"></canvas>
+<div class="alert alert-info" role="alert">
+    This page is still under construction
 </div>
 
-<!-- <embed src="https://www.iq.harvard.edu/files/harvard-iqss/files/css_metrics_fy20.pdf#toolbar=0" type="application/pdf"
-    width="95%" height="800px" /> -->
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Quarterly tickets
+                </h3>
+            </div>
+            <div class="card-body">
+                <!-- <div class="year_quarter viz"></div> -->
+                <canvas id="quarterly_tickets" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
 
-<script>
-    path = "{{site.baseurl}}/assets/data/"
-</script>
-<script src="{{site.baseurl}}assets/js/css_plots.js"></script>
+    <div class="col-xl-6">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Quarterly tickets
+                </h3>
+            </div>
+            <div class="card-body">
+                <!-- <div class="year_quarter viz"></div> -->
+                <canvas id="device_type" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Calls by device type <span id="FYpie">latest FY</span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <!-- <div class="year_quarter viz"></div> -->
+                <canvas id="device_type-pie" class="viz"></canvas>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+
+
+
+    <h4></h4>
+
+    <h4></h4>
+
+    < </div> <!-- <embed src="https://www.iq.harvard.edu/files/harvard-iqss/files/css_metrics_fy20.pdf#toolbar=0"
+        type="application/pdf" width="95%" height="800px" /> -->
+
+    <script>
+        path = "{{site.baseurl}}assets/data/"
+    </script>
+    <script src="{{site.baseurl}}assets/js/css_plots.js"></script>

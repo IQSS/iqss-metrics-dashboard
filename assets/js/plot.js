@@ -69,6 +69,7 @@ function pieChart(div_id, data) {
     // data.y: values
     // data.title: 
     var ctx = document.getElementById(div_id).getContext('2d');
+    const reducer = (accumulator, currentValue) => parseFloat(accumulator) + parseFloat(currentValue);
 
     new Chart(ctx, {
         type: "pie",
@@ -81,7 +82,26 @@ function pieChart(div_id, data) {
             }]
         },
         options: {
-            aspectRatio: 1
+            aspectRatio: 1,
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        // console.log(data)
+                        total = data.datasets[tooltipItem.datasetIndex].data.reduce(reducer)
+                        value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
+                        
+                        percentage = Math.round((100 *value) / total)
+                        // console.log(percentage)
+                        var label = data.labels[tooltipItem.index] || '';
+    
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += `${value} (${percentage}%)`;
+                        return label;
+                    }
+                }
+            }
         }
     });
 }
@@ -343,6 +363,64 @@ function lineChart(div_id, data) {
     });
 }
 
+
+function mixedChart(div_id, data) {
+    var ctx = document.getElementById(div_id).getContext('2d');
+    addAccessibilityItems(div_id, data.title);
+    console.log(data.y)
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            datasets: data.y,
+            labels: data.x
+        },
+        options: {
+            maintainAspectRatio: true,
+            aspectRatio: 1,
+            responsive: true,
+            // events: ['click' ],
+            tooltips: {
+                // position: position,
+                mode: "nearest",
+                intersect: false,
+            },
+            legend: {
+                display: true,
+            },
+            scales: {
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_x,
+                    },
+                    // gridLines: false,
+                }, ],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_y,
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+
+                            if (value > 1000000) {
+                                return value / 1000000 + "M";
+                            }
+                            if (value > 1000) {
+                                return value / 1000 + "K";
+
+                            } else {
+                                return value
+                            }
+                        }
+                    },
+                    // gridLines: true,
+                }, ],
+            },
+        },
+    });
+}
 
 function pointChart(div_id, data) {
 

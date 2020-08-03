@@ -1,5 +1,20 @@
-year	PC	Mac
-FY17	917.0	466.0
-FY18	691.0	328.0
-FY19	900.0	483.0
-FY20	1206.0	627.0
+id	PC	Mac	Sum	Year
+Software Issue	264.0	125.0	389.0	FY20
+Printer/Copier	125.0	59.0	184.0	FY20
+System Setup/Re-imaged	110.0	50.0	160.0	FY20
+Email Related	95.0	60.0	155.0	FY20
+Backup/Restore	91.0	34.0	125.0	FY20
+Software Install	80.0	43.0	123.0	FY20
+Windows/MacOS	81.0	41.0	122.0	FY20
+Account Related	68.0	35.0	103.0	FY20
+Hardware Issue/Replacement	64.0	36.0	100.0	FY20
+Domain/Drive Mapping	56.0	40.0	96.0	FY20
+Purchasing Hardware/Software	45.0	27.0	72.0	FY20
+General Inquiry	41.0	20.0	61.0	FY20
+Network/Jack related	32.0	23.0	55.0	FY20
+Equipment Move	8.0	14.0	22.0	FY20
+Virus/Malware	7.0	10.0	17.0	FY20
+Loaner	14.0	3.0	17.0	FY20
+Recycling Equipment	14.0	2.0	16.0	FY20
+Registering a device	10.0	3.0	13.0	FY20
+Research/Training	1.0	2.0	3.0	FY20

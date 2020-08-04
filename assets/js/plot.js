@@ -285,12 +285,15 @@ function multiLineChart(div_id, data) {
             },
             legend: {
                 display: true,
+                position: 'bottom',
             },
             scales: {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     // gridLines: false,
                 }, ],
@@ -298,6 +301,8 @@ function multiLineChart(div_id, data) {
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     ticks: {
                         beginAtZero: true,
@@ -325,7 +330,7 @@ function stackedArea(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    console.log(data.datasets)
+    
     // add default settings to the dataset.
     let d2 = []
     let templateObj = {
@@ -369,12 +374,15 @@ function stackedArea(div_id, data) {
             },
             legend: {
                 display: true,
+                position: 'bottom',
             },
             scales: {
                 xAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     // gridLines: false,
                 }, ],
@@ -382,6 +390,8 @@ function stackedArea(div_id, data) {
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     stacked:true,
                     ticks: {
@@ -406,6 +416,179 @@ function stackedArea(div_id, data) {
     });
 }
 
+function stackedHorizontalBar(div_id, data) {
+
+    var ctx = document.getElementById(div_id).getContext('2d');
+    addAccessibilityItems(div_id, data.title);
+    
+    // add default settings to the dataset.
+    let d2 = []
+    let templateObj = {
+        fill: true,
+        borderWidth: 4,
+        lineTension: 0        
+    }
+    let i = 0
+
+    for (d of data.datasets) {
+
+        let merged = {
+            ...templateObj,
+            ...d,
+
+            backgroundColor: d.borderColor, 
+        };
+        d2.push(merged)
+        i += 1;
+    }
+
+    new Chart(ctx, {
+        type: "horizontalBar",
+        data: {
+            labels: data.x,
+            datasets: d2,
+        },
+        options: {
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            responsive: true,
+            // events: ['click' ],
+            tooltips: {
+                // position: position,
+                mode: "nearest",
+                intersect: false,
+            },
+            legend: {
+                display: true,
+                position: 'bottom',
+            },
+            scales: {
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
+                    stacked:true,
+                    // gridLines: false,
+                }, ],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
+                    stacked:true,
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+
+                            if (value > 1000000) {
+                                return value / 1000000 + "M";
+                            }
+                            if (value > 1000) {
+                                return value / 1000 + "K";
+
+                            } else {
+                                return value
+                            }
+                        }
+                    },
+                    // gridLines: true,
+                }, ],
+            },
+        },
+    });
+}
+
+function stackedBar(div_id, data) {
+
+    var ctx = document.getElementById(div_id).getContext('2d');
+    addAccessibilityItems(div_id, data.title);
+    
+    // add default settings to the dataset.
+    let d2 = []
+    let templateObj = {
+        fill: true,
+        borderWidth: 4,
+        lineTension: 0        
+    }
+    let i = 0
+
+    for (d of data.datasets) {
+
+        let merged = {
+            ...templateObj,
+            ...d,
+
+            backgroundColor: d.borderColor, 
+        };
+        d2.push(merged)
+        i += 1;
+    }
+
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: data.x,
+            datasets: d2,
+        },
+        options: {
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            responsive: true,
+            // events: ['click' ],
+            tooltips: {
+                // position: position,
+                mode: "nearest",
+                intersect: false,
+            },
+            legend: {
+                display: true,
+                position: 'bottom',
+            },
+            scales: {
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
+                    stacked:true,
+                    // gridLines: false,
+                }, ],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
+                    stacked:true,
+                    ticks: {
+                        beginAtZero: true,
+                        callback: function (value, index, values) {
+
+                            if (value > 1000000) {
+                                return value / 1000000 + "M";
+                            }
+                            if (value > 1000) {
+                                return value / 1000 + "K";
+
+                            } else {
+                                return value
+                            }
+                        }
+                    },
+                    // gridLines: true,
+                }, ],
+            },
+        },
+    });
+}
 
 function lineChart(div_id, data) {
 

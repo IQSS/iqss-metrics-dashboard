@@ -10,12 +10,13 @@ title: IT Support
     This page is still under construction
 </div>
 
+<h3>Resolved Tickets</h3>
 <div class="row">
     <div class="col-xl-6">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title card-iqss-title">
-                    Quarterly tickets
+                    Quarterly Resolved Tickets
                 </h3>
             </div>
             <div class="card-body">
@@ -30,12 +31,57 @@ title: IT Support
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title card-iqss-title">
-                    Quarterly tickets
+                    Resolved tickets <span id="tickets-by-subject-period"></span>
                 </h3>
             </div>
             <div class="card-body">
                 <!-- <div class="year_quarter viz"></div> -->
-                <canvas id="device_type" class="viz"></canvas>
+                <canvas id="tickets-by-subject" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-12">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Resolved Tickets by Month
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="monthly_tickets" class="viz"></canvas>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-6">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Resolved tickets <span id="tickets-by-device-type-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="tickets-by-device-type" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-xl-6">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                   Patron Community <span id="patron-community-bar-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="patron-community-bar" class="viz"></canvas>
             </div>
         </div>
     </div>
@@ -45,27 +91,51 @@ title: IT Support
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title card-iqss-title">
-                    Calls by device type <span id="FYpie">latest FY</span>
+                    Patron Community <span id="patron-community-pie-period"></span>
                 </h3>
             </div>
             <div class="card-body">
-                <!-- <div class="year_quarter viz"></div> -->
-                <canvas id="device_type-pie" class="viz"></canvas>
-
+                <canvas id="patron-community-pie" class="viz"></canvas>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<h3>PC and Mac</h3>
 <div class="row">
+    <div class="col-xl-6">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Tickets for PC and Mac by Type <span id="mac-pc-type-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="mac-pc-type" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6">
+
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title card-iqss-title">
+                    Tickets for PC and Mac
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="mac-pc-years" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
-
-    <h4></h4>
-
-    <h4></h4>
-
-    < </div> <!-- <embed src="https://www.iq.harvard.edu/files/harvard-iqss/files/css_metrics_fy20.pdf#toolbar=0"
-        type="application/pdf" width="95%" height="800px" /> -->
 
     <script>
         path = "{{site.baseurl}}assets/data/"

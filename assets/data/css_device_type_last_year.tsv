@@ -1,2 +1,11 @@
-id	FY	PC	MAC	No Equipment	Printer Local/Network	Accessories	Copier/Printer	Smart Phone	Tablet	VOiP 	Scanner	year_number
-0	FY20	1073	535	171	52	115	72	74	20	6	2	20
+device	count	year
+PC	1073	FY20
+MAC	535	FY20
+No Equipment	171	FY20
+Accessories	115	FY20
+Smart Phone	74	FY20
+Copier/Printer	72	FY20
+Printer Local/Network	52	FY20
+Tablet	20	FY20
+VOiP 	6	FY20
+Scanner	2	FY20

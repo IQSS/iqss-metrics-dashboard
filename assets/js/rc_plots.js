@@ -1,12 +1,12 @@
 $(document).ready(function () {
     console.log(path)
-    generatePSRPlot(path, 'interactive', 'department');
-    generatePSRPlot(path, 'interactive', 'school');
-    generatePSRPlot(path, 'batch', 'department');
-    generatePSRPlot(path, 'batch', 'school');
+    generateRCPlot(path, 'interactive', 'department');
+    generateRCPlot(path, 'interactive', 'school');
+    generateRCPlot(path, 'batch', 'department');
+    generateRCPlot(path, 'batch', 'school');
 });
 
-function generatePSRPlot(path, name, type) {
+function generateRCPlot(path, name, type) {
     let div = `rc-${name}-by-${type}`
     d3.tsv(path + div + ".tsv", function (data) {
 

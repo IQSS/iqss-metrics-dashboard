@@ -1,0 +1,15 @@
+id	stringsReq	Freq	colRs	n	request_type	percentage
+0	Statistics Support	2282	#FB8072	2282	Statistics Support	37
+1	R	1328	#80B1D3	1328	R	22
+2	Stata	815	#B3DE69	815	Stata	13
+3	RCE	280	#D9D9D9	280	RCE	5
+4	Python	268	#D9D9D9	268	Python	4
+5	SPSS	126	#D9D9D9	126	SPSS	2
+6	Web Technology	117	#D9D9D9	117	Web Technology	2
+7	SAS	98	#D9D9D9	98	SAS	2
+8	Text Scraping	91	#D9D9D9	91	Text Scraping	1
+9	Other Software	83	#D9D9D9	83	Other Software	1
+10	Database	65	#D9D9D9	65	Database	1
+11	Text Mining	65	#D9D9D9	65	Text Mining	1
+12	Scripting Request	64	#D9D9D9	64	Scripting Request	1
+13	Other	440		440	Other	7

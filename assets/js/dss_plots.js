@@ -94,7 +94,7 @@ function year_quarter() {
 function timeSeriesCommunity() {
     d3.csv(path + "timeseries_community_quarter.csv", function (error, data) {
         if (error) return console.error(error);
-
+        console.log(path + "timeseries_community_quarter.csv")
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "cumulative_tickets");
         // console.log(myNumData)

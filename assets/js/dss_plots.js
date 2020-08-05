@@ -140,17 +140,18 @@ function timeSeriesCommunity() {
 
 // Patron Community (3)
 function patron_community() {
-    d3.csv(path + "community.csv", function (error, data) {
+    d3.tsv(path + "dss_community.tsv", function (error, data) {
         if (error) return console.error(error);
-
+        
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "n");
-        data_aggr = create_rest_category(myNumData, 0.005, "n", "patron_community")
-
+        myNumData = coerceToNum(myNumData, "id");
+        // data_aggr = create_rest_category(myNumData, 0.005, "n", "patron_community")
+        
         // Visualize
         d3plus.viz()
             .container(".patron_community")
-            .data(data_aggr)
+            .data(myNumData)
             .type("bar")
             .id("patron_community")
             .y({
@@ -164,7 +165,7 @@ function patron_community() {
             })
             .order({
                 "sort": "desc",
-                "value": "order"
+                "value": "id"
             })
             .color(d => iqss_color_pallette[1])
             .legend(false)
@@ -182,18 +183,18 @@ function patron_community() {
 
 // Request Type (4)
 function request_type() {
-    d3.csv(path + "request_types.csv", function (error, data) {
+    d3.tsv(path + "dss_request_types.tsv", function (error, data) {
         if (error) return console.error(error);
+        
 
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "n");
-
-        let data_aggr = create_rest_category(myNumData, 0.01, "n", "request_type")
-
-
+        myNumData = coerceToNum(myNumData, "id");
+        // let data_aggr = create_rest_category(myNumData, 0.01, "n", "request_type")
+        
         d3plus.viz()
             .container(".request_type")
-            .data(data_aggr)
+            .data(myNumData)
             .type("bar")
             .id("request_type")
             .y({
@@ -207,7 +208,7 @@ function request_type() {
             })
             .order({
                 "sort": "desc",
-                "value": "order"
+                "value": "id"
             })
             .color(d => iqss_color_pallette[0])
             .legend(false)

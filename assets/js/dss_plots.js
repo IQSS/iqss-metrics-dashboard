@@ -94,7 +94,7 @@ function year_quarter() {
 function timeSeriesCommunity() {
     d3.csv(path + "timeseries_community_quarter.csv", function (error, data) {
         if (error) return console.error(error);
-        console.log(path + "timeseries_community_quarter.csv")
+        
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "cumulative_tickets");
         // console.log(myNumData)
@@ -142,9 +142,7 @@ function timeSeriesCommunity() {
 // Patron Community (3)
 function patron_community() {
     d3.tsv(path + "dss_community.tsv", function (error, data) {
-        // if (error) return console.error(error);
-        console.log(path + "dss_community.tsv")
-        console.log(data)
+        if (error) return console.error(error);
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "n");
         myNumData = coerceToNum(myNumData, "id");

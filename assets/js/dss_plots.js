@@ -46,6 +46,7 @@ function coerceToNum(data, vararray) {
 // Quarter #OK (1)
 function year_quarter() {
     d3.csv(path + "year_quarter.csv", function (error, data) {
+        
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
@@ -141,8 +142,9 @@ function timeSeriesCommunity() {
 // Patron Community (3)
 function patron_community() {
     d3.tsv(path + "dss_community.tsv", function (error, data) {
-        if (error) return console.error(error);
-        
+        // if (error) return console.error(error);
+        console.log(path + "dss_community.tsv")
+        console.log(data)
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "n");
         myNumData = coerceToNum(myNumData, "id");
@@ -186,7 +188,6 @@ function request_type() {
     d3.tsv(path + "dss_request_types.tsv", function (error, data) {
         if (error) return console.error(error);
         
-
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, "n");
         myNumData = coerceToNum(myNumData, "id");

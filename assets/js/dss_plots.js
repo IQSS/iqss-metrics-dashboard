@@ -153,7 +153,7 @@ function patron_community() {
             })
             .order({
                 "sort": "asc",
-                "value": "id"
+                "value": "order"
             })
             .color(d => iqss_color_pallette[0])
             .legend(false)

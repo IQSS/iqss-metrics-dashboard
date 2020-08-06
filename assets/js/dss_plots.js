@@ -12,11 +12,11 @@ $(document).ready(function () {
     patron_community(); //3
     request_type();
     workshopAttendance();
-    // workshopNumber();
-    // dataFestAttendance();
-    // dataFestNumber();
-    // resOutputDepts();
-    // resOutputYears();
+    workshopNumber();
+    dataFestAttendance();
+    dataFestNumber();
+    resOutputDepts();
+    resOutputYears();
 });
 
 // Coerce data values to be numeric (multiple inputs)
@@ -43,14 +43,14 @@ function coerceToNum(data, vararray) {
     return data;
 };
 
-// Quarter #OK (1)
+// Quarter 
 function year_quarter() {
-    d3.csv(path + "year_quarter.csv", function (error, data) {
+    d3.csv(path + "tickets_created_quarterly.csv", function (error, data) {
         
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["n", "year"]);
+        var myNumData = coerceToNum(data, ["n_tickets", "year"]);
 
         d3plus.viz()
             .container(".year_quarter")
@@ -58,25 +58,17 @@ function year_quarter() {
             .type("bar")
             .id("year")
             .x({
-                "value": "yearQuarter",
+                "value": "year_quarter",
                 "scale": "discrete",
                 "label": "Year \& Quarter"
             })
             .y({
-                "value": "n",
+                "value": "n_tickets",
                 "label": "Number of New Help Requests"
             })
             .color(d =>
                 iqss_color_pallette[(new Date().getFullYear() - parseInt(d.year)) % iqss_color_pallette.length]
             )
-            // .legend({
-            //     "order": {
-            //         "sort": "asc",
-            //         "value": "year"
-            //     },
-            //     "size": 50,
-            //     // "text": "year"
-            // })
             .legend(false)
             .font({
                 "family": fontFamily
@@ -92,33 +84,29 @@ function year_quarter() {
 
 //#OK (2)
 function timeSeriesCommunity() {
-    d3.csv(path + "timeseries_community_quarter.csv", function (error, data) {
+    d3.csv(path + "affiliation_quarterly.csv", function (error, data) {
         if (error) return console.error(error);
         
+        // color: get unique values for affiliation:
+
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, "cumulative_tickets");
+        var myNumData = coerceToNum(data, ["n_tickets", "cumulative_tickets"]);
         // console.log(myNumData)
         d3plus.viz()
-            // .title({
-            //     "value": "Cumulative Number of Requests (Top Users)",
-            //     "position": "bottom",
-            //     "font": {
-            //         "size": "12px"
-            //     }
-            // })
             .container(".timeseriesCommunity")
             .data(myNumData)
             .type("line")
-            .id("patron_community")
+            .id("affiliation")
+            .x({
+                "value": "year_quarter",
+                "label": "Year \& Quarter",
+                "scale": "discrete",
+            })
             .y({
                 "value": "cumulative_tickets",
                 "label": "Cumulative Requests"
             })
-            .x({
-                "value": "quarter",
-                "label": "Quarter"
-            })
-            .color("patron_community")
+            // .color("affiliation")
             .legend({
                 "order": {
                     "sort": "asc",
@@ -141,33 +129,33 @@ function timeSeriesCommunity() {
 
 // Patron Community (3)
 function patron_community() {
-    d3.tsv(path + "dss_community.tsv", function (error, data) {
+    // affiliation_types.csv
+    d3.csv(path + "affiliation_types.csv", function (error, data) {
         if (error) return console.error(error);
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, "n");
-        myNumData = coerceToNum(myNumData, "id");
-        // data_aggr = create_rest_category(myNumData, 0.005, "n", "patron_community")
+        var myNumData = coerceToNum(data, ["order", "n_tickets"]);
+        
         
         // Visualize
         d3plus.viz()
             .container(".patron_community")
             .data(myNumData)
             .type("bar")
-            .id("patron_community")
+            .id("affiliation")
             .y({
-                "value": "patron_community",
+                "value": "affiliation",
                 "scale": "discrete",
                 "label": "Affiliation"
             })
             .x({
-                "value": "n",
+                "value": "n_tickets",
                 "label": "Number of Help Requests"
             })
             .order({
-                "sort": "desc",
+                "sort": "asc",
                 "value": "id"
             })
-            .color(d => iqss_color_pallette[1])
+            .color(d => iqss_color_pallette[0])
             .legend(false)
             .font({
                 "family": fontFamily,
@@ -183,31 +171,30 @@ function patron_community() {
 
 // Request Type (4)
 function request_type() {
-    d3.tsv(path + "dss_request_types.tsv", function (error, data) {
+    // request_types.csv
+    d3.csv(path + "request_types.csv", function (error, data) {
         if (error) return console.error(error);
         
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, "n");
-        myNumData = coerceToNum(myNumData, "id");
-        // let data_aggr = create_rest_category(myNumData, 0.01, "n", "request_type")
+        var myNumData = coerceToNum(data, ["n_tickets", "order"]);
         
         d3plus.viz()
             .container(".request_type")
             .data(myNumData)
             .type("bar")
             .id("request_type")
+            .x({
+                "value": "n_tickets",
+                "label": "Number of Help Requests"
+            })
             .y({
                 "value": "request_type",
                 "scale": "discrete",
                 "label": "Type of Help Requested"
             })
-            .x({
-                "value": "n",
-                "label": "Number of Help Requests"
-            })
             .order({
-                "sort": "desc",
-                "value": "id"
+                "sort": "asc",
+                "value": "order"
             })
             .color(d => iqss_color_pallette[0])
             .legend(false)
@@ -231,31 +218,32 @@ function request_type() {
 
 // Regular workshops (5)
 function workshopAttendance() {
+    // workshops.csv
     d3.csv(path + "workshops.csv", function (error, data) {
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["Attendance", "sortby"]);
+        var myNumData = coerceToNum(data, ["attendees", "order"]);
 
         d3plus.viz()
             .container(".workshopAttendance")
             .data(myNumData)
             .type("bar")
-            .id("Period")
+            .id("period")
             .y({
-                "value": "Period",
+                "value": "period",
                 "scale": "discrete",
                 "label": "Time Period"
             })
             .x({
-                "value": "Attendance",
+                "value": "attendees",
                 "label": "Number of Workshop Attendees"
             })
             .order({
-                "sort": "asc",
-                "value": "sortby"
+                "sort": "desc",
+                "value": "order"
             })
-            .color(d => iqss_color_pallette[0])
+            .color(d => iqss_color_pallette[1])
             .legend(false)
             .font({
                 "family": fontFamily
@@ -266,32 +254,33 @@ function workshopAttendance() {
 };
 
 function workshopNumber() {
-    d3.csv(path + "workshopNumber.csv", function (error, data) {
+
+    d3.csv(path + "workshops.csv", function (error, data) {
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["Number", "sortby"]);
-
+        var myNumData = coerceToNum(data, ["workshops_offered", "order"]);
+        
         d3plus.viz()
             .container(".workshopNumber")
             .data(myNumData)
             .type("bar")
-            .id("Period")
+            .id("period")
             .y({
-                "value": "Period",
+                "value": "period",
                 "scale": "discrete",
                 "label": "Time Period"
             })
             .x({
-                "value": "Number",
+                "value": "workshops_offered",
                 "label": "Number of Workshops Offered"
             })
             .order({
-                "sort": "asc",
-                "value": "sortby"
+                "sort": "desc",
+                "value": "order"
             })
-            // .color("")
-            // .legend(false)
+            .color(d => iqss_color_pallette[1])
+            .legend(false)
             .font({
                 "family": fontFamily
             })
@@ -302,30 +291,32 @@ function workshopNumber() {
 
 // DataFest
 function dataFestAttendance() {
-    d3.csv(path + "dataFest.csv", function (error, data) {
+    // zelfde
+    d3.csv(path + "datafest.csv", function (error, data) {
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["Attendance", "sortby"]);
-
-        var visualization = d3plus.viz()
+        var myNumData = coerceToNum(data, ["attendees", "order"]);
+        console.log(myNumData)
+        d3plus.viz()
             .container(".dataFestAttendance")
             .data(myNumData)
-            .type("bar")
-            .id("Period")
+            .type("bar") 
+            .id("date")
             .y({
-                "value": "Period",
+                "value": "date",
                 "scale": "discrete",
-                "label": "Time Period"
+                "label": "Date"
             })
             .x({
-                "value": "Attendance",
+                "value": "attendees",
                 "label": "Number of DataFest Attendees"
             })
             .order({
-                "sort": "asc",
-                "value": "sortby"
+                "sort": "desc",
+                "value": "order"
             })
+            .color(d => iqss_color_pallette[0])
             // .color("")
             // .legend(false)
             .font({
@@ -337,31 +328,32 @@ function dataFestAttendance() {
 };
 
 function dataFestNumber() {
-    d3.csv(path + "dataFest.csv", function (error, data) {
+    // zelfde
+    d3.csv(path + "datafest.csv", function (error, data) {
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["Number", "sortby"]);
+        var myNumData = coerceToNum(data, ["workshops_offered", "order"]);
 
-        var visualization = d3plus.viz()
+        d3plus.viz()
             .container(".dataFestNumber")
             .data(myNumData)
             .type("bar")
-            .id("Period")
+            .id("date")
             .y({
-                "value": "Period",
+                "value": "date",
                 "scale": "discrete",
-                "label": "Time Period"
+                "label": "Date"
             })
             .x({
-                "value": "Number",
+                "value": "workshops_offered",
                 "label": "Number of DataFest Workshops Offered"
             })
             .order({
-                "sort": "asc",
-                "value": "sortby"
+                "sort": "desc",
+                "value": "order"
             })
-            // .color("")
+            .color(d => iqss_color_pallette[0])
             // .legend(false)
             .font({
                 "family": fontFamily
@@ -374,19 +366,20 @@ function dataFestNumber() {
 // Research Output section
 
 function resOutputDepts() {
-    d3.csv(path + "research_output_dept.csv", function (error, data) {
+// 
+    d3.csv(path + "research_output_department.csv", function (error, data) {
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["count"]);
+        var myNumData = coerceToNum(data, ["publications", "order"]);
 
         var visualization = d3plus.viz()
             .container(".resOutputDepts")
             .data(myNumData)
             .type("bar")
-            .id("dept")
+            .id("department")
             .y({
-                "value": "dept",
+                "value": "department",
                 "scale": "discrete",
                 "label": "Department"
             })
@@ -396,14 +389,14 @@ function resOutputDepts() {
                 }
             })
             .x({
-                "value": "count",
+                "value": "publications",
                 "label": "Number of Academic Publications"
             })
             .order({
                 "sort": "asc",
-                "value": "count"
+                "value": "order"
             })
-            // .color("")
+            .color(d => iqss_color_pallette[3])
             // .legend(false)
             .font({
                 "family": fontFamily
@@ -414,11 +407,12 @@ function resOutputDepts() {
 };
 
 function resOutputYears() {
-    d3.csv(path + "research_output_year.csv", function (error, data) {
+    
+    d3.csv(path + "research_output.csv", function (error, data) {
         if (error) return console.error(error);
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["count"]);
+        var myNumData = coerceToNum(data, ["publications", "order"]);
 
         var visualization = d3plus.viz()
             .container(".resOutputYears")
@@ -431,11 +425,11 @@ function resOutputYears() {
                 "label": "Year"
             })
             .x({
-                "value": "count",
+                "value": "publications",
                 "label": "Number of Academic Publications"
             })
             // .order({"sort": "asc", "value": "sortby"})
-            // .color("")
+            .color(d => iqss_color_pallette[3])
             // .legend(false)
             .font({
                 "family": fontFamily

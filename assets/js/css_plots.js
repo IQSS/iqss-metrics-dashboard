@@ -156,8 +156,6 @@ function loadCSSPlots(path) {
             label_y: "Number of Resolved Tickets"
         }
 
-        pieChart(div+'-pie', dataset);
-        document.getElementById(div + "-pie-period").innerHTML = year;   
         horizontalBarChart(div+'-bar', dataset);
         document.getElementById(div + "-bar-period").innerHTML = year;   
     })

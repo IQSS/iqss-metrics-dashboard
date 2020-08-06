@@ -5,156 +5,33 @@ title: Data Science Services
 
 <h3 id="consulting_services">Consulting</h3>
 <div class="row">
-    <div class="col-xl-6">
-
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Number of New Help Requests
-                </h3>
-            </div>
-            <div class="card-body">
-                <div class="year_quarter viz"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Cumulative Number of Requests (Top Users)
-                </h3>
-            </div>
-            <div class="card-body">
-
-                <div class="timeseriesCommunity viz"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Number of Help Requests by Affiliation
-                </h3>
-            </div>
-            <div class="card-body">
-                <div class="patron_community viz"></div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Number of Help Requests by Type
-                </h3>
-            </div>
-            <div class="card-body">
-
-                <div class="request_type viz"></div>
-            </div>
-        </div>
-    </div>
-
+    {% include card-d3.html title = "Number of New Help Requests" div = "year_quarter" %}
+    {% include card-d3.html title = "Cumulative Number of Requests (Top Users)" div = "timeseriesCommunity" %}
+    {% include card-d3.html title = "Number of Help Requests by Affiliation" div = "patron_community" %}
+    {% include card-d3.html title = "Number of Help Requests by Type" div = "request_type" %}
 </div>
 
 <h4 id="training_services">Training</h4>
 <div class="row">
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Workshop Attendees
-                </h3>
-            </div>
-            <div class="card-body">
-
-                <div class="workshopAttendance viz"></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Workshops Offered
-                </h3>
-            </div>
-            <div class="card-body">
-                
-                    <div class="workshopNumber viz"></div>
-            </div>
-        </div>
-    </div>
-
+    {% include card-d3.html title = "Workshop Attendees" div = "workshopAttendance" %}
+    {% include card-d3.html title = "Workshops Offered" div = "workshopNumber" %}
 </div>
 
 <h4 id="training_services">DataFest *)</h4>
 <div class="row">
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    DataFest Attendees
-                </h3>
-            </div>
-            <div class="card-body">
-
-                <div class="dataFestAttendance viz"></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    DataFest Workshops
-                </h3>
-            </div>
-            <div class="card-body">
-                
-                    <div class="dataFestNumber viz"></div>
-            </div>
-        </div>
-    </div>
+    {% include card-d3.html title = "DataFest Attendees" div = "dataFestAttendance" %}
+    {% include card-d3.html title = "DataFest Workshops" div = "dataFestNumber" %}
     <p>*) DataFest is a collaborative effort with other units at Harvard</p>
 
 </div>
 
 
 <h4 id="training_services">Research Output (known to us)</h4>
-<div class="row">
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Academic Publications
-                </h3>
-            </div>
-            <div class="card-body">
 
-                <div class="resOutputDepts viz"></div>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    Academic Publications   
-                </h3>
-            </div>
-            <div class="card-body">
-                
-                    <div class="resOutputYears viz"></div>
-            </div>
-        </div>
-    </div>
+
+<div class="row">
+    {% include card-d3.html title = "Academic Publications" div = "resOutputDepts" %}
+    {% include card-d3.html title = "Academic Publications" div = "resOutputYears" %}
 </div>
 
 <!-- <script src="https://d3plus.org/js/d3plus.js"></script> -->

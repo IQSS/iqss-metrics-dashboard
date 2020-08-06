@@ -1,24 +1,24 @@
-"affiliation","n_tickets","order"
-"Government",574,23
-"Psychology",541,22
-"HSPH",397,21
-"Sociology",366,20
-"FAS/other",365,19
-"HKS",321,18
-"HEB",227,17
-"MIT",215,16
-"Economics",193,15
-"HBS",193,14
-"Health Policy",124,13
-"HMS",117,12
-"OEB",76,11
-"GSE",59,10
-"HBS Org Behavior",44,9
-"HLS",39,8
-"WCFIA",39,7
-"GSD",38,6
-"IQ",38,5
-"MIT Sloan",37,4
-"SEAS",37,3
-"Linguistics",22,2
-"Other",160,1
+"affiliation","n_tickets","order","period"
+"Government",574,23,"2012 - 2020"
+"Psychology",541,22,"2012 - 2020"
+"HSPH",397,21,"2012 - 2020"
+"Sociology",366,20,"2012 - 2020"
+"FAS/other",365,19,"2012 - 2020"
+"HKS",321,18,"2012 - 2020"
+"HEB",227,17,"2012 - 2020"
+"MIT",215,16,"2012 - 2020"
+"Economics",193,15,"2012 - 2020"
+"HBS",193,14,"2012 - 2020"
+"Health Policy",124,13,"2012 - 2020"
+"HMS",117,12,"2012 - 2020"
+"OEB",76,11,"2012 - 2020"
+"GSE",59,10,"2012 - 2020"
+"HBS Org Behavior",44,9,"2012 - 2020"
+"HLS",39,8,"2012 - 2020"
+"WCFIA",39,7,"2012 - 2020"
+"GSD",38,6,"2012 - 2020"
+"IQ",38,5,"2012 - 2020"
+"MIT Sloan",37,4,"2012 - 2020"
+"SEAS",37,3,"2012 - 2020"
+"Linguistics",22,2,"2012 - 2020"
+"Other",160,1,"2012 - 2020"

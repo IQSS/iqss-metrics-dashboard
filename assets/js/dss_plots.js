@@ -91,7 +91,7 @@ function timeSeriesCommunity() {
 
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, ["n_tickets", "cumulative_tickets"]);
-        // console.log(myNumData)
+    
         d3plus.viz()
             .container(".timeseriesCommunity")
             .data(myNumData)
@@ -132,13 +132,16 @@ function patron_community() {
     // affiliation_types.csv
     d3.csv(path + "affiliation_types.csv", function (error, data) {
         if (error) return console.error(error);
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["order", "n_tickets"]);
         
+        const myNumData = coerceToNum(data, ["order", "n_tickets"]);
         
+        const div = "patron_community"
+        const period = myNumData[0]["period"]
+        
+        document.getElementById(div + "-period").innerHTML = `(${period})`
         // Visualize
         d3plus.viz()
-            .container(".patron_community")
+            .container("." + div)
             .data(myNumData)
             .type("bar")
             .id("affiliation")
@@ -177,9 +180,13 @@ function request_type() {
         
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, ["n_tickets", "order"]);
+
+        let div = "request_type"
+        let period = myNumData[0]["period"]
+        document.getElementById(div + "-period").innerHTML = `(${period})`
         
         d3plus.viz()
-            .container(".request_type")
+            .container("."+div)
             .data(myNumData)
             .type("bar")
             .id("request_type")
@@ -230,17 +237,17 @@ function workshopAttendance() {
             .data(myNumData)
             .type("bar")
             .id("period")
-            .y({
+            .x({
                 "value": "period",
                 "scale": "discrete",
                 "label": "Time Period"
             })
-            .x({
+            .y({
                 "value": "attendees",
                 "label": "Number of Workshop Attendees"
             })
             .order({
-                "sort": "desc",
+                "sort": "asc",
                 "value": "order"
             })
             .color(d => iqss_color_pallette[1])
@@ -266,17 +273,17 @@ function workshopNumber() {
             .data(myNumData)
             .type("bar")
             .id("period")
-            .y({
+            .x({
                 "value": "period",
                 "scale": "discrete",
                 "label": "Time Period"
             })
-            .x({
+            .y({
                 "value": "workshops_offered",
                 "label": "Number of Workshops Offered"
             })
             .order({
-                "sort": "desc",
+                "sort": "asc",
                 "value": "order"
             })
             .color(d => iqss_color_pallette[1])
@@ -297,23 +304,24 @@ function dataFestAttendance() {
 
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, ["attendees", "order"]);
-        console.log(myNumData)
+
+        
         d3plus.viz()
             .container(".dataFestAttendance")
             .data(myNumData)
             .type("bar") 
-            .id("date")
-            .y({
-                "value": "date",
-                "scale": "discrete",
-                "label": "Date"
-            })
+            .id("year")
             .x({
+                "value": "year",
+                "scale": "discrete",
+                "label": "Year"
+            })
+            .y({
                 "value": "attendees",
                 "label": "Number of DataFest Attendees"
             })
             .order({
-                "sort": "desc",
+                "sort": "asc",
                 "value": "order"
             })
             .color(d => iqss_color_pallette[0])
@@ -339,18 +347,18 @@ function dataFestNumber() {
             .container(".dataFestNumber")
             .data(myNumData)
             .type("bar")
-            .id("date")
-            .y({
-                "value": "date",
-                "scale": "discrete",
-                "label": "Date"
-            })
+            .id("year")
             .x({
+                "value": "year",
+                "scale": "discrete",
+                "label": "Year"
+            })
+            .y({
                 "value": "workshops_offered",
                 "label": "Number of DataFest Workshops Offered"
             })
             .order({
-                "sort": "desc",
+                "sort": "asc",
                 "value": "order"
             })
             .color(d => iqss_color_pallette[0])
@@ -373,8 +381,12 @@ function resOutputDepts() {
         // Coerce data values to be numeric
         var myNumData = coerceToNum(data, ["publications", "order"]);
 
-        var visualization = d3plus.viz()
-            .container(".resOutputDepts")
+        const div = "resOutputDepts"
+        const period = myNumData[0]["period"]
+        document.getElementById(div + "-period").innerHTML = `(${period})`
+        
+        d3plus.viz()
+            .container("." + div)
             .data(myNumData)
             .type("bar")
             .id("department")
@@ -419,12 +431,12 @@ function resOutputYears() {
             .data(myNumData)
             .type("bar")
             .id("year")
-            .y({
+            .x({
                 "value": "year",
                 "scale": "discrete",
                 "label": "Year"
             })
-            .x({
+            .y({
                 "value": "publications",
                 "label": "Number of Academic Publications"
             })

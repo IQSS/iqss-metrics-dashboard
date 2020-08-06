@@ -273,7 +273,7 @@ function loadLabPlots(path) {
 
         const div = "lab_request_school";
         const period = data[0]["period"]
-        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
         let y= [];
         
@@ -297,7 +297,7 @@ function loadLabPlots(path) {
 
         const div = "lab_request_status";
         const period = data[0]["period"]
-        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
         let y= [];
         
@@ -321,7 +321,7 @@ function loadLabPlots(path) {
 
         const div = "lab_request_department";
         const period = data[0]["period"]
-        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
         let y= [];
         
@@ -344,7 +344,7 @@ function loadLabPlots(path) {
 
         const div = "lab_request_reason";
         const period = data[0]["period"]
-        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
         let y= [];
         
@@ -367,7 +367,7 @@ function loadLabPlots(path) {
 
         const div = "lab_request_discovery";
         const period = data[0]["period"]
-        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
 
         let labels = [];
         let y= [];

@@ -1,12 +1,13 @@
 $(document).ready(function () {
-    loadPlots2(path)
+    loadCSSPlots(path)
+    loadLabPlots(path)
 });
 
 
-function loadPlots2(path) {
+function loadCSSPlots(path) {
 
     d3.tsv(path + "css_quarterly_tickets_last_5yr.tsv", function (data) {
-
+        
         let labels = [];
         let dataverse = [];
         let rce = [];
@@ -163,9 +164,8 @@ function loadPlots2(path) {
 
 
     d3.tsv(path + "css_pc_mac_last_year.tsv", function (data) {
-         console.log(data)   
 
-         let div = "mac-pc-type";
+        let div = "mac-pc-type";
         let labels = [];
         let year = data[0]["Year"]
         let pc = [];
@@ -243,6 +243,150 @@ function loadPlots2(path) {
 }
 
 
+function loadLabPlots(path) {
+    
+    d3.tsv(path + "lab/lab_request_per_month.tsv", function (error, data) {
+        if (error) return console.error(error);
 
+        const div = "lab_request_per_quarter";
+        let labels = [];
+        let y= [];
+        
+        for (d of data) {
+            labels.push(d["year_month"])
+            y.push(d["count"])
+        }
+
+        lineChart(div, {
+            label_x: 'Month',
+            label_y: 'Requests',
+            x: labels,
+            y: y,
+            title: 'Number of Requests',
+            color: iqss_orange,
+            line_tension: 0
+            });
+    })
+
+    d3.tsv(path + "lab/lab_request_school.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "lab_request_school";
+        const period = data[0]["period"]
+        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        let labels = [];
+        let y= [];
+        
+        for (d of data) {
+            labels.push(d["School"])
+            y.push(d["count"])
+        }
+
+        barChart(div, {
+            label_x: 'School',
+            label_y: 'Requests',
+            x: labels,
+            y: y,
+            title: 'Number of Requests',
+            color: iqss_blue
+            });
+    })
+
+    d3.tsv(path + "lab/lab_request_status.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "lab_request_status";
+        const period = data[0]["period"]
+        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        let labels = [];
+        let y= [];
+        
+        for (d of data) {
+            labels.push(d["Status"])
+            y.push(d["count"])
+        }
+
+        horizontalBarChart(div, {
+            label_x: 'Status',
+            label_y: 'Requests',
+            x: labels,
+            y: y,
+            title: 'Number of Requests',
+            color: iqss_orange
+            });
+    })
+
+    d3.tsv(path + "lab/lab_request_department.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "lab_request_department";
+        const period = data[0]["period"]
+        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        let labels = [];
+        let y= [];
+        
+        for (d of data) {
+            labels.push(d["Department/Concentration"])
+            y.push(d["count"])
+        }
+
+        horizontalBarChart(div, {
+            label_x: 'Department/Concentration',
+            label_y: 'Requests',
+            x: labels,
+            y: y,
+            title: 'Number of Requests',
+            color: iqss_orange
+            });
+    })
+    d3.tsv(path + "lab/lab_request_reason.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "lab_request_reason";
+        const period = data[0]["period"]
+        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+        let labels = [];
+        let y= [];
+        
+        for (d of data) {
+            labels.push(d["Reason for Lab Access"])
+            y.push(d["count"])
+        }
+
+        pieChart(div, {
+            label_x: 'Department/Concentration',
+            label_y: 'Requests',
+            x: labels,
+            y: y,
+            title: 'Number of Requests',
+            color: iqss_orange
+            });
+    })
+    d3.tsv(path + "lab/lab_request_discovery.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "lab_request_discovery";
+        const period = data[0]["period"]
+        document.getElementById(`${div}-period`).innerHTML = `[${period}]`
+
+        let labels = [];
+        let y= [];
+        
+        for (d of data) {
+            labels.push(d["Lab Discovery"])
+            y.push(d["count"])
+        }
+
+        pieChart(div, {
+            label_x: 'Discovery',
+            label_y: 'Requests',
+            x: labels,
+            y: y,
+            title: 'Number of Requests',
+            color: iqss_orange
+            });
+    })
+    
+}
 
 

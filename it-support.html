@@ -122,7 +122,6 @@ toplinks:
     </div>
 
     <div class="col-xl-6">
-
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title card-iqss-title">
@@ -139,10 +138,19 @@ toplinks:
 
 <h2 id = "lab">Public Computer Lab</h2>
 
-<div class="alert alert-info" role="alert">
-    This page is still under construction
-</div>
+<h3>Lab tickets and Request</h3>
 
+
+
+<div class="row">
+    {% include card.html title = "Lab Requests" div = "lab_request_per_quarter" %}
+    {% include card.html title = "Requests by Status" div = "lab_request_status" %}
+    {% include card.html title = "Requests by Department" div = "lab_request_department" %}
+
+    {% include card.html title = "Requests by School" div = "lab_request_school" %}
+    {% include card.html title = "Reason for Lab Request" div = "lab_request_reason" %}
+    {% include card.html title = "How did you hear from us?" div = "lab_request_discovery" %}
+</div>
 
     <script>
         path = "{{site.baseurl}}assets/data/"

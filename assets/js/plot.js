@@ -149,11 +149,23 @@ function barChart(div_id, data) {
                     ticks: {
                         beginAtZero: true,
                         fontSize: 10
-                    }
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
                 }],
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
+                    },                    
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_y,
+                        fontStyle: 'bold',
+                        fontSize: 14,
                     },
                     display: true,
                 }]
@@ -207,7 +219,7 @@ function horizontalBarChart(div_id, data) {
                     ticks: {
                         beginAtZero: true,
                     },
-                      scaleLabel: {
+                    scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
@@ -219,6 +231,12 @@ function horizontalBarChart(div_id, data) {
                         beginAtZero: true,
                     },
                     display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: data.label_x,
+                        fontStyle: 'bold',
+                        fontSize: 14,
+                    },
                 }],
                 
                

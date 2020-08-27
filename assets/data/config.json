@@ -52,7 +52,7 @@
         ],
         "monthly_itemized": []
     },
-    "blacklists": {
+    "blockedlists": {
         "datasets/bySubject": [
             "Not specified",
             "Other"

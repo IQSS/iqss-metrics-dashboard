@@ -7,10 +7,8 @@ Dataverse (old)	Searchable Datasets	Harvard Dataverse	97,639	Searchable Datasets
 Client Support Services	Tickets resolved	IT Client Support Services	3895	Tickets resolved FY20	fa fa-ticket-alt	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/it_client_support_services_metrics.pdf
 Dataverse (old)	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-check	orange	dataverse.html
 Program on Survey Research	Program on Survey Research	Program on Survey Research	108	PSR Advisees in Calendar 2018	fa fa-poll	orange	https://projects.iq.harvard.edu/files/harvard-iqss/files/psrpreliminrymetrics2018_downloaded_from_site.pdf
+Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	orange	dataverse.html
+Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	orange	https://iqss.github.io/dataverse-tv/
 CGA	GIS Institute Applications	GIS Institute	14	Number of applications 2020 YTD	fa fa-university	blue	
-Harvard Dataverse	Harvard Dataverse Tickets	Harvard Dataverse 	1031	Total number of Tickets FY2020	fa fa-ticket-alt	red	
 Sponsored Research Administration	Active Grants Managed by IQSS	Active Grants Managed by IQSS	35	Last 12 months	fa fa-tasks	orange	bo.html
-Dataverse	GitHub Watchers	Dataverse on GitHub	530	Watchers	fab fa-github	orange	dataverse.html
-Dataverse	GitHub Subscribers	Dataverse on GitHub	63	Subscribers	fab fa-github	orange	dataverse.html
-Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	blue	dataverse.html
-Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	red	https://iqss.github.io/dataverse-tv/
+Harvard Dataverse	Harvard Dataverse Tickets	Harvard Dataverse 	1031	Total number of Tickets FY2020	fa fa-ticket-alt	red	

@@ -11,8 +11,8 @@ toplinks:
 
 <h2 id ="css">Client Support Services</h2>
 
-
 <h3>Resolved Tickets</h3>
+
 <div class="row">
     {% include card.html title = "Quarterly Resolved Tickets" div = "quarterly_tickets" %}
     {% include card.html title = "Resolved tickets" div = "tickets-by-subject" %}
@@ -22,9 +22,8 @@ toplinks:
 
 </div>
 
-
-
 <h3>PC and Mac</h3>
+
 <div class="row">
     {% include card.html title = "Tickets for PC and Mac by Type" div = "mac-pc-type" %}
     {% include card.html title = "Tickets for PC and Mac" div = "mac-pc-years" %}
@@ -33,6 +32,7 @@ toplinks:
 <h2 id = "lab">Public Computer Lab</h2>
 
 <h3>Lab tickets and Request</h3>
+
 <div class="row">
     {% include card.html title = "Lab Requests" div = "lab_request_per_quarter" %}
     {% include card.html title = "Requests by Status" div = "lab_request_status" %}
@@ -43,7 +43,7 @@ toplinks:
     {% include card.html title = "How did you hear from us?" div = "lab_request_discovery" %}
 </div>
 
-    <script>
-        path = "{{site.baseurl}}assets/data/"
-    </script>
-    <script src="{{site.baseurl}}assets/js/css_plots.js"></script>
+<script>
+    path = "{{site.baseurl}}assets/data/"
+</script>
+<script src="{{site.baseurl}}assets/js/css_plots.js"></script>

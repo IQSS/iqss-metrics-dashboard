@@ -67,7 +67,7 @@ function loadCSSPlots(path) {
     })
 
     d3.tsv(path + "css_monthly_tickets_last_3yr.tsv", function (data) {
-        console.log(data)
+
         let dataset = [];
         let y = []
         for (var i = 0; i < data.length; i++) {

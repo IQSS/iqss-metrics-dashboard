@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log(path)
     generateRCPlot(path, 'interactive', 'department');
     generateRCPlot(path, 'interactive', 'school');
     generateRCPlot(path, 'batch', 'department');
@@ -28,8 +27,7 @@ function generateRCPlot(path, name, type) {
             title: title
         }
 
-        // console.log(dataset)
         pieChart(div, dataset);
-        document.getElementById(div + "-year").innerHTML = year;
+        document.getElementById(div + "-period").innerHTML = `(${year})`;
     })
 }

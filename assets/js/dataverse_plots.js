@@ -1,21 +1,79 @@
 let fontFamily = "Montserrat";
+// let dataSource = "https://dataversemetrics.odum.unc.edu/dataverse-metrics/"
+// https://dataversemetrics.odum.unc.edu/dataverse-metrics/dataverses-toMonth.tsv
+
 
 $(document).ready(function () {
-    
+
     loadJSON(function (response) {
-        var config = JSON.parse(response);
+        const config = JSON.parse(response);
         dataversesToMonth(config);
         dataversesByCategory(config);
         datasetsToMonth(config);
         datasetsBySubject(config);
         filesToMonth(config);
         // downloadsToMonth(config);
+        harvardDataverse();
     }, path + "config.json");
 });
 
+function harvardDataverse() {
+    d3.tsv(path + "hdv-ticket-type_aggr.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "hdv-ticket-type"; //hdv-ticket-feature-period
+        const period = data[0]["period"]
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
+
+        let labels = [];
+        let y= [];
+
+        for (d of data) {
+            labels.push(d["value"])
+            y.push(d["count"])
+        }
+
+        horizontalBarChart(div, {
+            label_x: 'Ticket Type',
+            label_y: 'Total number of tickets',
+            x: labels,
+            y: y,
+            title: 'Number of Tickets',
+            color: harvard_crimson
+        });
+    })
+
+    d3.tsv(path + "hdv-feature_aggr.tsv", function (error, data) {
+        if (error) return console.error(error);
+
+        const div = "hdv-ticket-feature"; //hdv-ticket-feature-period
+        const period = data[0]["period"]
+
+        document.getElementById(`${div}-period`).innerHTML = `(${period})`
+
+        let labels = [];
+        let y= [];
+
+        for (d of data) {
+            labels.push(d["value"])
+            y.push(d["count"])
+        }
+
+        horizontalBarChart(div, {
+            label_x: 'Feature',
+            label_y: 'Total number of tickets',
+            x: labels,
+            y: y,
+            title: 'Number of Tickets',
+            color: harvard_crimson
+        });
+    })
+
+}
+
 function dataversesToMonth(config) {
-    var color = config["colors"]["dataverses/toMonth"];
-    var month_filter_enabled = config["month_filter_enabled"];
+    const color = config["colors"]["dataverses/toMonth"];
+    const month_filter_enabled = config["month_filter_enabled"];
 
     d3.tsv(path + "dataverses-toMonth.tsv", function (error, data) {
 
@@ -26,7 +84,7 @@ function dataversesToMonth(config) {
             });
         }
         coerceToNumeric(data);
-        var yLabel = "Number of Dataverses";
+        const yLabel = "Number of Dataverses";
         d3plus
             .viz()
             .data(data)
@@ -63,10 +121,10 @@ function dataversesToMonth(config) {
 }
 
 function dataversesByCategory(config) {
-    var colors = config["colors"]["dataverses/byCategory"];
+    let colors = config["colors"]["dataverses/byCategory"];
     d3.tsv(path + "dataverses-byCategory.tsv", function (error, data) {
         if (error) return console.error(error);
-        var tileLabel = "Number of Dataverses";
+        let tileLabel = "Number of Dataverses";
         coerceToNumeric(data);
         d3plus
             .viz()
@@ -91,7 +149,7 @@ function dataversesByCategory(config) {
                         return d3plus.string.title(text, params);
                     }
                 },
-               
+
             })
             .font({ "family": fontFamily})
             .legend(false)
@@ -101,17 +159,18 @@ function dataversesByCategory(config) {
 }
 
 function datasetsToMonth(config) {
-    var color = config["colors"]["datasets/toMonth"];
-    var month_filter_enabled = config["month_filter_enabled"];
+    let color = config["colors"]["datasets/toMonth"];
+    let month_filter_enabled = config["month_filter_enabled"];
     d3.tsv(path + "datasets-toMonth.tsv", function (error, data) {
         if (error) return console.error(error);
+
         if (month_filter_enabled) {
             data = data.filter(function (d) {
                 return parseInt(d.month.split("-")[1]) % 2 == 0;
             });
         }
         coerceToNumeric(data);
-        var yLabel = "Number of Datasets";
+        let yLabel = "Number of Datasets";
         d3plus
             .viz()
             .data(data)
@@ -148,11 +207,11 @@ function datasetsToMonth(config) {
 }
 
 function datasetsBySubject(config) {
-    var subjectBlacklist = config["blacklists"]["datasets/bySubject"];
-    var colors = config["colors"]["datasets/bySubject"];
+    let subjectBlockedlist = config["blockedlists"]["datasets/bySubject"];
+    let colors = config["colors"]["datasets/bySubject"];
     d3.tsv(path + "datasets-bySubject.tsv", function (error, data) {
         if (error) return console.error(error);
-        var tileLabel = "Number of Datasets";
+        let tileLabel = "Number of Datasets";
         coerceToNumeric(data);
         d3plus
             .viz()
@@ -165,7 +224,7 @@ function datasetsBySubject(config) {
             .type("tree_map")
             .id("name")
             .id({
-                mute: subjectBlacklist,
+                mute: subjectBlockedlist,
             })
             .size("count")
             .color({
@@ -189,8 +248,8 @@ function datasetsBySubject(config) {
 }
 
 function filesToMonth(config) {
-    var color = config["colors"]["files/toMonth"];
-    var month_filter_enabled = config["month_filter_enabled"];
+    let color = config["colors"]["files/toMonth"];
+    let month_filter_enabled = config["month_filter_enabled"];
     d3.tsv(path + "files-toMonth.tsv", function (error, data) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
@@ -199,7 +258,7 @@ function filesToMonth(config) {
             });
         }
         coerceToNumeric(data);
-        var yLabel = "Number of Files";
+        let yLabel = "Number of Files";
         d3plus
             .viz()
             .data(data)
@@ -236,8 +295,8 @@ function filesToMonth(config) {
 }
 
 function downloadsToMonth(config) {
-    var color = config["colors"]["downloads/toMonth"];
-    var month_filter_enabled = config["month_filter_enabled"];
+    let color = config["colors"]["downloads/toMonth"];
+    let month_filter_enabled = config["month_filter_enabled"];
     d3.tsv(path + "downloads-toMonth.tsv", function (error, data) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
@@ -246,7 +305,7 @@ function downloadsToMonth(config) {
             });
         }
         coerceToNumeric(data);
-        var yLabel = "Number of File Downloads";
+        let yLabel = "Number of File Downloads";
         d3plus
             .viz()
             .data(data)
@@ -285,7 +344,7 @@ function downloadsToMonth(config) {
 function coerceToNumeric(data) {
     data.forEach(function (d) {
         d3.keys(d).forEach(function (k) {
-            if (k == "count") {
+            if (k === "count") {
                 d[k] = +d[k];
             }
         });
@@ -294,24 +353,24 @@ function coerceToNumeric(data) {
 }
 
 function yAxisTruncation(metricArray, modNum) {
-    var min = metricArray[0].count;
-    var max = metricArray[metricArray.length - 1].count;
+    let min = metricArray[0].count;
+    let max = metricArray[metricArray.length - 1].count;
     if (min < modNum) {
         return [0, max + 10];
     }
-    var rangeStart = min - (min % modNum);
-    var rangeEnd = max - (max % modNum) + modNum;
+    let rangeStart = min - (min % modNum);
+    let rangeEnd = max - (max % modNum) + modNum;
     return [rangeStart, rangeEnd];
 }
 
 function createListOfInstallations(config, allInstallations) {
-    var all = allInstallations.installations;
-    var polled = config.installations;
-    var list = "<ul>";
-    for (var i = 0; i < all.length; ++i) {
+    let all = allInstallations.installations;
+    let polled = config.installations;
+    let list = "<ul>";
+    for (let i = 0; i < all.length; ++i) {
         // Some installations in the "all" file have a trailing slash.
-        var url = all[i].url.replace(/\/+$/, "");
-        var name = all[i].name;
+        let url = all[i].url.replace(/\/+$/, "");
+        let name = all[i].name;
         if (polled.includes(url)) {
             list += "<li>";
             list += '<a href="' + url + '" target="_blank">' + name + "</a>";
@@ -324,7 +383,7 @@ function createListOfInstallations(config, allInstallations) {
 
 // https://codepen.io/KryptoniteDove/post/load-json-file-locally-using-pure-javascript
 function loadJSON(callback, jsonFile) {
-    var xobj = new XMLHttpRequest();
+    let xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
     xobj.open("GET", jsonFile, true);
     xobj.onreadystatechange = function () {

@@ -141,9 +141,13 @@ toplinks:
 
 <!-- Harvard Dataverse -->
 <h2 id="hdv">Harvard Dataverse</h2>
-<div class="alert alert-info" role="alert">
-    Coming soon!
+<div class="row">
+    {% include card.html title = "What do people email Dataverse support about?" div = "hdv-ticket-type" %}
+    {% include card.html title = "What Dataverse features do people email Dataverse support about?" div = "hdv-ticket-feature" %}
 </div>
+
+
+<div id="havard-dataverse-metrics" class="row"></div>
 
 <!-- Data Management & Curation -->
 <h2 id="dmc">Data Management & Curation</h2>
@@ -166,7 +170,7 @@ toplinks:
     d3.tsv("{{site.baseurl}}assets/data/dataverse_installations.tsv", function (data) {
         let labels = []
         let d = [];
-        for (var i = 0; i < 10; i++) {
+        for (let i = 0; i < 10; i++) {
             labels.push(data[i].country);
             d.push(parseInt(data[i].count));
         }
@@ -188,7 +192,7 @@ toplinks:
         let labels = []
         let d = [];
 
-        for (var i = data.length - 12; i < data.length; i++) {
+        for (let i = data.length - 12; i < data.length; i++) {
             labels.push(data[i].month);
             d.push(parseInt(data[i].count));
         }
@@ -208,5 +212,8 @@ toplinks:
     path = "{{site.baseurl}}assets/data/"
 
     loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "Dataverse",
+        "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
+
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'havard-dataverse-metrics', "Harvard Dataverse",
         "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
 </script>

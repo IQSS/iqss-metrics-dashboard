@@ -6,66 +6,16 @@ title: Research Computing
 <h3>RCE Interactive</h3>
 
 <div class="row">
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    <span id="rc-interactive-by-department-year"></span> RCE Interactive Tier FAS Users by Department
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="rc-interactive-by-department"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-6">
-
-
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    <span id="rc-interactive-by-school-year"></span> RCE Interactive Tier Users by School
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="rc-interactive-by-school"></canvas>
-            </div>
-        </div>
-    </div>
-
-</div>
+    {% include card.html title = "RCE Interactive Tier FAS Users by Department" div = "rc-interactive-by-department" %}
+    {% include card.html title = "RCE Interactive Tier Users by School" div = "rc-interactive-by-school" %}
+ </div>
 
 
 <h3>RCE Batch</h3>
 
 <div class="row">
-    <div class="col-xl-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    <span id="rc-batch-by-department-year"></span> RCE Batch Tier FAS Users by Department
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="rc-batch-by-department"></canvas>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-6">
-
-
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title card-iqss-title">
-                    <span id="rc-batch-by-school-year"></span> RCE Batch Tier Users by School
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="rc-batch-by-school"></canvas>
-            </div>
-        </div>
-    </div>
-
+    {% include card.html title = "RCE Batch Tier FAS Users by Department" div = "rc-batch-by-department" %}
+    {% include card.html title = "RCE Batch Tier Users by School" div = "rc-batch-by-school" %}
 </div>
 
 

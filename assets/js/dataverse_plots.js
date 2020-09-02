@@ -15,6 +15,9 @@ $(document).ready(function () {
         filesToMonth(config);
         // downloadsToMonth(config);
         dataverseSupport();
+
+        // to make sure all data is retrieved
+        // else we don't now the order we end up with.
         harvardDataverse()
             .then(() => {
                 for(let rm of metrics_retrieved) {
@@ -24,6 +27,11 @@ $(document).ready(function () {
 
     }, path + "config.json");
 });
+
+// https://blog.abelotech.com/posts/number-currency-formatting-javascript/
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
 
 async function harvardDataverse() {
 
@@ -61,11 +69,10 @@ async function harvardDataverse() {
     for (let m of metrics) {
         const response = await fetch(`${baseUrl}${m.url}`)
         const data = await response.json();
-        let metricTmp = [m.id, "", m.title, data.data.count, m.time, "fa fa-" + m.icon, m.color];
+        let metricTmp = [m.id, "", m.title, formatNumber(data.data.count), m.time, "fa fa-" + m.icon, m.color];
         metrics_retrieved.push(metricTmp);
     }
 }
-
 
 function dataverseSupport() {
     d3.tsv(path + "dvs-ticket-type_aggr.tsv", function (error, data) {

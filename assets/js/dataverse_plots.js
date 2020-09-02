@@ -66,6 +66,7 @@ async function harvardDataverse() {
     }
 }
 
+
 function dataverseSupport() {
     d3.tsv(path + "dvs-ticket-type_aggr.tsv", function (error, data) {
         if (error) return console.error(error);
@@ -129,7 +130,7 @@ function dataversesToMonth(config) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 === 0;
+                return parseInt(d.month.split("-")[1]) % 2 == 0;
             });
         }
         coerceToNumeric(data);
@@ -215,7 +216,7 @@ function datasetsToMonth(config) {
 
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 === 0;
+                return parseInt(d.month.split("-")[1]) % 2 == 0;
             });
         }
         coerceToNumeric(data);
@@ -303,7 +304,7 @@ function filesToMonth(config) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 === 0;
+                return parseInt(d.month.split("-")[1]) % 2 == 0;
             });
         }
         coerceToNumeric(data);
@@ -350,7 +351,7 @@ function downloadsToMonth(config) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 === 0;
+                return parseInt(d.month.split("-")[1]) % 2 == 0;
             });
         }
         coerceToNumeric(data);
@@ -377,7 +378,7 @@ function downloadsToMonth(config) {
             })
             .format({
                 text: function (text, params) {
-                    if (text === "count") {
+                    if (text == "count") {
                         return yLabel;
                     } else {
                         return d3plus.string.title(text, params);
@@ -393,7 +394,7 @@ function downloadsToMonth(config) {
 function coerceToNumeric(data) {
     data.forEach(function (d) {
         d3.keys(d).forEach(function (k) {
-            if (k === "count") {
+            if (k == "count") {
                 d[k] = +d[k];
             }
         });
@@ -436,7 +437,7 @@ function loadJSON(callback, jsonFile) {
     xobj.overrideMimeType("application/json");
     xobj.open("GET", jsonFile, true);
     xobj.onreadystatechange = function () {
-        if (xobj.readyState === 4 && xobj.status === "200") {
+        if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
             callback(xobj.responseText);
         }
@@ -456,7 +457,7 @@ async function loadTSV(url) {
     for (let i = 1; i < x.length; i++) {
         let fields = x[i].split(/\t/);
 
-        if (fields[0] !== undefined && fields[0] !== "") {
+        if (fields[0] !== undefined && fields[0] != "") {
             d.push(fields);
         }
     }

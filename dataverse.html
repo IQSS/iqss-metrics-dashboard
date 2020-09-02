@@ -141,25 +141,21 @@ toplinks:
 
 <h3>Dataverse Support</h3>
 <div class="row">
-    {% include card.html title = "What do people email Dataverse support about?" div = "hdv-ticket-type" %}
-    {% include card.html title = "What Dataverse features do people email Dataverse support about?" div = "hdv-ticket-feature" %}
+    {% include card.html title = "What do people email Dataverse support about?" div = "dvs-ticket-type" %}
+    {% include card.html title = "What Dataverse features do people email Dataverse support about?" div = "dvs-ticket-feature" %}
 </div>
 
-<div id="havard-dataverse-metrics" class="row"></div>
+<div id="dataverse-support-metrics" class="row"></div>
 
 <!-- Harvard Dataverse -->
 <h2 id="hdv">Harvard Dataverse</h2>
-<div class="alert alert-info" role="alert">
-    Coming soon!
-</div>
-
+<div id="harvard-dataverse-metrics" class="row"></div>
 
 <!-- Data Management & Curation -->
 <h2 id="dmc">Data Management & Curation</h2>
 <div class="alert alert-info" role="alert">
     Coming soon!
 </div>
-
 
 <script src="https://d3plus.org/js/d3plus.js"></script>
 
@@ -219,6 +215,6 @@ toplinks:
     loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "Dataverse",
         "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
 
-    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'havard-dataverse-metrics', "Harvard Dataverse",
+    loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'dataverse-support-metrics', "Dataverse Support",
         "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3");
 </script>

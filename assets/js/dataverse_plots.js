@@ -2,6 +2,7 @@ let fontFamily = "Montserrat";
 // let dataSource = "https://dataversemetrics.odum.unc.edu/dataverse-metrics/"
 // https://dataversemetrics.odum.unc.edu/dataverse-metrics/dataverses-toMonth.tsv
 
+let metrics_retrieved =[]
 
 $(document).ready(function () {
 
@@ -13,15 +14,63 @@ $(document).ready(function () {
         datasetsBySubject(config);
         filesToMonth(config);
         // downloadsToMonth(config);
-        harvardDataverse();
+        dataverseSupport();
+        harvardDataverse()
+            .then(() => {
+                for(let rm of metrics_retrieved) {
+                    addMetric(rm, 'harvard-dataverse-metrics')
+                }
+        });
+
     }, path + "config.json");
 });
 
-function harvardDataverse() {
-    d3.tsv(path + "hdv-ticket-type_aggr.tsv", function (error, data) {
+async function harvardDataverse() {
+
+    const baseUrl = 'https://dataverse.harvard.edu/api/info/metrics/';
+
+    let metrics = [
+        {id: 0, url: "files", title: "Files Deposited", time: "Files Total", icon: "file-alt", color: "orange"},
+        {
+            id: 1,
+            url: "files/pastDays/30",
+            title: "Files Deposited",
+            time: "Deposited Last 30 days",
+            icon: "file-alt",
+            color: "orange"
+        },
+        {id: 2, url: "datasets", title: "Datasets Deposited", time: "Datasets Total", icon: "database", color: "red"},
+        {
+            id: 3,
+            url: "datasets/pastDays/30",
+            title: "Datasets Deposited",
+            time: "Datasets Last 30 Days",
+            icon: "database",
+            color: "red"
+        },
+        {id: 4, url: "downloads", title: "Files Downloaded", time: "Files Total", icon: "file-download", color: "blue"},
+        {
+            id: 5,
+            url: "downloads/pastDays/30",
+            title: "Files Downloaded",
+            time: "Downloaded Last 30 days",
+            icon: "file-download",
+            color: "blue"
+        }]
+
+    for (let m of metrics) {
+        const response = await fetch(`${baseUrl}${m.url}`)
+        const data = await response.json();
+        let metricTmp = [m.id, "", m.title, data.data.count, m.time, "fa fa-" + m.icon, m.color];
+        metrics_retrieved.push(metricTmp);
+    }
+}
+
+function dataverseSupport() {
+    d3.tsv(path + "dvs-ticket-type_aggr.tsv", function (error, data) {
         if (error) return console.error(error);
 
-        const div = "hdv-ticket-type"; //hdv-ticket-feature-period
+        const div = "dvs-ticket-type"; //dvs-ticket-feature-period
         const period = data[0]["period"]
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
 
@@ -43,10 +92,10 @@ function harvardDataverse() {
         });
     })
 
-    d3.tsv(path + "hdv-feature_aggr.tsv", function (error, data) {
+    d3.tsv(path + "dvs-feature_aggr.tsv", function (error, data) {
         if (error) return console.error(error);
 
-        const div = "hdv-ticket-feature"; //hdv-ticket-feature-period
+        const div = "dvs-ticket-feature"; //dvs-ticket-feature-period
         const period = data[0]["period"]
 
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
@@ -80,7 +129,7 @@ function dataversesToMonth(config) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 == 0;
+                return parseInt(d.month.split("-")[1]) % 2 === 0;
             });
         }
         coerceToNumeric(data);
@@ -166,7 +215,7 @@ function datasetsToMonth(config) {
 
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 == 0;
+                return parseInt(d.month.split("-")[1]) % 2 === 0;
             });
         }
         coerceToNumeric(data);
@@ -254,7 +303,7 @@ function filesToMonth(config) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 == 0;
+                return parseInt(d.month.split("-")[1]) % 2 === 0;
             });
         }
         coerceToNumeric(data);
@@ -301,7 +350,7 @@ function downloadsToMonth(config) {
         if (error) return console.error(error);
         if (month_filter_enabled) {
             data = data.filter(function (d) {
-                return parseInt(d.month.split("-")[1]) % 2 == 0;
+                return parseInt(d.month.split("-")[1]) % 2 === 0;
             });
         }
         coerceToNumeric(data);
@@ -387,7 +436,7 @@ function loadJSON(callback, jsonFile) {
     xobj.overrideMimeType("application/json");
     xobj.open("GET", jsonFile, true);
     xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
+        if (xobj.readyState === 4 && xobj.status === "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
             callback(xobj.responseText);
         }
@@ -407,7 +456,7 @@ async function loadTSV(url) {
     for (let i = 1; i < x.length; i++) {
         let fields = x[i].split(/\t/);
 
-        if (fields[0] != undefined && fields[0] != "") {
+        if (fields[0] !== undefined && fields[0] !== "") {
             d.push(fields);
         }
     }

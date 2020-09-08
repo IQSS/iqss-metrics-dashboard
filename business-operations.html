@@ -1,31 +1,26 @@
 ---
 layout: default
 title: Business Operations
-toplinks:
-  - id: sr
-    name: Sponsored Research
-  - id: fa
-    name: Finance & Administration
 ---
 <!-- templates for the widgets -->
 {% include templates.html %}
-{% include toplinks.html %}
+
 <!-- This is "preparation" for the real metric that will be updated 
 this reads form _data direct, as opposed to the update of the data itself (from _site/assets/data -->
-<h2 id="sr">Sponsored Research Administration</h2>
+<div class="update">
+    Last update:&nbsp;<span id="last_update_date2"></span>
+</div>
+<h4 id="sr">Sponsored Research Administration</h4>
 
 <div id="sponsored_research" class=row></div>
 <!-- <div class="update">
     Last update:&nbsp;<span id="last_update_date1"></span>
 </div> -->
 
-<h2 id="fa">Finance & Administration</h2>
+<!--<h3 id="fa">Finance & Administration</h3>-->
 
 <div id="finance"></div>
 
-<div class="update">
-    Last update:&nbsp;<span id="last_update_date2"></span>
-</div>
 
 <!-- <h4>Social Media</h4> -->
 <!-- <div id="socialmedia" class="row"></div> -->

@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="{{site.baseurl}}assets/plugins/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="{{site.baseurl}}assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="{{site.baseurl}}assets/plugins/leaflet/leaflet.css">
+    <link rel="stylesheet" href="{{site.baseurl}}assets/css/styles.css">
+
+    <!-- Javascript libraries -->
+    <script src="{{site.baseurl}}assets/plugins/jquery/jquery.min.js"></script>
+    <script src="{{site.baseurl}}assets/plugins/d3/d3_3_5.js"></script>
+    <script src="{{site.baseurl}}assets/plugins/d3/d3plus.js"></script>
+    <script src="{{site.baseurl}}assets/plugins/chart.js/Chart.min.js"></script>
+
+    <!-- Javascript scripts -->
+    <script src="{{site.baseurl}}assets/js/metrics.js"></script>
+    <script src="{{site.baseurl}}assets/js/plot.js"></script>
+
+    <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}favicon.png">
+    <title role="banner" aria-labelledby="main_title">Metrics | {{ page.title }}</title>
+</head>
+
+<body class="layout-top-nav" style="height: auto;">
+    <div class="skipnav" role="navigation">
+        <a href="#main_title">Skip to main content</a>
+    </div>
+    <div class="wrapper" role="main" aria-labelledby="main_title">
+        <!-- Content Header (Page header) -->
+        {% include navigation.html %}
+
+        <!-- optional include side bar here: include sidebar.html from jeykyll _include -->
+
+        <div class="content-wrapper">
+            <!-- <div> -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-12">
+<!--                            <h1 id="main_title" class="m-0 text-dark" role="banner" aria-label="main-title">-->
+<!--                                {{ page.title }}</h1>-->
+                                <!-- <p>{{ page.description | markdownify}}</p> -->
+                                <!-- {{ page.title  }} -->
+
+                                {% assign current_site = site.data.navigation | where: "name", page.title %}
+                                <div>{{ current_site[0].description}}</div>
+                                
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.content-header -->
+
+            <div class="content">
+                <div class="container-fluid">
+                    {{ content }}
+                </div><!-- /.container-fluid -->
+            </div>
+
+        </div>
+
+        <!-- optional include control sidebar here controlesidebar.html from jekyll _include-->
+
+
+    </div>
+
+    <!-- Javscritp libraries -->
+
+    <script src="{{site.baseurl}}assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{site.baseurl}}assets/js/adminlte.min.js"></script>
+
+</body>
+
+</html>

@@ -47,12 +47,12 @@ function addMetric(fields, div_id, class_override) {
     //     }
     // }
     
-    metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[5] + "'></span>";
     metricInstance.querySelector(".info-box-group").innerHTML = fields[2];
     metricInstance.querySelector(".info-box-value").innerHTML = fields[3];
     metricInstance.querySelector(".info-box-unit").innerHTML = fields[4];
-    metricInstance.querySelector(".info-box-div").className = class_override;
+    metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + fields[5] + "'></span>";
     metricInstance.querySelector(".info-box").classList.add("bg-iqss-" + fields[6]);
+    metricInstance.querySelector(".info-box-div").className = class_override;
     // metricInstance.querySelector(".info-box-unit").innerHTML = fields[];
     if (div_id !== "") {
         document.getElementById(div_id).appendChild(metricInstance);

@@ -16,7 +16,7 @@
     --harvard-light-grey: #B6B6B6;
     --card-height: 160px;
 
-    --blue: --var(--iqss-dark-blue);
+    --blue: var(--iqss-dark-blue);
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -27,7 +27,7 @@
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #ffffff;
-    --gray: --(--iqss-grey);
+    --gray: var(--iqss-grey);
     --gray-dark: #343a40;
     --primary: var(--iqss-orange);
     --secondary: var(--iqss-dark-blue);
@@ -61,7 +61,7 @@ body {
 .info-box {
     min-height: var(--card-height) !important;
     max-height: var(--card-height);
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 .info-box-content {
@@ -151,7 +151,7 @@ body {
     font-weight: bold;
     font-size: 1.5em;
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: 2em;
 }
 
@@ -163,8 +163,6 @@ body {
     line-height: 1.5em;
     /* padding-left: 1em; */
 }
-
-
 
 .bg-iqss-orange {
     background-color: var(--iqss-orange) !important;
@@ -279,6 +277,8 @@ body {
     line-height: normal;
 }
 
+// Would be nice if the menu is fixed (needs tweaking in underlying CSSs)
+// position: fixed;
 
 h1,
 h2,
@@ -347,7 +347,7 @@ h3 {
         // }
 
         div {
-            page-break-before: never;
+            page-break-before: avoid;
         }
 
     }

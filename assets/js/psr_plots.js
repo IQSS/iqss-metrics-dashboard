@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log(path)
     generatePSRPlots('school');
     generatePSRPlots('role');
 });
@@ -11,7 +10,7 @@ function titleCaseWord(word) {
 function generatePSRPlots(t) {
     let div1 = `psr-${t}`
     let div2 = `psr-${t}-distribution`
-    console.log(div1, div2)
+
     let file = `psrAdvisesBy${titleCaseWord(t)}.tsv`
     
     d3.tsv(path + file, function (data) {
@@ -21,10 +20,8 @@ function generatePSRPlots(t) {
         let values2 = []
 
         let year = data[0]["Period"];
-        console.log(year)
 
-
-        view = titleCaseWord(t)
+        let view = titleCaseWord(t)
         let title = `Number of Advisees by ${view}`
         
 
@@ -62,10 +59,6 @@ function generatePSRPlots(t) {
         datasets.push(dataset1)
         datasets.push(dataset2)
 
-        console.log(datasets)
-        console.log(labels)
-
-
         let mixed_data_set ={
             x: labels,
             y: datasets,
@@ -93,7 +86,7 @@ function generatePSRPlots(t) {
         for (e of elms) {
             e.innerHTML = `(${year})`
         }
-        // console.log(elms)
+
         
     })
 }

@@ -94,12 +94,12 @@ function pieChart(div_id, data) {
             tooltips: {
                 callbacks: {
                     label: function(tooltipItem, data) {
-                        // console.log(data)
+
                         total = data.datasets[tooltipItem.datasetIndex].data.reduce(reducer)
                         value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
                         
                         percentage = Math.round((100 *value) / total)
-                        // console.log(percentage)
+
                         var label = data.labels[tooltipItem.index] || '';
     
                         if (label) {
@@ -683,7 +683,7 @@ function lineChart(div_id, data) {
 function mixedChart(div_id, data) {
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    console.log(data.y)
+
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -846,7 +846,6 @@ function create_rest_category(data, fraction, numfield, charfield) {
     const threshold = fraction * total
 
     for (d of data) {
-        // console.log(d)
 
         if (d[numfield] < threshold) {
             rest = rest + d.n

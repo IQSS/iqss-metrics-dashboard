@@ -7,8 +7,8 @@
   link: business-operations.html
   icon: dollar-sign
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
-  description: | 
-    Business operations provides IQSS' programs and teams with administrative and financial support, as well as general services to the IQSS community.
+  description: |
+Up    Business Operations provides IQSS programs and teams with administrative and financial support, as well as general services to the IQSS community.
 - name: Data Science Services
   link: data-science-services.html
   icon: table
@@ -26,7 +26,7 @@
   icon: desktop
   color: warning
   description: |
-    Client Support Services (CSS) provides desktop IT support and assistance with all of our affiliates' hardware and software needs.
+    Client Support Services (CSS) provides desktop IT support and assistance with all of our affiliates’ hardware and software needs.
   image: https://projects.iq.harvard.edu/files/styles/os_files_xlarge/public/harvard-iqss/files/img_0029-1.jpg?m=1585862380&itok=YwcMagf1
 - name: Research Computing
   link: research-computing.html
@@ -38,5 +38,5 @@
   link: scientific-programs.html
   icon: flask
   description: |
-    IQSS is home to many faculty-led scientific programs that focus on specialized qualitative and quantitative social science topics of interest.
+    IQSS is home to the Center for Geographic Analysis and many more faculty-led programs focused on qualitative and quantitative social science topics of interest.
   image: https://projects.iq.harvard.edu/files/styles/os_files_large/public/harvard-iqss/files/data-science-5.jpg?m=1556913818&itok=JPQMYXZO

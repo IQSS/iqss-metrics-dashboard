@@ -8,7 +8,7 @@
   icon: dollar-sign
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
   description: |
-Up    Business Operations provides IQSS programs and teams with administrative and financial support, as well as general services to the IQSS community.
+    Business Operations provides IQSS programs and teams with administrative and financial support, as well as general services to the IQSS community.
 - name: Data Science Services
   link: data-science-services.html
   icon: table

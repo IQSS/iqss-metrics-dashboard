@@ -9,7 +9,7 @@ toplinks:
 ---
 
 {% include templates.html %}
-{% include toplinks.html %}
+<!--{% include toplinks.html %}-->
 
 <h2 id="cga">Center for Geographical Analysis (CGA)</h2>
 The <span class="font-weight-bold">Center for Geographic Analysis (CGA)</span> supports research and teaching across all
@@ -96,7 +96,7 @@ disciplines in the University as they relate to geospatial technology and method
 
             <div class="card-body">
                 <canvas id="cga_workshop_evaluations"></canvas>
-                <div class="card-">Not in all cases does a higher value mean better. For more information go to: <a
+                <div class="card-text">Not in all cases does a higher value mean better. For more information go to: <a
                         href="https://gis.harvard.edu/workshop-evaluation" target="_blank"
                         rel="noopener noreferrer">Workshop evaluations</a></div>
             </div>
@@ -212,6 +212,7 @@ disciplines in the University as they relate to geospatial technology and method
 
 
 <script>
+    resize();
     d3.tsv("{{site.baseurl}}assets/data/cga_contact.tsv", function (data) {
         let labels = []
         let d = [];

@@ -19,9 +19,29 @@ var olive = "#BCBD22"
 var cyan = "#17BECF"
 
 // chartJS default settings
-Chart.defaults.global.defaultFontSize = 14;
+// Chart.defaults.global.defaultFontSize = 14;
+// To find all the settings type console log the Chart.defaults in the console of the browser
 Chart.defaults.global.defaultFontFamily = "Montserrat";
 Chart.defaults.global.defaultFontColor = "#000";
+Chart.defaults.global.elements.point.radius = 0;
+
+Chart.defaults.global.onResize = function() {
+    resize();
+}
+
+function resize() {
+    const width = document.body.clientWidth;
+
+    if (width>576) {
+        Chart.defaults.global.defaultFontSize = 14;
+    } else if (width<=576 && width >470) {
+        Chart.defaults.global.defaultFontSize = 10;
+    }else {
+        Chart.defaults.global.defaultFontSize = 8;
+    }
+}
+
+/* Always call resize before drawing */
 
 // 12 colors
 var iqss_color_pallette = [iqss_dark_blue, iqss_orange, green, harvard_crimson, purple,
@@ -65,9 +85,7 @@ function addAccessibilityItems(div_id, title) {
 
 
 function pieChart(div_id, data) {
-    // data.x: labels
-    // data.y: values
-    // data.title: 
+
     var ctx = document.getElementById(div_id).getContext('2d');
     const reducer = (accumulator, currentValue) => parseFloat(accumulator) + parseFloat(currentValue);
 
@@ -223,7 +241,7 @@ function horizontalBarChart(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                 }],
                 yAxes: [{
@@ -235,7 +253,7 @@ function horizontalBarChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                 }],
                 
@@ -273,7 +291,9 @@ function multiLineChart(div_id, data) {
     templateObj = {
         fill: false,
         borderWidth: 4,
-        lineTension: 0
+        lineTension: 0,
+        // pointRadius: chartPointRadius,
+        // pointHoverRadius: chartPointHoverRadius
     }
 
     for (d of data.datasets) {
@@ -311,7 +331,7 @@ function multiLineChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     // gridLines: false,
                 }, ],
@@ -320,7 +340,7 @@ function multiLineChart(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     ticks: {
                         beginAtZero: true,
@@ -354,7 +374,7 @@ function stackedArea(div_id, data) {
     let templateObj = {
         fill: true,
         borderWidth: 4,
-        lineTension: 0        
+        lineTension: 0
     }
     let i = 0
 
@@ -400,7 +420,7 @@ function stackedArea(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     // gridLines: false,
                 }, ],
@@ -409,7 +429,7 @@ function stackedArea(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     stacked:true,
                     ticks: {
@@ -486,7 +506,7 @@ function stackedHorizontalBar(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     stacked:true,
                     // gridLines: false,
@@ -496,7 +516,7 @@ function stackedHorizontalBar(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     stacked:true,
                     ticks: {
@@ -573,7 +593,7 @@ function stackedBar(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     stacked:true,
                     // gridLines: false,
@@ -583,7 +603,7 @@ function stackedBar(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     stacked:true,
                     ticks: {
@@ -646,7 +666,7 @@ function lineChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     // gridLines: false,
                 }, ],
@@ -655,7 +675,7 @@ function lineChart(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     ticks: {
                         beginAtZero: true,
@@ -710,7 +730,7 @@ function mixedChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     // gridLines: false,
                 }, ],
@@ -719,7 +739,7 @@ function mixedChart(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     ticks: {
                         beginAtZero: true,
@@ -792,7 +812,7 @@ function pointChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     // gridLines: false,
                 }, ],
@@ -801,7 +821,7 @@ function pointChart(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        fontSize: 14,
+                        
                     },
                     ticks: {
                         min: 1,

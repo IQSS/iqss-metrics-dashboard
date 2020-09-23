@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    resize();
     generatePSRPlots('school');
     generatePSRPlots('role');
 });

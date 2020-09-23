@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    loadCSSPlots(path)
-    loadLabPlots(path)
+    resize();
+    loadCSSPlots(path);
+    loadLabPlots(path);
 });
 
 

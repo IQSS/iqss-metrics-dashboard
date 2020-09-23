@@ -5,7 +5,7 @@ let fontFamily = "Montserrat";
 let metrics_retrieved =[]
 
 $(document).ready(function () {
-
+    resize();
     loadJSON(function (response) {
         const config = JSON.parse(response);
         dataversesToMonth(config);

@@ -1,0 +1,12 @@
+<div class="info-box-div col-xs-12 col-sm-6 col-lg-4 col-xl-3">
+    <div class="info-box bg-iqss-{{include.color || default: 'orange'}}" style="max-height:90px;">
+                <span class="info-box-icon">
+                    <span class="{{ include.icon | default: 'fa fa-globe'}}" aria-hidden="true"></span>
+                </span>
+        <div class="info-box-content">
+            <span class="info-box-group">{{include.metric}}</span>
+            <span class="info-box-value">{{include.value | '0'}}</span>
+            <p class="info-box-unit">{{include.period | }}</p>
+        </div>
+    </div>
+</div>

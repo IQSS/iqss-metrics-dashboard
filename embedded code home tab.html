@@ -1,0 +1,101 @@
+<iframe id='metrics-frame-home' scrolling='no' width=100% frameborder=0 height="1500"
+  src='https://iqss.github.io/iqss-metrics-dashboard/'>
+</iframe>
+
+
+<!-- Include this script once  -->
+<script>
+  // Change this for every page:
+
+  var media_queries = {
+    "px": [0, 576, 768, 992, 1200],
+    "home": [2700, 1480, 1283, 1235, 950],
+    "bo": [4700, 2800, 2800, 2200, 1600],
+    "dss": [4356, 6600, 6600, 4000, 3484],
+    "dv": [6400, 7200, 5500, 4500, 3010],
+    "it": [5000, 8500, 12000, 5000, 4596],
+    "rc": [5000, 3800, 4500, 1800, 1634],
+    "sp": [6500, 9000, 6300, 4800, 4527]
+  };
+
+  /**
+   * Set the iframe height of the metrics page
+   * @author Erik Buunk
+   * @param {string} page - The name of the page
+   * @return {} - nothing
+   */
+  function setHeight(page) {
+
+    // console.log("setting height for: " + page);
+    const frame = document.getElementById("metrics-frame-" + page);
+    // get iframe width
+    var w = frame.clientWidth;
+
+    // find iframe width
+    var height = 100;
+    var idx = 0;
+
+    for (var i = 0; i < media_queries.px.length; i++) {
+      if (media_queries.px[i] <= w) {
+        idx = i;
+      }
+    }
+
+    // set height
+    height = media_queries[page][idx]
+    frame.clientHeight = height;
+    frame.offsetHeight = height;
+    frame.scrollHeight = height;
+    frame.height = height;
+    frame.setAttribute("style", "height: " + height +"px !important;")
+  }
+
+  function setIFrameHeightHome() {
+    setHeight("home");
+  }
+
+  function setIFrameHeightBO() {
+    setHeight("bo");
+  }
+
+  function setIFrameHeightDSS() {
+    setHeight("dss");
+  }
+
+  function setIFrameHeightDV() {
+    setHeight("dv");
+  }
+
+  function setIFrameHeightIT() {
+    setHeight("it");
+  }
+
+  function setIFrameHeightRC() {
+    setHeight("rc");
+  }
+
+  function setIFrameHeightSP() {
+    setHeight("sp");
+  }
+
+
+  setInterval(() => {
+    // Set initital height.
+    setHeight("home");
+    setHeight("bo");
+    setHeight("dss");
+    setHeight("dv");
+    setHeight("it");
+    setHeight("rc");
+    setHeight("sp");
+
+  }, 5000);
+
+  window.addEventListener("resize", setIFrameHeightHome);
+  window.addEventListener("resize", setIFrameHeightBO);
+  window.addEventListener("resize", setIFrameHeightDSS);
+  window.addEventListener("resize", setIFrameHeightDV);
+  window.addEventListener("resize", setIFrameHeightIT);
+  window.addEventListener("resize", setIFrameHeightRC);
+  window.addEventListener("resize", setIFrameHeightSP);
+</script>

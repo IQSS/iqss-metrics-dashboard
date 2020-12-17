@@ -2,8 +2,8 @@ id	value	count	period
 0	Authentication	70	FY2020
 1	Permissions	66	FY2020
 2	File upload	59	FY2020
-3	APIs	29	FY2020
-4	Metadata Inquiry	29	FY2020
+3	Metadata Inquiry	29	FY2020
+4	APIs	29	FY2020
 5	Versioning	24	FY2020
 6	Submit for Review	24	FY2020
 7	Data Explorer	20	FY2020
@@ -15,6 +15,6 @@ id	value	count	period
 13	Tabular data file	8	FY2020
 14	Return to Author	7	FY2020
 15	Notifications	4	FY2020
-16	Geospatial Data Exploration	3	FY2020
-17	File Level DOI	3	FY2020
+16	File Level DOI	3	FY2020
+17	Geospatial Data Exploration	3	FY2020
 18	Other	387	FY2020

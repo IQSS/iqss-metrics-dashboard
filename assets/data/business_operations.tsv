@@ -1,7 +1,7 @@
 Group	Metric	Icon	URL	Color	Period	Total	Updated	Homepage
-Sponsored Research Administration	Direct Expenditures	fa fa-dollar-sign	bo.html	orange	Last 12 months	$3,815,471	February 2021	
-Sponsored Research Administration	Indirects Collected	fa fa-funnel-dollar	bo.html	orange	Last 12 months	$937,741		
-Sponsored Research Administration	Grant Applications Submitted	fa fa-share	bo.html	orange	Last 12 months	37		
+Sponsored Research Administration	Direct Expenditures	fa fa-dollar-sign	bo.html	orange	Last 12 months	$3,568,962	February 2021	
+Sponsored Research Administration	Indirects Collected	fa fa-funnel-dollar	bo.html	orange	Last 12 months	$869,154		
+Sponsored Research Administration	Grant Applications Submitted	fa fa-share	bo.html	orange	Last 12 months	32		
 Sponsored Research Administration	Active Grants Managed by IQSS	fa fa-tasks	bo.html	orange	Last 12 months	37		x
 Sponsored Research Administration	Number of unique PIs using IQSS sponsored research services	fa fa-user-alt	bo.html	orange	Last 12 months	27		
 Sponsored Research Administration	Number of unique Harvard Departments using IQSS sponsored research services	fa fa-university	bo.html	orange	Last 12 months	7		
@@ -11,16 +11,16 @@ Undergrad Student Support	Undergraduate Research Scholar Dollars Awarded	fa fa-m
 Graduate Student Support	New Graduate Student Appointments	fa fa-plus-circle	bo.html	light-blue	Last 12 months	6		
 Graduate Student Support	Graduate Student Research Grants Awarded	fa fa-award	bo.html	light-blue	Most Recent Year	27		
 Graduate Student Support	Graduate Research Grant Dollars Awarded	fa fa-trophy	bo.html	light-blue	Most Recent Year	$50,930		
-Graduate Student Support	Graduate Travel Grants Awarded	fa fa-suitcase	bo.html	light-blue	Last 12 months	7		
-Graduate Student Support	Graduate Travel Grant Dollars Awarded	fa fa-plane-departure	bo.html	light-blue	Last 12 months	$5,200		
-Community Building	New Student Affiliates 	fa fa-user-graduate	bo.html	blue	Last 12 months	41		
-Community Building	New Academic Affiliates	fa fa-plus-square	bo.html	blue	Last 12 months	40		
+Graduate Student Support	Graduate Travel Grants Awarded	fa fa-suitcase	bo.html	light-blue	Last 12 months	4		
+Graduate Student Support	Graduate Travel Grant Dollars Awarded	fa fa-plane-departure	bo.html	light-blue	Last 12 months	$2,850		
+Community Building	New Student Affiliates 	fa fa-user-graduate	bo.html	blue	Last 12 months	33		
+Community Building	New Academic Affiliates	fa fa-plus-square	bo.html	blue	Last 12 months	39		
 Community Building	Academic Reappointments	fa fa-redo	bo.html	blue	Last 12 months	45		
-Community Building	New Faculty Affiliates	fa fa-user-plus	bo.html	blue	Last 12 months	6		
-Community Building	Events (seminars, conferences, trainings, social events)	fa fa-calendar-alt	bo.html	blue	Last 12 months	41		
-Community Building	Attendees at events	fa fa-users	bo.html	blue	Last 12 months	1725		
-Community Building	Current Student Affiliates	fa fa-user-alt	bo.html	blue	Most Recent Month	2072		
-Community Building	Current Academic Affiliates	fa fa-user-alt	bo.html	blue	Most Recent Month	966		
-Community Building	Current Faculty Affiliates	fa fa-user-alt	bo.html	blue	Most Recent Month	1257		
-Community Building	Visas Processed	fa fa-passport	bo.html	blue	Last 12 months	18		
+Community Building	New Faculty Affiliates	fa fa-user-plus	bo.html	blue	Last 12 months	5		
+Community Building	Events (seminars, conferences, trainings, social events)	fa fa-calendar-alt	bo.html	blue	Last 12 months	36		
+Community Building	Attendees at events	fa fa-users	bo.html	blue	Last 12 months	1525		
+Community Building	Current Student Affiliates	fa fa-user-alt	bo.html	blue	Most Recent Month	213		
+Community Building	Current Academic Affiliates	fa fa-user-alt	bo.html	blue	Most Recent Month	98		
+Community Building	Current Faculty Affiliates	fa fa-user-alt	bo.html	blue	Most Recent Month	123		
+Community Building	Visas Processed	fa fa-passport	bo.html	blue	Last 12 months	16		
 Community Building	IQSS Website and News Features	fas fa-newspaper	bo.html	blue	Last 12 months	30		

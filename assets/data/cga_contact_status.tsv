@@ -1,8 +1,7 @@
 id	Your Harvard status/appointment	count	fraction	percentage
-0	Graduate student: Masters	80	0.34	34%
-2	Graduate student: Doctorate	52	0.22	22%
-3	Staff	26	0.11	11%
-4	Faculty	19	0.08	8%
-5	Research fellow	14	0.06	6%
-6	Post doctoral research associate	11	0.05	5%
-0	Other	36	0.15000000000000002	15%
+0	Graduate student: Masters	81	0.36	36%
+1	Graduate student: Doctorate	50	0.22	22%
+3	Staff	24	0.11	11%
+4	Faculty	20	0.09	9%
+5	Research fellow	11	0.05	5%
+0	Other	40	0.17	17%

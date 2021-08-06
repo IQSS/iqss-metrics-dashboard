@@ -1,6 +1,6 @@
 id	value	count	period
-0	Authentication	126	FY2021
-1	Permissions	126	FY2021
+0	Permissions	126	FY2021
+1	Authentication	126	FY2021
 2	File upload	86	FY2021
 3	Dataset publishing	80	FY2021
 4	File download	34	FY2021
@@ -12,12 +12,12 @@ id	value	count	period
 10	Dataset creation	18	FY2021
 11	Citation	16	FY2021
 12	Data Explorer	10	FY2021
-13	Return to Author	10	FY2021
-14	Guestbook	10	FY2021
+13	Guestbook	10	FY2021
+14	Return to Author	10	FY2021
 15	File Hierarchy	9	FY2021
 16	Versioning	8	FY2021
-17	Notifications	7	FY2021
-18	Dataverse editing	7	FY2021
+17	Dataverse editing	7	FY2021
+18	Notifications	7	FY2021
 19	APIs	6	FY2021
 20	File Level DOI	4	FY2021
 21	Tabular data file	4	FY2021

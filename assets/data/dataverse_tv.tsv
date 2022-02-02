@@ -1,4 +1,6 @@
 Speakers	Title	Description	YouTube ID
+Julie Goldman, Danny Brooke	Dataverse, DMPTool, RSpace, and Harvard Data Commons	The talk begins at at 23:13 as part of the Force11 Community Call.	BN5HKGYiJCg
+Jim Myers	Multiple licenses demo	"The password is ""community2022!"" A demo of the multiple license feature under development at https://github.com/IQSS/dataverse/pull/7920"	
 Teresa Bascik (UniversitÃ© de MontrÃ©al), Mark Goodwin (UBC), Ãve Paquette-Bigras (UniversitÃ© de MontrÃ©al), Michael Steeleworthy (Wilfrid Laurier)	Data Curation and Metadata Best Practices for Dataverse	New guides to help curators, data managers, and stewards	OOro8ymXoEY
 Philipp Conzett, Helene N. Andreassen	Adapting flexible metadata support in Dataverse to the needs of domain-specific repositories	The case of The TromsÃ¸ Repository of Language and Linguistics (TROLLing).	6Exy3bvLm9U
 Pablo ValÃ©rio PolÃ´nia	Developing an updated plugin for Dataverse integration with OPS/OJS	In this activity we present the current status of development of a plugin to integrate Dataverse with Open Preprint Servers (OPS) and Open Journal Systems (OJS) in their most recent versions (3.3.x series).	

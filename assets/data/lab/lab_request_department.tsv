@@ -1,23 +1,23 @@
 id	Department/Concentration	count	percentage	period
-1	Government	242	13.3	October 2019 - May 2020
-2	Architecture	184	10.1	October 2019 - May 2020
-3	Design Studies	115	6.3	October 2019 - May 2020
-4	Economics	104	5.7	October 2019 - May 2020
-5	Urban Planning	97	5.3	October 2019 - May 2020
-6	Landscape Architecture	95	5.2	October 2019 - May 2020
-7	IQSS	85	4.7	October 2019 - May 2020
-8	Sociology	63	3.5	October 2019 - May 2020
-9	Social Studies	46	2.5	October 2019 - May 2020
-10	Public Policy	44	2.4	October 2019 - May 2020
-11	Undeclared	41	2.3	October 2019 - May 2020
-12	English	40	2.2	October 2019 - May 2020
-13	Philosophy	33	1.8	October 2019 - May 2020
-14	GHP	29	1.6	October 2019 - May 2020
-15	History	26	1.4	October 2019 - May 2020
-16	Finance	25	1.4	October 2019 - May 2020
-17	CMES	24	1.3	October 2019 - May 2020
-18	Asia	23	1.3	October 2019 - May 2020
-19	WCFIA	20	1.1	October 2019 - May 2020
-20	Political Science	20	1.1	October 2019 - May 2020
-21	Health Policy	20	1.1	October 2019 - May 2020
-100	Other	446	24.5	October 2019 - May 2020
+0	Government	570	17.5	September 2021 - July 2021
+2	Design Studies	290	8.9	September 2021 - July 2021
+3	Architecture	184	5.7	September 2021 - July 2021
+4	Economics	169	5.2	September 2021 - July 2021
+5	Urban Planning	117	3.6	September 2021 - July 2021
+6	Landscape Architecture	100	3.1	September 2021 - July 2021
+7	Biology	98	3.0	September 2021 - July 2021
+8	Sociology	88	2.7	September 2021 - July 2021
+9	IQSS	85	2.6	September 2021 - July 2021
+10	Education Policy	79	2.4	September 2021 - July 2021
+11	Undeclared	75	2.3	September 2021 - July 2021
+12	Public Administration	70	2.2	September 2021 - July 2021
+13	Computer Science	68	2.1	September 2021 - July 2021
+14	WCFIA	63	1.9	September 2021 - July 2021
+15	Social Studies	52	1.6	September 2021 - July 2021
+16	Anthropology	51	1.6	September 2021 - July 2021
+17	Public Policy	50	1.5	September 2021 - July 2021
+18	English	45	1.4	September 2021 - July 2021
+19	History	39	1.2	September 2021 - July 2021
+20	Philosophy	38	1.2	September 2021 - July 2021
+21	Political Science	38	1.2	September 2021 - July 2021
+100	Other	886	27.200000000000003	September 2021 - July 2021

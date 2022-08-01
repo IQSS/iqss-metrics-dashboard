@@ -1,16 +1,16 @@
 id	value	count	period
-0	Feature Support	355	FY2021
-1	Repository Maintenance	287	FY2021
-2	Data request	161	FY2021
-3	General Dataverse inquiry	115	FY2021
-4	Account update	73	FY2021
-5	Bug	25	FY2021
-6	Journal	21	FY2021
-7	Large File Upload	14	FY2021
-8	Demo request	12	FY2021
-9	Sensitive Data	9	FY2021
-10	Installation inquiry	9	FY2021
-11	Data Deletion request	8	FY2021
-12	Harvesting	8	FY2021
-13	Download Metrics	5	FY2021
-14	Software Suggestions	4	FY2021
+0	Feature Support	567	FY2022
+1	General Dataverse inquiry	127	FY2022
+2	Data request	110	FY2022
+3	Repository Maintenance	102	FY2022
+4	Bug	49	FY2022
+5	Account update	44	FY2022
+6	Large File Upload	23	FY2022
+7	Journal	10	FY2022
+8	Installation inquiry	9	FY2022
+9	Demo request	8	FY2022
+10	Download Metrics	6	FY2022
+11	Data Deletion request	5	FY2022
+12	Harvesting	3	FY2022
+13	Sensitive Data	3	FY2022
+14	Software Suggestions	2	FY2022

@@ -1,25 +1,24 @@
 id	value	count	period
-0	Authentication	127	FY2021
-1	Permissions	127	FY2021
-2	File upload	88	FY2021
-3	Dataset publishing	80	FY2021
-4	File download	38	FY2021
-5	Metadata Inquiry	31	FY2021
-6	Dataset editing	29	FY2021
-7	Submit for Review	25	FY2021
-8	Dataset creation	22	FY2021
-9	Deaccessioning	20	FY2021
-10	Dataverse Creation	19	FY2021
-11	Citation	17	FY2021
-12	Guestbook	12	FY2021
-13	Data Explorer	10	FY2021
-14	Return to Author	10	FY2021
-15	APIs	9	FY2021
-16	File Hierarchy	9	FY2021
-17	Dataverse editing	8	FY2021
-18	Versioning	8	FY2021
-19	Notifications	7	FY2021
-20	Tabular data file	5	FY2021
-21	File Level DOI	4	FY2021
-22	Geospatial Data Exploration	2	FY2021
-23	Other	141	FY2021
+0	Dataset publishing	184	FY2022
+1	Authentication	162	FY2022
+2	File upload	91	FY2022
+3	Permissions	85	FY2022
+4	File download	50	FY2022
+5	Submit for Review	35	FY2022
+6	Deaccessioning	32	FY2022
+7	Dataset editing	32	FY2022
+8	Dataset creation	29	FY2022
+9	Metadata Inquiry	22	FY2022
+10	APIs	16	FY2022
+11	Dataverse Creation	15	FY2022
+12	Citation	12	FY2022
+13	Return to Author	11	FY2022
+14	Notifications	8	FY2022
+15	Versioning	8	FY2022
+16	Guestbook	7	FY2022
+17	File Hierarchy	6	FY2022
+18	Tabular data file	5	FY2022
+19	Data Explorer	4	FY2022
+20	Dataverse editing	2	FY2022
+21	Geospatial Data Exploration	1	FY2022
+22	Other	99	FY2022

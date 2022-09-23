@@ -1,6 +1,60 @@
 Speakers	Title	Description	YouTube ID
-Dataverse Community	#Dataverse2022 Community Update Video 	Updates from Dataverse installations around the world.	dyCPbvFy63g
-Julie Goldman, Danny Brooke	Dataverse, DMPTool, RSpace, and Harvard Data Commons	The talk begins at at 23:13 as part of the Force11 Community Call.	BN5HKGYiJCg
+Philip Durbin	Demo of using Globus to upload files to Dataverse 	Support for Globus is currently being tested. Upload is working, as shown in this demo.	
+Eryk Kulikowski, Dieuwertje Bloemen	Demo of creating datasets with incomplete required metadata fields	KU Leuven RDR has code ready to resolve https://github.com/IQSS/dataverse/issues/8822	
+Gustavo Durand	Introduction to the Dataverse Software (in Spanish)	Given at the launch event for Repositorio de Datos AcadÃ©micos RDA-UNR.	z2Fzjl5o6KA
+Jim Myers	Experimenting with geospatial indexing	Given at the Geospatial session at the 2022 Dataverse Community Meeting.	EACJJaV3O1c
+Kevin Worthington	Geospatial Data Support in Institutional Repositories	Given at the Geospatial session at the 2022 Dataverse Community Meeting.	EACJJaV3O1c
+Fu Xiaokang	Dataverse Enables Effective Sharing of COVID-19 Data	Given at the Geospatial session at the 2022 Dataverse Community Meeting.	EACJJaV3O1c
+Bert Spaan	Allmaps: curating, georeferencing and exploring for IIIF maps	Given at the Geospatial session at the 2022 Dataverse Community Meeting.	EACJJaV3O1c
+Kaitlin Newson	GeoJSON Preview	Given at the Geospatial session at the 2022 Dataverse Community Meeting.	EACJJaV3O1c
+Kevin Worthington	Geospatial session introduction	Given at the Geospatial session at the 2022 Dataverse Community Meeting.	EACJJaV3O1c
+Jim Myers	There and Back Again: Recent Updates to Dataverseâs BagIt-based Archiving Capabilities	Given at the Preservation session at the 2022 Dataverse Community Meeting.	qY3ZUwLqL8Y
+Tiago Braga, Tatiana Canelhas Pignataro	HipÃ¡tia: a model to implement trusted archival digital repositories	Given at the Preservation session at the 2022 Dataverse Community Meeting.	qY3ZUwLqL8Y
+Grant Hurley	Fixity in the Cloud: Preservation Planning for Scholars Portal Dataverse	Given at the Preservation session at the 2022 Dataverse Community Meeting.	qY3ZUwLqL8Y
+Dorothea Iglezaki	Metadata2Dataverse demo	Given at the Metadata session at the 2022 Dataverse Community Meeting.	
+Dorothea Iglezaki	Metadata2Dataverse	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+Jan Range	EasyDataverse: Generation of a User-friendly Python Interface to a Dataverse Installation	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+Eugene Barsky, Paul Lesack	Dryad2Dataverse	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+John Huck, Kaitlin Newson	One to Beam Up: Migrating a Dataverse Repository to a Shared Installation	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+Oliver Bertuch	HERMES + Dataverse - are we ready for research software?	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+Slava Tykhonov	Flexible Metadata Schemes Support for Dataverse	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+Wim Hugo	Where Does Metadata End, and the Graph Begin?	Given at the Metadata session at the 2022 Dataverse Community Meeting.	eeCMN_5Nj_0
+Andrew Woods	Harvard Data Commons	Through the Harvard Data Commons project, weâve developed a Confederation of Open Access Repositories (COAR) Notify/Linked Data Notification-based mechanism for these repositories to inform each other of new materials potentially related to their holdings, allowing administrators to easily create back-links as appropriate.	S6tbrqOU8QM
+Mahmood Shad	FAIR Computational Workflow Support in Dataverse	Given at the Curation and/or Workflows session at the 2022 Dataverse Community Meeting.	4b-1jwxKb9A
+Wim Hugo	Licences and Automation	Given at the Curation and/or Workflows session at the 2022 Dataverse Community Meeting.	4b-1jwxKb9A
+Kathryn Claypool	Using Metadata to Catalog: When Protected Data Canât Be Stored in Dataverse	Given at the Curation and/or Workflows session at the 2022 Dataverse Community Meeting.	4b-1jwxKb9A
+Ceilyn Boyd, Katie Mika	Curating Large Library Collections in the Harvard Dataverse Repository	Given at the Curation and/or Workflows session at the 2022 Dataverse Community Meeting.	4b-1jwxKb9A
+Saadiah Ghazali	WorldFish Dataverse Performance	Given at the Curation and/or Workflows session at the 2022 Dataverse Community Meeting.	4b-1jwxKb9A
+Christina Chan-Park, Laura Sare, Laura Waugh	Getting to Know You: Results of the Texas Data Repository User Survey	Given at the Curation and/or Workflows session at the 2022 Dataverse Community Meeting.	4b-1jwxKb9A
+Marcus Gaertner	XSample â Excerpt Generation via External Tool	Given at the Tools/Curation/Metadata session at the 2022 Dataverse Community Meeting.	aIC_cfkWgZk
+Maria Praetzelli, Julie Goldman	FAIRification of Data through Passage of Research Data and Metadata between DMPTool, RSpace and Dataverse	Given at the Tools/Curation/Metadata session at the 2022 Dataverse Community Meeting.	aIC_cfkWgZk
+Sebastian Karcher	Enhancing Dataverse for Qualitative Data: New Previewers and External Tools	Given at the Tools/Curation/Metadata session at the 2022 Dataverse Community Meeting.	aIC_cfkWgZk
+Sebastian Karcher	Introducing dvcurator-python	Given at the Tools/Curation/Metadata session at the 2022 Dataverse Community Meeting.	aIC_cfkWgZk
+Matthew Dunlap	Confirmable Reproducible Research Environment - CORE2	Given at the Tools/Curation/Metadata session at the 2022 Dataverse Community Meeting.	aIC_cfkWgZk
+Sonia Barbosa	The Dataverse Project for Managing and Sharing Your Research Data		sLoOrSMHK4Y
+Katie Mika	Research Data Publishing Ethics - Outputs from FORCE11 & COPE Working Group		sLoOrSMHK4Y
+Jon Crabtree, Philipp Conzett, Jim Myers	Updates from the Global Dataverse Community Consortium	Financial updates, ongoing projects, GDCC website, Governance and Advisory Board, Dataverse Community Survey 2022	sLoOrSMHK4Y
+Ana Trisovic	Dataverse Integration With GitHub via a GitHub Action	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Jim Myers	Adding Lots of Zeros to the Size of Datafiles	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Stefan Kasberger	Doing tests, data migrations and other API stuff with the help of pyDataverse	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Yves Rozenholc, Slava Tykhonov	The COVID-19 Museum... a use case for the Dataverse community	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Dan Willoughby	Using an Alternative to S3 - Connecting Dataverse to Storj	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Ines Schmahl, Florian Rhiem	From Lab Notebook to Publication - A Lighthouse Workflow for Research Data	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Baptiste Rouxel	Creating a Customizable Open Source Dataverse Widget for Website Integration	Given at the Integrations/Tools session at the 2022 Dataverse Community Meeting.	3ek7F_Dxcjk
+Philipp Conzett, Adil Hasan	Building a Research Data Archive â What Flavour Should It Be?	Given at the Software session at the 2022 Dataverse Community Meeting.	-Re_elg67e8
+Ellen Kraffmiller, Raman Prasad, Ethan Cowan	DP Creator & Dataverse: Integrating differential privacy	Given at the Software session at the 2022 Dataverse Community Meeting.	-Re_elg67e8
+Esther DzalÃ© Yeumo, Thomas Jouneau	Towards a National Federated Data Space	Given at the Software session at the 2022 Dataverse Community Meeting.	-Re_elg67e8
+Zacarias Benta	Developing a Distributed and Fault Tolerant Dataverse Architecture	Given at the Software session at the 2022 Dataverse Community Meeting.	-Re_elg67e8
+Slava Tykhonov, Marion Wittenberg, Wilko Steinhoff	Archive in a Box for Dataverse: Building Distributed Data Network with shared services	Given at the Software session at the 2022 Dataverse Community Meeting.	-Re_elg67e8
+Steven McEachern	Indigenous Data and Infrastructure Services	Given at the Plenary session at the 2022 Dataverse Community Meeting.	YghUP5mMwMU
+Jane Anderson	Keynote: Local Contexts - traditional knowledge labels & notices	Given at the Plenary session at the 2022 Dataverse Community Meeting.	YghUP5mMwMU
+Melissa Renee Korf, Julie Goldman	NIH/GREI: DMP/RDM Updates	The Dataverse Project at IQSS is joining the NIH Office of Data Science Strategy (ODSS) and five other generalist repositories in launching the Generalist Repository Ecosystem Initiative (GREI) with the intention of supplementing domain-specific repositories in support of the NIH biomedical data ecosystem for data sharing.	YghUP5mMwMU
+Sarah Giesbrecht, Anatsiisinsski (Chyloe Healy)	Indigenous Data Management: Indigenous Sovereignty in Action	The Indigenous Data Management: Indigenous Sovereignty in Action project is intended to bring together experts in Indigenous data and information management to share their knowledge through a series of webinars and compile this information into an online toolkit.	YghUP5mMwMU
+Aapooyaki Bonnie Healy	Keynote for the 2022 Dataverse Community Meeting	Given at the Plenary session at the 2022 Dataverse Community Meeting.	YghUP5mMwMU
+Gary King	Welcome to the 2022 Dataverse Community Meeting	Given at the Plenary session at the 2022 Dataverse Community Meeting.	YghUP5mMwMU
+Gustavo Durand	Dataverse Software - New Features and Future Plans	Given at the Plenary session at the 2022 Dataverse Community Meeting.	YghUP5mMwMU
+Dataverse Community	#Dataverse2022 Community Update Video 	Updates from Dataverse installations around the world. Given at the 2022 Dataverse Community Meeting.	dyCPbvFy63g
+Julie Goldman, Danny Brooke	Dataverse, DMPTool, RSpace, and Harvard Data Commons	Given at the Force11 Community Call.	BN5HKGYiJCg
 Jim Myers	Multiple licenses demo	"The password is ""community2022!"" A demo of the multiple license feature under development at https://github.com/IQSS/dataverse/pull/7920"	
 Teresa Bascik (UniversitÃ© de MontrÃ©al), Mark Goodwin (UBC), Ãve Paquette-Bigras (UniversitÃ© de MontrÃ©al), Michael Steeleworthy (Wilfrid Laurier)	Data Curation and Metadata Best Practices for Dataverse	New guides to help curators, data managers, and stewards	OOro8ymXoEY
 Philipp Conzett, Helene N. Andreassen	Adapting flexible metadata support in Dataverse to the needs of domain-specific repositories	The case of The TromsÃ¸ Repository of Language and Linguistics (TROLLing).	6Exy3bvLm9U
@@ -33,6 +87,8 @@ Ana Trisovic	Repository Approaches to Improving the Quality of Shared Data and C
 Mandy Gooch	Supporting Computational Reproducibility: Updates on CoRe2 Development and AJPS Verification Policy Implementation	Talk about the updates on the developments of the CoRe2 platform, the Dataverse collaboration, and the AJPS result verification policy implementation.	oMQsTcXtGbU
 MercÃ¨ Crosas	2020 Dataverse Community Meeting closing event	Thanks for coming to #dataverse2020!	l5y2L16PNxs
 Anna Dabrowski, Meghan Goodchild, Gustavo Durand	Remote Storage/Large Datasets	The Remote Storage/Large Datasets breakout session will include brief presentations from community members and group discussion about improving data transfer mechanisms and storage options for Dataverse repositories. Presentations will cover data upload developments, including Globus integration and direct upload to S3, as well as Trusted Remote Storage Agents (TRSA) for sensitive data, and managing multiple data stores. This session is an opportunity to hear about and provide feedback on the efforts of community members, discuss policy and service implications for managing repositories, and talk about further coordinating our efforts.	LHyiA3JeiwE
+Tomasz Miksa	Dataverse and Machine-actionable Data Management Plans	Part of the External Tools session.	YH4I_kldmGI
+Mahsa Naseri	Dataverse External Tools: JMP integration	Part of the External Tools session.	YH4I_kldmGI
 Phil Durbin, Kaitlin Newson, Jim Myers, Kacper Kowalik, James Honaker, Kamil Guryn, Xinyue Ye, Mahsa Naseri, Matthew Dunlap, Tomasz Miksa	External Tools	External Tools intro, The Dataverse Data Curation Tool, A Previewer How To, Whole Tale as a Dataverse's External Tool, TwoRavens for Machine Learning, A set of a new Dataverse external tools for advanced data visualization in hard sciences, An Intelligent Dataset Discovery System for Dataverse, JMP integration, Data Curation and Verification Workflows Utilizing Containerization, Dataverse and Machine-actionable Data Management Plans	YH4I_kldmGI
 Jonas Kahle, Philipp Conzett, Richard Fulss	Flexible Metadata Session 2	Panel of speakers will give brief talks on longer term metadata issues and projects that have major design implications. Discussion in this session will focus on opportunities, challenges, and priorities for long term features and design development to facilitate metadata integration and exchange.	fOzhYfEr7Rk
 Olga Kurek, Steve McEachern, Martine Gagnon	Flexible Metadata Session 1	Panelists will give brief talks on metadata projects that have been recently implemented or are near-term opportunities. This discussion will focus on near-term metadata projects and possibilities that can be executed in the latest version.	3_SRARQiBr8

@@ -1,22 +1,20 @@
 id	Department/Concentration	count	percentage	period
-0	Government	802	18.3	September 2021 - July 2021
-2	Design Studies	425	9.7	September 2021 - July 2021
-3	Economics	256	5.8	September 2021 - July 2021
-4	Architecture	222	5.1	September 2021 - July 2021
-5	IQSS	161	3.7	September 2021 - July 2021
-6	Urban Planning	140	3.2	September 2021 - July 2021
-7	Undeclared	107	2.4	September 2021 - July 2021
-8	Landscape Architecture	105	2.4	September 2021 - July 2021
-9	Public Policy	101	2.3	September 2021 - July 2021
-10	Biology	98	2.2	September 2021 - July 2021
-11	Education Policy	96	2.2	September 2021 - July 2021
-12	Sociology	93	2.1	September 2021 - July 2021
-13	Public Administration	89	2.0	September 2021 - July 2021
-14	WCFIA	76	1.7	September 2021 - July 2021
-15	Anthropology	73	1.7	September 2021 - July 2021
-16	Computer Science	72	1.6	September 2021 - July 2021
-17	Social Studies	52	1.2	September 2021 - July 2021
-18	History	50	1.1	September 2021 - July 2021
-19	Pop Health Science	46	1.0	September 2021 - July 2021
-20	English	45	1.0	September 2021 - July 2021
-100	Other	1283	29.2	September 2021 - July 2021
+0	Government	625	12.9	February 2019 - August 2022
+2	Economics	347	7.2	February 2019 - August 2022
+3	Architecture	341	7.1	February 2019 - August 2022
+4	Urban Planning	282	5.8	February 2019 - August 2022
+5	Design Studies	279	5.8	February 2019 - August 2022
+6	Landscape Architecture	237	4.9	February 2019 - August 2022
+7	IQSS	211	4.4	February 2019 - August 2022
+8	Sociology	109	2.3	February 2019 - August 2022
+9	Health Policy	92	1.9	February 2019 - August 2022
+10	Social Studies	87	1.8	February 2019 - August 2022
+11	Public Policy	82	1.7	February 2019 - August 2022
+12	WCFIA	79	1.6	February 2019 - August 2022
+13	Anthropology	77	1.6	February 2019 - August 2022
+14	Medicine	74	1.5	February 2019 - August 2022
+15	History	60	1.2	February 2019 - August 2022
+16	GHP	59	1.2	February 2019 - August 2022
+17	Political Science	58	1.2	February 2019 - August 2022
+18	Pop Health Science	52	1.1	February 2019 - August 2022
+100	Other	1678	34.8	February 2019 - August 2022

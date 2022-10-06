@@ -1,4 +1,5 @@
 Speakers	Title	Description	YouTube ID
+Sonia Barbosa	Introduction to Generalist Repositories for NIH Data Sharing	Learn what a generalist repository is, including key repository features and data sharing use cases for generalist repositories. Find out how generalist repositories fit into the NIH data sharing landscape and the new NIH Data Management and Sharing Policy.	prywwu1Bzww
 Philip Durbin	Demo of using Globus to upload files to Dataverse 	Support for Globus is currently being tested. Upload is working, as shown in this demo.	
 Eryk Kulikowski, Dieuwertje Bloemen	Demo of creating datasets with incomplete required metadata fields	KU Leuven RDR has code ready to resolve https://github.com/IQSS/dataverse/issues/8822	
 Gustavo Durand	Introduction to the Dataverse Software (in Spanish)	Given at the launch event for Repositorio de Datos AcadÃ©micos RDA-UNR.	z2Fzjl5o6KA

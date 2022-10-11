@@ -1,22 +1,19 @@
 id	Department/Concentration	count	percentage	period
-1	IQSS	117	15.6	June 2019 - August 2022
-2	Government	101	13.5	June 2019 - August 2022
-3	Medicine	39	5.2	June 2019 - August 2022
-4	Design Studies	34	4.5	June 2019 - August 2022
-5	Urban Planning	32	4.3	June 2019 - August 2022
-6	Sociology	31	4.1	June 2019 - August 2022
-7	Architecture	28	3.7	June 2019 - August 2022
-8	Public Policy	24	3.2	June 2019 - August 2022
-9	WCFIA	18	2.4	June 2019 - August 2022
-10	CGA	17	2.3	June 2019 - August 2022
-11	Pop Health Science	17	2.3	June 2019 - August 2022
-12	International Relations	17	2.3	June 2019 - August 2022
-13	Landscape Architecture	16	2.1	June 2019 - August 2022
-14	Education Policy	13	1.7	June 2019 - August 2022
-15	Environmental Health;Public Policy	13	1.7	June 2019 - August 2022
-16	Psychology	13	1.7	June 2019 - August 2022
-17	Undeclared	12	1.6	June 2019 - August 2022
-18	Urban Design	11	1.5	June 2019 - August 2022
-19	Economics	10	1.3	June 2019 - August 2022
-20	Public Administration	8	1.1	June 2019 - August 2022
-100	Other	178	23.8	June 2019 - August 2022
+0	Sociology	362	23.4	September 2022 - August 2022
+1	Government	233	15.1	September 2022 - August 2022
+3	IQSS	117	7.6	September 2022 - August 2022
+4	Urban Planning	63	4.1	September 2022 - August 2022
+5	Landscape Architecture	60	3.9	September 2022 - August 2022
+6	Design Studies	50	3.2	September 2022 - August 2022
+7	Architecture	47	3.0	September 2022 - August 2022
+8	Economics	41	2.7	September 2022 - August 2022
+9	Medicine	40	2.6	September 2022 - August 2022
+10	Public Policy	34	2.2	September 2022 - August 2022
+11	Education Policy	33	2.1	September 2022 - August 2022
+12	WCFIA	33	2.1	September 2022 - August 2022
+13	Environmental Health	21	1.4	September 2022 - August 2022
+14	Pop Health Science	17	1.1	September 2022 - August 2022
+15	International Relations	17	1.1	September 2022 - August 2022
+16	Undeclared	17	1.1	September 2022 - August 2022
+17	CGA	17	1.1	September 2022 - August 2022
+100	Other	345	22.299999999999997	September 2022 - August 2022

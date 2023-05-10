@@ -1,19 +1,25 @@
 id	Department/Concentration	count	percentage	period
-0	Sociology	362	23.4	September 2022 - August 2022
-1	Government	233	15.1	September 2022 - August 2022
-3	IQSS	117	7.6	September 2022 - August 2022
-4	Urban Planning	63	4.1	September 2022 - August 2022
-5	Landscape Architecture	60	3.9	September 2022 - August 2022
-6	Design Studies	50	3.2	September 2022 - August 2022
-7	Architecture	47	3.0	September 2022 - August 2022
-8	Economics	41	2.7	September 2022 - August 2022
-9	Medicine	40	2.6	September 2022 - August 2022
-10	Public Policy	34	2.2	September 2022 - August 2022
-11	Education Policy	33	2.1	September 2022 - August 2022
-12	WCFIA	33	2.1	September 2022 - August 2022
-13	Environmental Health	21	1.4	September 2022 - August 2022
-14	CGA	17	1.1	September 2022 - August 2022
-15	Pop Health Science	17	1.1	September 2022 - August 2022
-16	Undeclared	17	1.1	September 2022 - August 2022
-17	International Relations	17	1.1	September 2022 - August 2022
-100	Other	345	22.299999999999997	September 2022 - August 2022
+0	Government	467	10.3	September 2022 - May 2023
+2	Sociology	362	8.0	September 2022 - May 2023
+3	IQSS	289	6.4	September 2022 - May 2023
+4	Economics	279	6.2	September 2022 - May 2023
+5	Urban Planning	235	5.2	September 2022 - May 2023
+6	Design Studies	216	4.8	September 2022 - May 2023
+7	Landscape Architecture	181	4.0	September 2022 - May 2023
+8	Public Policy	162	3.6	September 2022 - May 2023
+9	RSEA	146	3.2	September 2022 - May 2023
+10	Medicine	134	3.0	September 2022 - May 2023
+11	EALC	124	2.7	September 2022 - May 2023
+12	Computer Science	101	2.2	September 2022 - May 2023
+13	WCFIA	88	1.9	September 2022 - May 2023
+14	Education Policy	80	1.8	September 2022 - May 2023
+15	Architecture	77	1.7	September 2022 - May 2023
+16	Pop Health Science	70	1.6	September 2022 - May 2023
+17	Urban Design	69	1.5	September 2022 - May 2023
+18	Environmental Health	68	1.5	September 2022 - May 2023
+19	Engineering	58	1.3	September 2022 - May 2023
+20	Social Studies	57	1.3	September 2022 - May 2023
+21	Health Policy	55	1.2	September 2022 - May 2023
+22	Public Administration	50	1.1	September 2022 - May 2023
+23	Life Sciences	48	1.1	September 2022 - May 2023
+100	Other	1099	24.3	September 2022 - May 2023

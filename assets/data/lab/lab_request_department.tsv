@@ -1,7 +1,7 @@
 id	Department/Concentration	count	percentage	period
-0	Government	467	10.3	September 2022 - May 2023
+0	Government	466	10.3	September 2022 - May 2023
 2	Sociology	362	8.0	September 2022 - May 2023
-3	IQSS	289	6.4	September 2022 - May 2023
+3	IQSS	288	6.4	September 2022 - May 2023
 4	Economics	279	6.2	September 2022 - May 2023
 5	Urban Planning	235	5.2	September 2022 - May 2023
 6	Design Studies	216	4.8	September 2022 - May 2023
@@ -22,4 +22,4 @@ id	Department/Concentration	count	percentage	period
 21	Health Policy	55	1.2	September 2022 - May 2023
 22	Public Administration	50	1.1	September 2022 - May 2023
 23	Life Sciences	48	1.1	September 2022 - May 2023
-100	Other	1099	24.3	September 2022 - May 2023
+100	Other	1100	24.4	September 2022 - May 2023

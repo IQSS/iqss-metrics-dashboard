@@ -1,0 +1,15 @@
+group	metric	title	value	unit	icon	color	url
+Business Operations	Sponsored Research Support	Sponsored Research Support	13	Grants Applications Submitted  the first half of FY19	fa fa-share	orange	bo.html
+Business Operations	Travel Grants Awarded	Administration & Finance	24	Travel Grants Awarded FY19	fa fa-plane-departure	orange	bo.html
+Data Science Services	Data Consulting Requests	Data Science Services	706	Data Consulting requests 2019	fa fa-question	orange	dss.html
+Customer Support Services	IQSS Computer Lab	IQSS Computer Lab	955	New accounts FY18-20	fa fa-user-plus	orange	css.html
+Research Computing	RCE Batch	RCE Batch	12%	Increase in RCE Batch Users FY18	fa fa-server	orange	rc.html
+Research Computing	Increase usage RCE Interactive	RCE Interactive	9%	Increase in RCE Interactive Tier Users FY18	fa fa-mouse-pointer	orange	rc.html
+Dataverse	Searchable Datasets	Harvard Dataverse	97,639	Searchable Datasets	fa fa-database	orange	dataverse.html
+Client Support Services	Tickets resolved	IT Client Support Services	3895	Tickets resolved FY20	fa fa-ticket-alt	orange	css.html
+Dataverse	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-check	orange	dataverse.html
+Program on Survey Research	Program on Survey Research	Program on Survey Research	108	PSR Advisees in Calendar 2018	fa fa-poll	orange	psr.html
+Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	orange	
+Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	orange	https://iqss.github.io/dataverse-tv/
+CGA	Number of Registrations for CGA Conference	CGA Events	112	Registrations for CGA Conference 2020	fa fa-calendar-alt	blue	
+Dataverse Support	Dataverse  Support Tickets	Dataverse Support	1615	Total number of Tickets FY2023	fa fa-ticket-alt	red	

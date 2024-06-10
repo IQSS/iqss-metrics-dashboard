@@ -9,7 +9,9 @@ Dataverse	Searchable Datasets	Harvard Dataverse	97,639	Searchable Datasets	fa fa
 Client Support Services	Tickets resolved	IT Client Support Services	3895	Tickets resolved FY20	fa fa-ticket-alt	orange	css.html
 Dataverse	Datasets Curated	Data Management & Curation	25	Datasets Curated	fa fa-check	orange	dataverse.html
 Program on Survey Research	Program on Survey Research	Program on Survey Research	108	PSR Advisees in Calendar 2018	fa fa-poll	orange	psr.html
-Dataverse	Dataverse Installations	Dataverse Worldwide	60	Number of Installations	fa fa-globe	orange	
-Dataverse	Dataverse TV	Dataverse TV	47	Number of Videos	fa fa-tv	orange	https://iqss.github.io/dataverse-tv/
 CGA	Number of Registrations for CGA Conference	CGA Events	112	Registrations for CGA Conference 2020	fa fa-calendar-alt	blue	
+Dataverse	Dataverse Installations	Dataverse Worldwide	118	Number of Installations	fa fa-globe	blue	dataverse.html
+Dataverse	Dataverse TV	Dataverse TV	198	Number of Videos	fa fa-tv	red	https://iqss.github.io/dataverse-tv/
+Dataverse	GitHub Watchers	Dataverse on GitHub	852	Watchers	fab fa-github	orange	dataverse.html
+Dataverse	GitHub Subscribers	Dataverse on GitHub	67	Subscribers	fab fa-github	orange	dataverse.html
 Dataverse Support	Dataverse  Support Tickets	Dataverse Support	1615	Total number of Tickets FY2023	fa fa-ticket-alt	red	

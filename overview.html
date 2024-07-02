@@ -1,0 +1,38 @@
+---
+layout: default
+title: Our year in numbers
+description: |
+    Selected metrics from our work this year
+---
+{% include templates.html %}
+
+<div class="row">
+    {% include card.html title = "Team composition" div = "team-composition" grid_class = "col-sm-6" %}
+    {% include card.html title = "Expenses" div = "expense-breakdown" grid_class = "col-sm-6" %}
+    {% include card.html title = "Income" div = "income-breakdown" grid_class = "col-sm-6" %}
+</div>
+
+
+<h3>Metrics</h3>
+
+
+
+<div id="mainmetrics" class="row"></div>
+
+
+<script src="https://d3plus.org/js/d3plus.js"></script>
+
+<!-- D3 plus plots -->
+<script src="{{site.baseurl}}assets/js/overview_plots.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+<script src="{{site.baseurl}}assets/js/maps.js"></script>
+
+<script>
+    // this section needs to be pushed forward since the {{site.baseurl}} is not handled in the 
+    // javascript file
+    path = "{{site.baseurl}}assets/data/"
+
+</script>

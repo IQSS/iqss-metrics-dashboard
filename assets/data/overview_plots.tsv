@@ -1,0 +1,27 @@
+page	metric	composition	value	unit	icon	color	url	timestamp	source
+summary	Core Team Members	Team Composition and Affiliates	121	Core Team Members				2024	manual
+summary	Extended Team Members	Team Composition and Affiliates	82	Extended Team Members				2024	manual
+summary	Affiliates	Team Composition and Affiliates	582	Affiliates				2024	manual
+summary	Personnel Expense	Expense Breakdown	10200000	USD				2025	manual
+summary	Non-Personnel Expense	Expense Breakdown	2200000	USD					manual
+summary	Income from Gifts and Endowments	Income Breakdown	3000000	USD					manual
+summary	Income from Provost Subvention	Income Breakdown	2000000	USD					manual
+summary	Income from FAS Subvention	Income Breakdown	4400000	USD					manual
+summary	Sponsored Portfolio		15600000	USD	fa fa-briefcase			2024	manual
+summary	Sponsored Spending		4000000	USD	fa fa-cash-register			2025	manual
+summary	FASRC Utilizers		8000	Users	fa fa-user			2024	manual
+summary	Office Space		17718	Sqft	fa fa-building				manual
+summary	Dataverse Installations Worldwide		119	Installations	fa fa-server				external
+summary	DSS Unique Research Projects		266	Projects	fa fa-flask			manual
+summary	DSS Individual Engagements		750	Engagements	fa fa-people-arrows				manual
+summary	PPR Authors Served		40	Authors	fa fa-paper-plane				manual
+summary	PPR Papers Submitted		84	Papers	fa fa-paper-plane
+summary	PPR Reviews Generated		104	Reviews	fa fa-book
+summary	CSS Resolved Tickets		3923	Resolved tickets	fa fa-at
+summary	CSS Desktop Support		1814	Resolved tickets	fa fa-desktop				
+summary	CSS RCE Support		1055	Resolved tickets	fa fa-server				
+summary	CSS Dataverse Support		1054	Resolved tickets	fa fa-phone				
+summary	Unique PIs Using Sponsored Research Services		33	PIs	fa fa-user-secret
+summary	Community Building/Academic Events		50	Events	fa fa-calendar-day				
+summary	IQSS Website and News Features		55	Website features	fa fa-star				
+summary	Graduate Student Research Grants Awarded		31	Grants	fa fa-gift

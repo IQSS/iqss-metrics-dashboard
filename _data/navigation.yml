@@ -1,8 +1,14 @@
-- name: Metrics Home
+- name: Home
   link: ./
   icon: home
   description:  We work hard to make social science research better, faster, and more collaborative. To keep our efforts on track, we collect metrics—which you can explore in the categories below.
   image: https://projects.iq.harvard.edu/files/styles/os_files_xxlarge/public/harvard-iqss/files/about-banner.jpg?m=1556901058&itok=5_oZylxb
+- name: Our year in numbers
+  link: overview.html
+  icon: rectangle-list
+  description:  |
+    Budget overview and highlighted metrics from our work this year.
+  image: assets/images/overview.jpg
 - name: Business Operations
   link: business-operations.html
   icon: dollar-sign

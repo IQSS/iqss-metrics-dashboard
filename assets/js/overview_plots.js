@@ -27,7 +27,6 @@ function loadOverviewPlots(path) {
                 ibLabels.push(d["metric"])
                 ibLabelsCount.push(d["value"])
             } else { 
-                console.log(d)
                 addMetric(d, "mainmetrics", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3")
             }
         }
@@ -72,9 +71,8 @@ function addMetric(d, div_id, class_override) {
 
     const metricInstance = document.importNode(metricTemplate.content, true);
 
-    
     metricInstance.querySelector(".info-box-group").innerHTML = d['metric'];
-    metricInstance.querySelector(".info-box-value").innerHTML = d['value'];
+    metricInstance.querySelector(".info-box-value").innerHTML = Number(d['value']).toLocaleString();
     metricInstance.querySelector(".info-box-unit").innerHTML = d['unit'];
     metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + d['icon'] + "'></span>";
     metricInstance.querySelector(".info-box").classList.add("bg-iqss-orange");

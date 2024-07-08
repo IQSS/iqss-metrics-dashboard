@@ -100,6 +100,7 @@ function pieChart(div_id, data) {
             }]
         },
         options: {
+            responsive: true,
             aspectRatio: 1,
             legend: {
                 position: 'bottom',
@@ -123,7 +124,7 @@ function pieChart(div_id, data) {
                         if (label) {
                             label += ': ';
                         }
-                        label += `${value} (${percentage}%)`;
+                        label += `${Number(value).toLocaleString()} (${percentage}%)`;
                         return label;
                     }
                 }

@@ -18,7 +18,7 @@ disciplines in the University as they relate to geospatial technology and method
 <h3>CGA Contact</h3>
 
 <div class="row">
-    <div class="card card-iqss-primary card-outline col-lg-8">
+    <div class="card card-iqss-primary card-outline col-md-6">
         <div class="card-header">
             <h3 class="card-title">
                 Virtual help desk requests last 12 months
@@ -29,7 +29,7 @@ disciplines in the University as they relate to geospatial technology and method
         </div>
         <!-- /.card -->
     </div>
-    <div class="col-lg-4">
+    <div class="col-md-6">
         <div id="mainmetrics"></div>
     </div>
 
@@ -74,7 +74,7 @@ disciplines in the University as they relate to geospatial technology and method
 <h3>CGA Training and Workshops</h3>
 
 <div class="row">
-    <div class="card card-iqss-primary card-outline col-lg-6">
+    <div class="card card-iqss-primary card-outline col-md-6">
         <div class="card-header">
             <h3 class="card-title">
                 Training Last 12 Months
@@ -86,7 +86,7 @@ disciplines in the University as they relate to geospatial technology and method
         <!-- /.card -->
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-md-6">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">
@@ -110,7 +110,7 @@ disciplines in the University as they relate to geospatial technology and method
 <div class="row">
 
 
-    <div class="col-lg-6">
+    <div class="col-md-8">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">
@@ -122,7 +122,7 @@ disciplines in the University as they relate to geospatial technology and method
         </div>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-md-4">
         <div class="card card-iqss-primary card-outline">
             <div class="card-header">
                 <h3 class="card-title">
@@ -139,6 +139,18 @@ disciplines in the University as they relate to geospatial technology and method
 
 
 </div>
+
+<!--  Peer Pre-Review Program -->
+<h2 id="ppr">Peer Pre-Review Program</h2>
+<p>
+    The <span class="font-weight-bold">peer pre-review (PPR)</span> program at Harvard’s Institute for Quantitative Social Science (IQSS) is designed to improve scholarship and speed its publication. PPR provides Harvard University and Washington University in St. Louis scholars with constructive, anonymous peer review of their research documents (i.e., papers, grants, and pre-registration reports) by an outside scholar incentivized to participate, and with a fast turnaround (just four weeks on average).
+</p>
+
+<h3>PPR Overview</h3>
+<div class="row" id="pprOverview"></div>
+<h3>PPR Authors</h3>
+<div class="row" id="pprAuthors"></div>
+
 
 <!--  Program on Survey Research -->
 
@@ -329,7 +341,6 @@ disciplines in the University as they relate to geospatial technology and method
         });
     });
 
-    // cga_license_request_last_12_months_by_status
     d3.tsv("{{site.baseurl}}assets/data/cga_license_request_last_12_months_by_status.tsv", function (data) {
         let labels = []
         let d = [];
@@ -360,4 +371,5 @@ disciplines in the University as they relate to geospatial technology and method
     path = "{{site.baseurl}}assets/data/"
 </script>
 
+<script src="{{site.baseurl}}assets/js/ppr_plots.js"></script>
 <script src="{{site.baseurl}}assets/js/psr_plots.js"></script>

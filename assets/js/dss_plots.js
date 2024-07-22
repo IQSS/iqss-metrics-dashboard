@@ -4,101 +4,110 @@
 // Run after DOM is loaded
 let path = "assets/data/dss/";
 let fontFamily = "Montserrat";
-
+const financialYearColorsCache = {};
+var financialYearColorsIdx = 0;
 
 $(document).ready(function () {
-    year_quarter(); //1
-    timeSeriesCommunity(); //2
-    patron_community(); //3
+    dssOverview();
+    year_quarter();
+    timeSeriesCommunity(); 
+    patron_community(); 
     request_type();
-    workshopAttendance();
-    workshopNumber();
-    dataFestAttendance();
-    dataFestNumber();
-    resOutputDepts();
-    resOutputYears();
 });
 
-// Coerce data values to be numeric (multiple inputs)
-function coerceToNum(data, vararray) {
-    if (jQuery.type(vararray) == "string") {
-        data.forEach(function (d) {
-            d3.keys(d).forEach(function (k) {
-                if (k == vararray) {
-                    d[k] = +d[k]
-                }
-            });
-        });
-    } else if (jQuery.type(vararray) == "array") {
-        data.forEach(function (d) {
-            d3.keys(d).forEach(function (k) {
-                if (jQuery.inArray(k, vararray) != -1) {
-                    d[k] = +d[k]
-                }
-            });
-        });
-    } else {
-        return console.error("coerceToNum: Variables input specified incorrectly");
-    }
-    return data;
-};
 
+
+function colorMemo(financial_year) {
+    let c = financialYearColorsIdx; 
+    if (financialYearColorsCache[`${financial_year}`]) return financialYearColorsCache[`${financial_year}`];
+    if (c > iqss_color_pallette.length) financialYearColorsIdx = 0;
+    financialYearColorsCache[`${financial_year}`] = iqss_color_pallette[c];
+    financialYearColorsIdx = financialYearColorsIdx + 1;
+    return c;
+}
+
+function dssOverview() { 
+    d3.tsv(path + "overview.tsv", function (error, data) {
+        console.log(error);
+        for (d of data) {
+            dssAddMetric(d, "dssOverview", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3")
+        }
+    })
+}
+
+function dssAddMetric(d, div_id, class_override) {
+
+    if (class_override === undefined) {
+        class_override = 'col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3'
+    }
+
+    const metricTemplate = document.getElementById("iq-info-box");
+    const metricInstance = document.importNode(metricTemplate.content, true);
+
+    metricInstance.querySelector(".info-box-group").innerHTML = d['metric'];
+    metricInstance.querySelector(".info-box-value").innerHTML = Number(d['value']).toLocaleString();
+    metricInstance.querySelector(".info-box-unit").innerHTML = '';
+    metricInstance.querySelector(".info-box-icon").innerHTML = "<span class='" + d['icon'] + "'></span>";
+    metricInstance.querySelector(".info-box").style.color = "#ffffff";
+    metricInstance.querySelector(".info-box").style.backgroundColor = iqss_color_pallette[colorMemo(d['metric'])]
+    metricInstance.querySelector(".info-box-div").className = class_override;
+    document.getElementById(div_id).appendChild(metricInstance);
+
+}
 // Quarter 
 function year_quarter() {
-    d3.csv(path + "tickets_created_quarterly.csv", function (error, data) {
-        
+    d3.csv(path + "metrics_by_quarter.csv", function (error, data) {
+
         if (error) return console.error(error);
 
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["n_tickets", "year"]);
+        const myNumData = data;
 
         d3plus.viz()
-            .container(".year_quarter")
+            .container(".totalNumHelpRequests")
             .data(myNumData)
             .type("bar")
-            .id("year")
-            .x({
-                "value": "year_quarter",
-                "scale": "discrete",
-                "label": "Year \& Quarter"
-            })
+            .id("fyear_quarter")
             .y({
-                "value": "n_tickets",
-                "label": "Number of New Help Requests"
+                "value": "fyear_quarter",
+                "scale": "discrete",
+                "label": "Year \& Quarter",
             })
-            .color(d =>
-                iqss_color_pallette[(new Date().getFullYear() - parseInt(d.year)) % iqss_color_pallette.length]
-            )
-            .legend(false)
+            .x({
+                "value": "unique_tickets",
+                "label": "Number of Help requests"
+            })
+            .color((d) => { return colorMemo(d.fyear_quarter) } )
             .font({
                 "family": fontFamily
             })
-            .height({
-                "max": false
-            })
+            .legend(false)
             .resize(true)
             .draw()
     });
 };
 
 
-//#OK (2)
+// patron_community,fyear_quarter,unique_tickets,cumulative_tickets
 function timeSeriesCommunity() {
-    d3.csv(path + "affiliation_quarterly.csv", function (error, data) {
+    d3.csv(path + "metrics_by_department_cumulative.csv", function (error, data) {
         if (error) return console.error(error);
-        
+
         // color: get unique values for affiliation:
 
         // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["n_tickets", "cumulative_tickets"]);
-    
+        const myNumData = data.map(d => ({
+            ...d,
+            unique_tickets: parseInt(d.unique_tickets),
+            cumulative_tickets: parseInt(d.cumulative_tickets)
+        }));
+
         d3plus.viz()
-            .container(".timeseriesCommunity")
+            .container(".helpRequestsByDepartmentCm")
             .data(myNumData)
             .type("line")
-            .id("affiliation")
+            .id("patron_community")
             .x({
-                "value": "year_quarter",
+                "value": "fyear_quarter",
                 "label": "Year \& Quarter",
                 "scale": "discrete",
             })
@@ -106,21 +115,11 @@ function timeSeriesCommunity() {
                 "value": "cumulative_tickets",
                 "label": "Cumulative Requests"
             })
-            // .color("affiliation")
-            .legend({
-                "order": {
-                    "sort": "asc",
-                    // "value": "patron_community"
-                },
-                "size": 75,
-                // "text": "patron_community",
-                // "filters": true,
-                // "icons": true,
-
-            })
+            .legend(false)
             .font({
                 "family": fontFamily
             })
+            .color((d) => { return colorMemo(d.patron_community) })
             .resize(true)
             //.time({"value": "quarter"})
             .draw();
@@ -130,36 +129,37 @@ function timeSeriesCommunity() {
 // Patron Community (3)
 function patron_community() {
     // affiliation_types.csv
-    d3.csv(path + "affiliation_types.csv", function (error, data) {
+    d3.csv(path + "metrics_by_department.csv", function (error, data) {
         if (error) return console.error(error);
-        
-        const myNumData = coerceToNum(data, ["order", "n_tickets"]);
-        
-        const div = "patron_community"
-        const period = myNumData[0]["period"]
-        
-        document.getElementById(div + "-period").innerHTML = `(${period})`
+
+        const myNumData = data.map(d => ({
+            ...d,
+            unique_tickets: parseInt(d.unique_tickets)
+        }));
+
+        const div = "helpRequestsByDepartment"
+
         // Visualize
         d3plus.viz()
             .container("." + div)
             .data(myNumData)
             .type("bar")
-            .id("affiliation")
+            .id(["patron_community", "financial_year"])
             .y({
-                "value": "affiliation",
+                "value": "patron_community",
                 "scale": "discrete",
-                "label": "Affiliation"
+                "label": "Department"
             })
             .x({
-                "value": "n_tickets",
-                "label": "Number of Help Requests"
+                "value": "unique_tickets",
+                "label": "Number of Help Requests",
             })
             .order({
                 "sort": "asc",
-                "value": "order"
+                "value": "unique_tickets"
             })
-            .color(d => iqss_color_pallette[0])
             .legend(false)
+            .color((d) => iqss_color_pallette[Math.floor(Math.random() * iqss_color_pallette.length)]) // iqss_color_pallette[Math.floor(Math.random() * iqss_color_pallette.length)]))
             .font({
                 "family": fontFamily,
                 "transform": "none"
@@ -170,28 +170,27 @@ function patron_community() {
 };
 
 
-
-
 // Request Type (4)
 function request_type() {
-    // request_types.csv
-    d3.csv(path + "request_types.csv", function (error, data) {
+    d3.csv(path + "metrics_by_request_type.csv", function (error, data) {
         if (error) return console.error(error);
-        
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["n_tickets", "order"]);
 
-        let div = "request_type"
-        let period = myNumData[0]["period"]
-        document.getElementById(div + "-period").innerHTML = `(${period})`
-        
+        const myNumData = data.map(d => ({
+            ...d,
+            total_count: parseInt(d.total_count),
+            unique_tickets: parseInt(d.unique_tickets),
+            financialYearColor: colorMemo(d.financial_year)
+        }))
+
+        const div = "helpRequestsByType"
+
         d3plus.viz()
-            .container("."+div)
+            .container("." + div)
             .data(myNumData)
             .type("bar")
-            .id("request_type")
+            .id(["request_type","financial_year"])
             .x({
-                "value": "n_tickets",
+                "value": "total_count",
                 "label": "Number of Help Requests"
             })
             .y({
@@ -201,251 +200,14 @@ function request_type() {
             })
             .order({
                 "sort": "asc",
-                "value": "order"
+                "value": "total_count"
             })
-            .color(d => iqss_color_pallette[0])
+            .color((d) => { return Array.isArray(d.financialYearColor) ? d.financialYearColor.at(-1) : d.financialYearColor })
+            .font({
+                "family": fontFamily,
+                "transform": "none"
+            })
             .legend(false)
-            .font({
-                "family": fontFamily
-            })
-            .resize(true)
-            .draw()
-    });
-};
-
-
-
-//
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////
-// WORKSHOPS
-
-// Regular workshops (5)
-function workshopAttendance() {
-    // workshops.csv
-    d3.csv(path + "workshops.csv", function (error, data) {
-        if (error) return console.error(error);
-
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["attendees", "order"]);
-
-        d3plus.viz()
-            .container(".workshopAttendance")
-            .data(myNumData)
-            .type("bar")
-            .id("period")
-            .x({
-                "value": "period",
-                "scale": "discrete",
-                "label": "Time Period"
-            })
-            .y({
-                "value": "attendees",
-                "label": "Number of Workshop Attendees"
-            })
-            .order({
-                "sort": "asc",
-                "value": "order"
-            })
-            .color(d => iqss_color_pallette[1])
-            .legend(false)
-            .font({
-                "family": fontFamily
-            })
-            .resize(true)
-            .draw()
-    });
-};
-
-function workshopNumber() {
-
-    d3.csv(path + "workshops.csv", function (error, data) {
-        if (error) return console.error(error);
-
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["workshops_offered", "order"]);
-        
-        d3plus.viz()
-            .container(".workshopNumber")
-            .data(myNumData)
-            .type("bar")
-            .id("period")
-            .x({
-                "value": "period",
-                "scale": "discrete",
-                "label": "Time Period"
-            })
-            .y({
-                "value": "workshops_offered",
-                "label": "Number of Workshops Offered"
-            })
-            .order({
-                "sort": "asc",
-                "value": "order"
-            })
-            .color(d => iqss_color_pallette[1])
-            .legend(false)
-            .font({
-                "family": fontFamily
-            })
-            .resize(true)
-            .draw()
-    });
-};
-
-// DataFest
-function dataFestAttendance() {
-    // zelfde
-    d3.csv(path + "datafest.csv", function (error, data) {
-        if (error) return console.error(error);
-
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["attendees", "order"]);
-
-        
-        d3plus.viz()
-            .container(".dataFestAttendance")
-            .data(myNumData)
-            .type("bar") 
-            .id("year")
-            .x({
-                "value": "year",
-                "scale": "discrete",
-                "label": "Year"
-            })
-            .y({
-                "value": "attendees",
-                "label": "Number of DataFest Attendees"
-            })
-            .order({
-                "sort": "asc",
-                "value": "order"
-            })
-            .color(d => iqss_color_pallette[0])
-            // .color("")
-            // .legend(false)
-            .font({
-                "family": fontFamily
-            })
-            .resize(true)
-            .draw()
-    });
-};
-
-function dataFestNumber() {
-    // zelfde
-    d3.csv(path + "datafest.csv", function (error, data) {
-        if (error) return console.error(error);
-
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["workshops_offered", "order"]);
-
-        d3plus.viz()
-            .container(".dataFestNumber")
-            .data(myNumData)
-            .type("bar")
-            .id("year")
-            .x({
-                "value": "year",
-                "scale": "discrete",
-                "label": "Year"
-            })
-            .y({
-                "value": "workshops_offered",
-                "label": "Number of DataFest Workshops Offered"
-            })
-            .order({
-                "sort": "asc",
-                "value": "order"
-            })
-            .color(d => iqss_color_pallette[0])
-            // .legend(false)
-            .font({
-                "family": fontFamily
-            })
-            .resize(true)
-            .draw()
-    });
-};
-
-// Research Output section
-
-function resOutputDepts() {
-// 
-    d3.csv(path + "research_output_department.csv", function (error, data) {
-        if (error) return console.error(error);
-
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["publications", "order"]);
-
-        const div = "resOutputDepts"
-        const period = myNumData[0]["period"]
-        document.getElementById(div + "-period").innerHTML = `(${period})`
-        
-        d3plus.viz()
-            .container("." + div)
-            .data(myNumData)
-            .type("bar")
-            .id("department")
-            .y({
-                "value": "department",
-                "scale": "discrete",
-                "label": "Department"
-            })
-            .format({
-                "text": function (text) {
-                    return text.toUpperCase()
-                }
-            })
-            .x({
-                "value": "publications",
-                "label": "Number of Academic Publications"
-            })
-            .order({
-                "sort": "asc",
-                "value": "order"
-            })
-            .color(d => iqss_color_pallette[3])
-            // .legend(false)
-            .font({
-                "family": fontFamily
-            })
-            .resize(true)
-            .draw()
-    });
-};
-
-function resOutputYears() {
-    
-    d3.csv(path + "research_output.csv", function (error, data) {
-        if (error) return console.error(error);
-
-        // Coerce data values to be numeric
-        var myNumData = coerceToNum(data, ["publications", "order"]);
-
-        var visualization = d3plus.viz()
-            .container(".resOutputYears")
-            .data(myNumData)
-            .type("bar")
-            .id("year")
-            .x({
-                "value": "year",
-                "scale": "discrete",
-                "label": "Year"
-            })
-            .y({
-                "value": "publications",
-                "label": "Number of Academic Publications"
-            })
-            // .order({"sort": "asc", "value": "sortby"})
-            .color(d => iqss_color_pallette[3])
-            // .legend(false)
-            .font({
-                "family": fontFamily
-            })
             .resize(true)
             .draw()
     });

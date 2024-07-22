@@ -1,0 +1,104 @@
+financial_year,request_type,total_count
+FY21,Big Data,5
+FY21,C/C++,2
+FY21,Collaboration,4
+FY21,Data Inquiry/Request,1
+FY21,Database,1
+FY21,Excel,3
+FY21,GIS,1
+FY21,LaTeX,8
+FY21,Machine Learning,6
+FY21,Matlab,1
+FY21,Other,1
+FY21,Other Software,8
+FY21,Python,41
+FY21,R,174
+FY21,RCE,33
+FY21,Research Design,5
+FY21,SAS,9
+FY21,SPSS,9
+FY21,Social Network Analysis,2
+FY21,Stata,82
+FY21,Statistics Support,333
+FY21,Survey Software,19
+FY21,Text Mining,6
+FY21,Web Scraping,29
+FY21,Web Technology,5
+FY21,Workshop Enquiry,11
+FY22,Analytical Tool Request,3
+FY22,Big Data,5
+FY22,C/C++,4
+FY22,Collaboration,8
+FY22,Data Inquiry/Request,6
+FY22,Data Visualization,2
+FY22,Database,3
+FY22,GIS,2
+FY22,LaTeX,1
+FY22,Machine Learning,20
+FY22,Matlab,6
+FY22,Mplus,2
+FY22,Other,3
+FY22,Other Software,6
+FY22,Python,49
+FY22,R,134
+FY22,RCE,10
+FY22,Social Network Analysis,11
+FY22,Stata,56
+FY22,Statistics Support,212
+FY22,Survey Software,11
+FY22,Text Mining,8
+FY22,Web Scraping,16
+FY22,Web Technology,13
+FY22,Workshop Enquiry,10
+FY23,Analytical Tool Request,1
+FY23,Big Data,12
+FY23,Collaboration,4
+FY23,Data Inquiry/Request,3
+FY23,Data Visualization,8
+FY23,Database,10
+FY23,Excel,1
+FY23,GIS,5
+FY23,Machine Learning,11
+FY23,Mplus,2
+FY23,Other,5
+FY23,Other Software,4
+FY23,Python,51
+FY23,R,148
+FY23,RCE,6
+FY23,Research Design,18
+FY23,SAS,2
+FY23,SPSS,1
+FY23,Social Network Analysis,1
+FY23,Stata,67
+FY23,Statistics Support,247
+FY23,Survey Software,8
+FY23,Text Mining,2
+FY23,Web Scraping,26
+FY23,Web Technology,1
+FY23,Workshop Enquiry,5
+FY24,Analytical Tool Request,12
+FY24,Big Data,3
+FY24,CAFE,19
+FY24,Collaboration,35
+FY24,Data Inquiry/Request,1
+FY24,Data Visualization,2
+FY24,Database,4
+FY24,Excel,2
+FY24,GIS,2
+FY24,LaTeX,5
+FY24,Machine Learning,11
+FY24,Mplus,1
+FY24,Other,5
+FY24,Other Software,3
+FY24,Python,32
+FY24,R,139
+FY24,Research Design,21
+FY24,SAS,1
+FY24,SPSS,3
+FY24,Social Network Analysis,1
+FY24,Stata,42
+FY24,Statistics Support,262
+FY24,Survey Software,1
+FY24,Text Mining,1
+FY24,Web Scraping,12
+FY24,Workshop Enquiry,2

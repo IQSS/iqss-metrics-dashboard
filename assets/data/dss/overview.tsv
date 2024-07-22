@@ -1,0 +1,7 @@
+page	metric	composition	value	unit	icon	color	url	timestamp	source
+dss	Total help requests	Overview	256	help requests	fa fa-question-circle			2024	manual
+dss	Researchers helped	Overview	193	researchers	fa fa-flask			2024	manual
+dss	Departments served 	Overview	26	departments	fa fa-school			2024	manual
+dss	Research collaborations 	Overview	12	collaborations	fa fa-users			2024	manual
+dss	Types of help request 	Overview	26	categories	fa fa-folder			2024	manual
+dss	R packages developed 	Overview	5	R packages	fa fa-box-open			2024	manual

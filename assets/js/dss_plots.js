@@ -28,7 +28,6 @@ function colorMemo(financial_year) {
 
 function dssOverview() { 
     d3.tsv(path + "overview.tsv", function (error, data) {
-        console.log(error);
         for (d of data) {
             dssAddMetric(d, "dssOverview", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3")
         }
@@ -76,7 +75,7 @@ function year_quarter() {
                 "value": "unique_tickets",
                 "label": "Number of Help requests"
             })
-            .color((d) => { return colorMemo(d.fyear_quarter) } )
+            .color((d) => { return colorMemo(d.financial_year) } )
             .font({
                 "family": fontFamily
             })
@@ -115,7 +114,7 @@ function timeSeriesCommunity() {
                 "value": "cumulative_tickets",
                 "label": "Cumulative Requests"
             })
-            .legend(false)
+            .legend(true)
             .font({
                 "family": fontFamily
             })
@@ -144,7 +143,7 @@ function patron_community() {
             .container("." + div)
             .data(myNumData)
             .type("bar")
-            .id(["patron_community", "financial_year"])
+            .id(["financial_year","patron_community"])
             .y({
                 "value": "patron_community",
                 "scale": "discrete",
@@ -155,11 +154,10 @@ function patron_community() {
                 "label": "Number of Help Requests",
             })
             .order({
-                "sort": "asc",
-                "value": "unique_tickets"
+                "sort": "desc",
+                "value": "financial_year",
             })
-            .legend(false)
-            .color((d) => iqss_color_pallette[Math.floor(Math.random() * iqss_color_pallette.length)]) // iqss_color_pallette[Math.floor(Math.random() * iqss_color_pallette.length)]))
+            .color((d) => colorMemo(d.financial_year))
             .font({
                 "family": fontFamily,
                 "transform": "none"
@@ -188,7 +186,7 @@ function request_type() {
             .container("." + div)
             .data(myNumData)
             .type("bar")
-            .id(["request_type","financial_year"])
+            .id(["financial_year", "request_type"])
             .x({
                 "value": "total_count",
                 "label": "Number of Help Requests"
@@ -202,12 +200,12 @@ function request_type() {
                 "sort": "asc",
                 "value": "total_count"
             })
-            .color((d) => { return Array.isArray(d.financialYearColor) ? d.financialYearColor.at(-1) : d.financialYearColor })
+            .color((d) => colorMemo(d.financial_year))
             .font({
                 "family": fontFamily,
                 "transform": "none"
             })
-            .legend(false)
+            .legend(true)
             .resize(true)
             .draw()
     });

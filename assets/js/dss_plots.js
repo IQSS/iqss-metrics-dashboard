@@ -10,15 +10,15 @@ var financialYearColorsIdx = 0;
 $(document).ready(function () {
     dssOverview();
     year_quarter();
-    timeSeriesCommunity(); 
-    patron_community(); 
+    timeSeriesCommunity();
+    patron_community();
     request_type();
 });
 
 
 
 function colorMemo(financial_year) {
-    let c = financialYearColorsIdx; 
+    let c = financialYearColorsIdx;
     if (financialYearColorsCache[`${financial_year}`]) return financialYearColorsCache[`${financial_year}`];
     if (c > iqss_color_pallette.length) financialYearColorsIdx = 0;
     financialYearColorsCache[`${financial_year}`] = iqss_color_pallette[c];
@@ -26,7 +26,7 @@ function colorMemo(financial_year) {
     return c;
 }
 
-function dssOverview() { 
+function dssOverview() {
     d3.tsv(path + "overview.tsv", function (error, data) {
         for (d of data) {
             dssAddMetric(d, "dssOverview", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3")
@@ -75,7 +75,7 @@ function year_quarter() {
                 "value": "unique_tickets",
                 "label": "Number of Help requests"
             })
-            .color((d) => { return colorMemo(d.financial_year) } )
+            .color((d) => { return colorMemo(d.financial_year) })
             .font({
                 "family": fontFamily
             })
@@ -114,7 +114,7 @@ function timeSeriesCommunity() {
                 "value": "cumulative_tickets",
                 "label": "Cumulative Requests"
             })
-            .legend(true)
+            .legend({ labels: true, text: (d) => { return d.patron_community.substring(0, 3); } })
             .font({
                 "family": fontFamily
             })
@@ -133,8 +133,10 @@ function patron_community() {
 
         const myNumData = data.map(d => ({
             ...d,
-            unique_tickets: parseInt(d.unique_tickets)
+            unique_tickets: parseInt(d.unique_tickets),
+            financialYearNumber: parseInt(d.financial_year.slice(2))
         }));
+
 
         const div = "helpRequestsByDepartment"
 
@@ -143,7 +145,7 @@ function patron_community() {
             .container("." + div)
             .data(myNumData)
             .type("bar")
-            .id(["financial_year","patron_community"])
+            .id(["financial_year", "patron_community"])
             .y({
                 "value": "patron_community",
                 "scale": "discrete",
@@ -155,7 +157,7 @@ function patron_community() {
             })
             .order({
                 "sort": "desc",
-                "value": "financial_year",
+                "value": "financialYearNumber"
             })
             .color((d) => colorMemo(d.financial_year))
             .font({

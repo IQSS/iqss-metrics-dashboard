@@ -14,8 +14,7 @@
     --harvard-black: #000000;
     --harvard-dark-grey: #808285;
     --harvard-light-grey: #B6B6B6;
-    --card-height: 160px;
-
+    --card-height: 125px;
     --blue: var(--iqss-dark-blue);
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -363,7 +362,7 @@ h3 {
 
 
 .plot {
-    min-height: 500px;
+    min-height: 600px;
 }
 
 .viz {
@@ -375,7 +374,7 @@ h3 {
     // chart styling
     // add more margin if screen is larger
     .viz {
-            height: 500px;
+            height: 700px;
             //width: 500px;
             margin: 1em 1em 2em 1em;
             padding: 1em;

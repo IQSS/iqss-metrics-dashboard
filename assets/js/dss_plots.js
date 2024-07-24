@@ -1,10 +1,10 @@
 // D3 help for this version 
-// https: //github.com/alexandersimoes/d3plus/wiki/Visualizations
+// https: https://github.com/alexandersimoes/d3plus/wiki/Visualizations
 
 // Run after DOM is loaded
 let path = "assets/data/dss/";
 let fontFamily = "Montserrat";
-const financialYearColorsCache = {};
+const financialYearColorsCache = { FY24: 1, FY23: 4, FY22: 6, FY21: 8 };
 var financialYearColorsIdx = 0;
 
 $(document).ready(function () {
@@ -114,6 +114,7 @@ function timeSeriesCommunity() {
                 "value": "cumulative_tickets",
                 "label": "Cumulative Requests"
             })
+            .order({ "value": "cumulative_tickets", sort: "asc" })
             .legend({ labels: true, text: (d) => { return d.patron_community.substring(0, 3); } })
             .font({
                 "family": fontFamily
@@ -137,7 +138,6 @@ function patron_community() {
             financialYearNumber: parseInt(d.financial_year.slice(2))
         }));
 
-
         const div = "helpRequestsByDepartment"
 
         // Visualize
@@ -155,14 +155,16 @@ function patron_community() {
                 "value": "unique_tickets",
                 "label": "Number of Help Requests",
             })
-            .order({
-                "sort": "desc",
-                "value": "financialYearNumber"
-            })
             .color((d) => colorMemo(d.financial_year))
+            .order({ value: "unique_tickets", sort: "asc" })
+            .legend({
+                order: {
+                    "value": "id",
+                    "sort": "desc",
+                }
+            })
             .font({
                 "family": fontFamily,
-                "transform": "none"
             })
             .resize(true)
             .draw()
@@ -207,7 +209,12 @@ function request_type() {
                 "family": fontFamily,
                 "transform": "none"
             })
-            .legend(true)
+            .legend({
+                order: {
+                    "value": "id",
+                    "sort": "desc",
+                }
+            })
             .resize(true)
             .draw()
     });

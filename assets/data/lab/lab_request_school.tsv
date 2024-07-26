@@ -1,12 +1,13 @@
 id	School	count	percentage	period
-0	FAS	503	43.8	September 2022 - July 2021
-1	GSD	270	23.5	September 2022 - July 2021
-2	GSAS	102	8.9	September 2022 - July 2021
-3	HKS	96	8.4	September 2022 - July 2021
-4	HSPH	32	2.8	September 2022 - July 2021
-5	GSE	26	2.3	September 2022 - July 2021
-6	HMS	21	1.8	September 2022 - July 2021
-7	SEAS	18	1.6	September 2022 - July 2021
+0	FAS	510	43.8	September 2022 - July 2021
+1	GSD	272	23.3	September 2022 - July 2021
+2	GSAS	104	8.9	September 2022 - July 2021
+3	HKS	96	8.2	September 2022 - July 2021
+4	HSPH	32	2.7	September 2022 - July 2021
+5	GSE	26	2.2	September 2022 - July 2021
+6	HMS	22	1.9	September 2022 - July 2021
+7	SEAS	18	1.5	September 2022 - July 2021
 8	DCE	14	1.2	September 2022 - July 2021
 9	HLS	13	1.1	September 2022 - July 2021
-10	Other	53	4.6	September 2022 - July 2021
+10	HDS	12	1.0	September 2022 - July 2021
+11	Other	46	3.9	September 2022 - July 2021

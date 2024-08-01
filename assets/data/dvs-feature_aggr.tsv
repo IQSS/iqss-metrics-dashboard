@@ -1,23 +1,22 @@
 id	value	count	period
-0	Dataset publishing	259	FY2023
-1	Authentication	182	FY2023
-2	File upload	92	FY2023
-3	Dataverse Creation	89	FY2023
-4	Permissions	72	FY2023
-5	Dataset editing	54	FY2023
-6	File download	40	FY2023
-7	Deaccessioning	34	FY2023
-8	Submit for Review	27	FY2023
-9	Metadata Inquiry	23	FY2023
-10	Citation	21	FY2023
-11	APIs	20	FY2023
-12	Return to Author	20	FY2023
-13	Dataset creation	15	FY2023
-14	File Hierarchy	12	FY2023
-15	Guestbook	9	FY2023
-16	Versioning	8	FY2023
-17	Dataverse editing	7	FY2023
-18	Notifications	5	FY2023
-19	Tabular data file	3	FY2023
-20	Data Explorer	2	FY2023
-21	Other	79	FY2023
+0	Dataset publishing	167	FY2024
+1	Authentication	146	FY2024
+2	Dataverse Creation	105	FY2024
+3	File upload	70	FY2024
+4	Permissions	65	FY2024
+5	Dataset editing	55	FY2024
+6	Submit for Review	37	FY2024
+7	File download	36	FY2024
+8	Deaccessioning	30	FY2024
+9	Dataset creation	28	FY2024
+10	APIs	26	FY2024
+11	Citation	22	FY2024
+12	Dataverse editing	17	FY2024
+13	Return to Author	17	FY2024
+14	Metadata Inquiry	16	FY2024
+15	File Hierarchy	14	FY2024
+16	Versioning	9	FY2024
+17	Guestbook	8	FY2024
+18	Notifications	2	FY2024
+19	Tabular data file	2	FY2024
+20	Other	74	FY2024

@@ -1,4 +1,5 @@
 Speakers	Title	Description	YouTube ID
+Jan Range	A Rust library, a CLI and a DVUploader desktop app	"Jan has developed a new Rust library for Dataverse that includes a ""dvcli"" command line interface. A graphical DVUploader was demoed as well."	
 Dieuwertje Bloemen, Ozgur Karadeniz	KU Leuven Review Dashboard	Tracks dataset reviews and semi-automates feedback generation.	
 Slava Tykhonov	Dataverse, Large Language Models and knowledge graphs		
 Ceilyn Boyd	Transforming a Digital Collection into a Data Collection	A discussion of the Slavery, Abolition, Emancipation, and Freedom (SAEF) Data Collection, an open access research dataset representing over 1200 items in Houghton Libraryâs SAEF collection. The SAEF Data Collection is Harvard Libraryâs first major endeavor to represent a significant print collection as data, supporting research methodologies involving computational analysis of images, Optical Character Recognition (OCR) text, and machine-generated transcriptions of manuscript materials. 	

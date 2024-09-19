@@ -1,0 +1,100 @@
+---
+layout: default
+title: Research Services
+---
+{% include templates.html %}
+
+<h2 id="dss">Data Science Services</h2>
+<p>
+    <span class="font-weight-bold">Data Science Services (DSS)</span> assists researchers in the Harvard community in overcoming obstacles at every stage of the research and publication process.
+</p>
+
+<!-- FIXME: FY24 should be parameterized eventually based on the latest year of data availableK -->
+<h3>Overview FY24</h3>
+<div id="dssOverview" class="row"></div>
+
+<h3 id="consulting_services">Help requests</h3>
+<div class="row">
+    {% include card-d3.html grid_class = "col-md-6" title = "Total number of Help requests" div = "totalNumHelpRequests" %}
+    {% include card-d3.html grid_class = "col-md-6" title = "Help Requests by Department (FY21 - FY24)" div = "helpRequestsByDepartment" %}
+    {% include card-d3.html grid_class = "col-md-6" title = "Help Requests by Top 8 Departments Cumulatively" div = "helpRequestsByDepartmentCm" %}
+    {% include card-d3.html grid_class = "col-md-6" title = "Help Requests by Type of Request (FY21 - FY24)" div = "helpRequestsByType" %}
+</div>
+
+<!--  Program on Survey Research -->
+
+<h2 id="psr">Program on Survey Research</h2>
+<p>The <span class="font-weight-bold">Program on Survey Research</span> encourages and facilitates research and
+    instruction
+    in the theory and practice of survey research, with a mission of enhancing the quality of teaching and research at
+    Harvard.</p>
+
+<h3>Advisees by School</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    PSR Advisees by School <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-school" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Distribution of PSR Advisees by School <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-school-distribution" class="viz"></canvas>
+            </div>       
+        </div>
+    </div>
+</div>
+
+<h3>Advisees by Primary Role</h3>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    PSR Advisees by Primary Role <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-role" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Distribution of PSR Primary Role <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-role-distribution" class="viz"></canvas>
+            </div>       
+        </div>
+    </div>
+
+</div>
+
+<script>
+    path = "{{site.baseurl}}assets/data/"
+    resize();
+</script>
+<script src="{{site.baseurl}}assets/js/plot.js"></script>
+<script src="{{site.baseurl}}assets/js/dss_plots.js"></script>
+<script src="{{site.baseurl}}assets/js/psr_plots.js"></script>

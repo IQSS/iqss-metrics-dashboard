@@ -145,78 +145,6 @@ disciplines in the University as they relate to geospatial technology and method
 <h3>PPR Authors</h3>
 <div class="row" id="pprAuthors"></div>
 
-
-<!--  Program on Survey Research -->
-
-<h2 id="psr">Program on Survey Research</h2>
-<p>The <span class="font-weight-bold">Program on Survey Research</span> encourages and facilitates research and
-    instruction
-    in the theory and practice of survey research, with a mission of enhancing the quality of teaching and research at
-    Harvard.</p>
-
-<h3>Advisees by School</h3>
-
-<div class="row">
-    <div class="col-md-6">
-        
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">
-                    PSR Advisees by School <span class="psr-period"></span>
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="psr-school" class="viz"></canvas>
-            </div>
-        </div>
-    </div>
- 
-    <div class="col-md-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">
-                    Distribution of PSR Advisees by School <span class="psr-period"></span>
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="psr-school-distribution" class="viz"></canvas>
-            </div>       
-        </div>
-    </div>
-</div>
-
-<h3>Advisees by Primary Role</h3>
-
-<div class="row">
-    <div class="col-md-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">
-                    PSR Advisees by Primary Role <span class="psr-period"></span>
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="psr-role" class="viz"></canvas>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col-md-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">
-                    Distribution of PSR Primary Role <span class="psr-period"></span>
-                </h3>
-            </div>
-            <div class="card-body">
-                <canvas id="psr-role-distribution" class="viz"></canvas>
-            </div>       
-        </div>
-    </div>
-
-</div>
-
-
 <script>
     resize();
     d3.tsv("{{site.baseurl}}assets/data/cga_contact.tsv", function (data) {
@@ -366,4 +294,3 @@ disciplines in the University as they relate to geospatial technology and method
 </script>
 
 <script src="{{site.baseurl}}assets/js/ppr_plots.js"></script>
-<script src="{{site.baseurl}}assets/js/psr_plots.js"></script>

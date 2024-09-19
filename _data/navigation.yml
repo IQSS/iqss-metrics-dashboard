@@ -15,11 +15,11 @@
   image: assets/images/bo.jpg
   description: |
     Business Operations provides IQSS programs and teams with administrative and financial support, as well as general services to the IQSS community.
-- name: Data Science Services
-  link: data-science-services.html
+- name: Research Services
+  link: research-services.html
   icon: table
-  image: assets/images/dss.jpg
-  description: Data Science Services (DSS) assists researchers in the Harvard community in overcoming obstacles at every stage of the research and publication process.
+  image: assets/images/research-services.jpg
+  description: IQSS Research Services provide high-touch technical solutions for researchers in the Harvard community.
 - name: Dataverse
   link: dataverse.html
   icon: database

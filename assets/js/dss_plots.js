@@ -2,7 +2,7 @@
 // https: https://github.com/alexandersimoes/d3plus/wiki/Visualizations
 
 // Run after DOM is loaded
-let path = "assets/data/dss/";
+let dssPath = "assets/data/dss/";
 let fontFamily = "Montserrat";
 const financialYearColorsCache = { FY24: 1, FY23: 4, FY22: 6, FY21: 8 };
 var financialYearColorsIdx = 0;
@@ -27,7 +27,7 @@ function colorMemo(financial_year) {
 }
 
 function dssOverview() {
-    d3.tsv(path + "overview.tsv", function (error, data) {
+    d3.tsv(dssPath + "overview.tsv", function (error, data) {
         for (d of data) {
             dssAddMetric(d, "dssOverview", "col-sm-6 col-xs-12 col-md-6 col-lg-4 col-xl-3")
         }
@@ -55,7 +55,7 @@ function dssAddMetric(d, div_id, class_override) {
 }
 // Quarter 
 function year_quarter() {
-    d3.csv(path + "metrics_by_quarter.csv", function (error, data) {
+    d3.csv(dssPath + "metrics_by_quarter.csv", function (error, data) {
 
         if (error) return console.error(error);
 
@@ -88,7 +88,7 @@ function year_quarter() {
 
 // patron_community,fyear_quarter,unique_tickets,cumulative_tickets
 function timeSeriesCommunity() {
-    d3.csv(path + "metrics_by_department_cumulative.csv", function (error, data) {
+    d3.csv(dssPath + "metrics_by_department_cumulative.csv", function (error, data) {
         if (error) return console.error(error);
 
         // color: get unique values for affiliation:
@@ -129,7 +129,7 @@ function timeSeriesCommunity() {
 // Patron Community (3)
 function patron_community() {
     // affiliation_types.csv
-    d3.csv(path + "metrics_by_department.csv", function (error, data) {
+    d3.csv(dssPath + "metrics_by_department.csv", function (error, data) {
         if (error) return console.error(error);
 
         const myNumData = data.map(d => ({
@@ -174,7 +174,7 @@ function patron_community() {
 
 // Request Type (4)
 function request_type() {
-    d3.csv(path + "metrics_by_request_type.csv", function (error, data) {
+    d3.csv(dssPath + "metrics_by_request_type.csv", function (error, data) {
         if (error) return console.error(error);
 
         const myNumData = data.map(d => ({

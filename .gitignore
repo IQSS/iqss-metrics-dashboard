@@ -1,4 +1,5 @@
 _config.yml
+.vscode/settings.json
 _site
 .sass-cache
 .jekyll-cache

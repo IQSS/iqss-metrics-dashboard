@@ -35,35 +35,13 @@ toplinks:
     </div>
 </div>
 
-<div class="row">
-    <div class="card card-iqss-primary card-outline col-md-6">
-        <div class="card-header">
-            <h3 class="card-title">
-                Virtual help desk requests by status/appointment
-            </h3>
-        </div>
-        <div class="card-body">
-            <canvas id="cgaStatusRequests"></canvas>
-        </div>
-    </div>
-    <div class="card card-iqss-primary card-outline col-md-6">
-        <div class="card-header">
-            <h3 class="card-title">
-                Helpdesk requests by affiliated school (Last 12 Months)
-            </h3>
-        </div>
-        <div class="card-body"><canvas id="cga_contact_last_12_months_by_school"></canvas></div>
-    </div>
-
-</div>
-
 
 <h3>CGA metrics</h3>
 
 <h4>CGA Training and Workshops</h4>
 
 <div class="row">
-    <div class="card card-iqss-primary card-outline col-md-6">
+    <div class="card card-iqss-primary card-outline col-md-8">
         <div class="card-header">
             <h3 class="card-title">
                 Training Last 12 Months
@@ -75,28 +53,25 @@ toplinks:
         <!-- /.card -->
     </div>
 
-    <div class="col-md-6">
-        <div class="card card-iqss-primary card-outline">
-            <div class="card-header">
-                <h3 class="card-title">
+    <div class="card card-iqss-primary card-outline col-md-4">
+        <div class="card-header">
+            <h3 class="card-title">
                     Workshop Evaluations
-                </h3>
-            </div>
-
-            <div class="card-body">
-                <canvas id="cga_workshop_evaluations"></canvas>
-                <div class="card-text">Not in all cases does a higher value mean better. For more information go to: <a
-                        href="https://gis.harvard.edu/workshop-evaluation" target="_blank"
-                        rel="noopener noreferrer">Workshop evaluations</a></div>
-            </div>
+            </h3>
         </div>
+        <div class="card-body">
+            <canvas id="cga_workshop_evaluations"></canvas>
+        </div>
+
+        <div class="card-text">Not in all cases does a higher value mean better. For more information go to: <a
+            href="https://gis.harvard.edu/workshop-evaluation" target="_blank"
+            rel="noopener noreferrer">Workshop evaluations</a></div>
     </div>
 </div>
 
 <h4>GIS License requests</h4>
 
 <div class="row">
-
 
     <div class="col-md-8">
         <div class="card card-iqss-primary card-outline">
@@ -105,8 +80,8 @@ toplinks:
                     Top 10 GIS license requests (Last 12 Months)
                 </h3>
             </div>
-
-            <canvas id="cga_license_requests"></canvas>
+            <div class="card-body">
+            <canvas id="cga_license_requests"></canvas></div>
         </div>
     </div>
 
@@ -118,7 +93,7 @@ toplinks:
                 </h3>
             </div>
 
-            <canvas id="cga_license_request_last_12_months_by_status"></canvas>
+            <div class="card-body"><canvas id="cga_license_request_last_12_months_by_status"></canvas></div>
         </div>
     </div>
 </div>

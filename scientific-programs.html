@@ -32,8 +32,6 @@ disciplines in the University as they relate to geospatial technology and method
     <div class="col-md-6">
         <div id="mainmetrics"></div>
     </div>
-
-
 </div>
 
 <div class="row">
@@ -65,7 +63,7 @@ disciplines in the University as they relate to geospatial technology and method
 <h3>CGA metrics</h3>
 <div id="mainmetrics"></div>
 
-<h4>CGA Training and Workshops</h3>
+<h4>CGA Training and Workshops</h4>
 
 <div class="row">
     <div class="card card-iqss-primary card-outline col-md-6">
@@ -98,9 +96,8 @@ disciplines in the University as they relate to geospatial technology and method
     </div>
 </div>
 
+<h4>GIS License requests</h4>
 
-
-<h4>GIS License requests</h3>
 <div class="row">
 
 
@@ -127,25 +124,78 @@ disciplines in the University as they relate to geospatial technology and method
             <canvas id="cga_license_request_last_12_months_by_status"></canvas>
         </div>
     </div>
+</div>
 
 
+<h2 id="psr">Program on Survey Research</h2>
+<p>The <span class="font-weight-bold">Program on Survey Research</span> encourages and facilitates research and
+    instruction in the theory and practice of survey research, with a mission of enhancing the quality of teaching and
+    research at
+    Harvard.</p>
+    
+<h3>Advisees by School</h3>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    PSR Advisees by School <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-school" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
 
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Distribution of PSR Advisees by School <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-school-distribution" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+    
 
+<h3>Advisees by Primary Role</h3>
+    
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    PSR Advisees by Primary Role <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-role" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card card-iqss-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                    Distribution of PSR Primary Role <span class="psr-period"></span>
+                </h3>
+            </div>
+            <div class="card-body">
+                <canvas id="psr-role-distribution" class="viz"></canvas>
+            </div>
+        </div>
+    </div>
 
 </div>
 
-<!--  Peer Pre-Review Program -->
-<h2 id="ppr">Peer Pre-Review Program (PPR)</h2>
-<p>
-    The <span class="font-weight-bold">peer pre-review (PPR)</span> program at Harvard’s Institute for Quantitative Social Science (IQSS) is designed to improve scholarship and speed its publication. PPR provides Harvard University and Washington University in St. Louis scholars with constructive, anonymous peer review of their research documents (i.e., papers, grants, and pre-registration reports) by an outside scholar incentivized to participate, and with a fast turnaround (just four weeks on average).
-</p>
-
-<h3>PPR Overview</h3>
-<div class="row" id="pprOverview"></div>
-<h3>PPR Authors</h3>
-<div class="row" id="pprAuthors"></div>
-
 <script>
+    path = "{{site.baseurl}}assets/data/"
     resize();
     d3.tsv("{{site.baseurl}}assets/data/cga_contact.tsv", function (data) {
         let labels = []
@@ -166,7 +216,6 @@ disciplines in the University as they relate to geospatial technology and method
     });
 
     d3.tsv("{{site.baseurl}}assets/data/cga_contact_status.tsv", function (data) {
-
         let labels = []
         let d = [];
         for (var i = 0; i < data.length; i++) {
@@ -185,10 +234,7 @@ disciplines in the University as they relate to geospatial technology and method
         });
     });
 
-    // cga_contact_last_12_months_by_school
-
     d3.tsv("{{site.baseurl}}assets/data/cga_contact_last_12_months_by_school.tsv", function (data) {
-
         let labels = []
         let d = [];
 
@@ -206,7 +252,6 @@ disciplines in the University as they relate to geospatial technology and method
             label_y: "Number of License Requests"
         });
     });
-
 
     d3.tsv("{{site.baseurl}}assets/data/cga_training.tsv", function (data) {
         let labels = []
@@ -282,15 +327,8 @@ disciplines in the University as they relate to geospatial technology and method
         });
     });
 
-
-
-    // createUniqueGroupDivs("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', 'group')
-    // loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", '');
     loadMainMetrics("{{site.baseurl}}assets/data/main_metrics.tsv", 'mainmetrics', "CGA", "col-lg-12");
 </script>
 
-<script>
-    path = "{{site.baseurl}}assets/data/"
-</script>
 
-<script src="{{site.baseurl}}assets/js/ppr_plots.js"></script>
+<script src="{{site.baseurl}}assets/js/psr_plots.js"></script>

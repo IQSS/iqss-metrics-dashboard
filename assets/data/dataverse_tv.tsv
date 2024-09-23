@@ -1,4 +1,5 @@
 Speakers	Title	Description	YouTube ID
+Guillermo Portas	Demo 3 of the new Dataverse frontend	This demo covers the collection page, configuring facets, creating a dataset, and uploading files.	
 Alvin Stockdale, Peter Seibert, Amber Leahy, Nana Boateng	NLMâs Dataset Catalog and an updated to Data Explorer	The US NIH National Library of Medicine released a beta version of their Dataset Catalog. Also, Borealis released a new version of Data Explorer.	
 Jan Range	A Rust library, a CLI and a DVUploader desktop app	"Jan has developed a new Rust library for Dataverse that includes a ""dvcli"" command line interface. A graphical DVUploader was demoed as well."	
 Dieuwertje Bloemen, Ozgur Karadeniz	KU Leuven Review Dashboard	Tracks dataset reviews and semi-automates feedback generation.	

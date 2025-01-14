@@ -1,4 +1,5 @@
 Speakers	Title	Description	YouTube ID
+Eric Olson	Specialized Metadata in Generalist Repositories: OSF+CEDAR Integration	CEDAR has been integrated into OSF and forked to work with Dataverse.	
 Ozgur Karadeniz	Demo of KU Leuvenâs review dashboard	"KU Leuven has built an open-source tool to track, simplify, and semi-automate dataset review and curation process: <a href=""https://github.com/libis/rdm-review-dashboard"">https://github.com/libis/rdm-review-dashboard</a>"	
 Arofan Gregory	DDI-CDI Basics/The CDIF Framework	DDI-CDI and CDIF	
 Jan Range	Resumable downloads with dvcli	This demonstration showcases the new DVCLI feature that enables resumable downloads. By utilizing the Range header, downloads can be paused and resumed at any point, making it particularly beneficial when dealing with large files and experiencing technical interruptions that cause the download to stop. This feature will be available in an upcoming release of DVCLI.	

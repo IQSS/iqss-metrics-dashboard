@@ -1,4 +1,5 @@
-Speakers	Title	Description	YouTube ID
+Speakers		Description	YouTube ID
+Slava Tykhonov	Ask Dataverse and Large Language Models in the RAG framework		
 Sonia Barbosa, Katie Mika	Intro to Using the Harvard Dataverse & FAIR, and the NIH DMP Harvard Dataverse Guidance Document	Learn about the Harvard Dataverse Repository for data sharing and preservation.	iZHrHokIhLE
 Eric Olson	Specialized Metadata in Generalist Repositories: OSF+CEDAR Integration	CEDAR has been integrated into OSF and forked to work with Dataverse.	
 Ozgur Karadeniz	Demo of KU Leuvenâs review dashboard	"KU Leuven has built an open-source tool to track, simplify, and semi-automate dataset review and curation process: <a href=""https://github.com/libis/rdm-review-dashboard"">https://github.com/libis/rdm-review-dashboard</a>"	

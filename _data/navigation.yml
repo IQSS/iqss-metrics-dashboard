@@ -38,7 +38,7 @@
   link: research-computing.html
   icon: server
   description: |
-    The Research Computing Environment (RCE) is a powerful computer cluster that you can use to run jobs that are too large for a personal workstation.
+    Social science researchers at Harvard recently migrated from IQSS’s Research Computing Environment (RCE) to the more powerful FAS Research Computing infrastructure (FASRC). As a result, 3.5 times as many researchers now use cluster resources, CPU usage increased twenty-twofold, and GPU usage exceeds 178,000 hours. Researchers can now undertake larger experiments and more ambitious computational projects, and their use of these resources is expected to grow.
   image: assets/images/rc.jpg
 - name: Scientific Programs
   link: scientific-programs.html

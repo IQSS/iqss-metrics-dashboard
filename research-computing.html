@@ -3,19 +3,21 @@ layout: default
 title: Research Computing
 ---
 
-<h3>RCE Interactive</h3>
+<h3>An overview of social science research computing at FAS in 2024 by department</h3>
 
 <div class="row">
-    {% include card.html title = "RCE Interactive Tier FAS Users by Department" div = "rc-interactive-by-department" %}
-    {% include card.html title = "RCE Interactive Tier Users by School" div = "rc-interactive-by-school" %}
- </div>
+    {% include card.html title = "2024 FAS Social Science CPU Hours" div = "2024-fas-soc-rc-cpu-x-dept" %}
+    {% include card.html title = "2024 FAS Social Science GPU Hours" div = "2024-fas-soc-rc-gpu-x-dept" %}
+    {% include card.html title = "2024 FAS Social Science Jobs executed" div = "2024-fas-soc-rc-exec-x-dept" %}
+    {% include card.html title = "2024 FAS Social Science PIs" div = "2024-fas-soc-rc-exec-x-dept" %}
+</div>
 
 
-<h3>RCE Batch</h3>
+<h3>Research computing in the social sciences at Harvard accross time</h3>
 
 <div class="row">
-    {% include card.html title = "RCE Batch Tier FAS Users by Department" div = "rc-batch-by-department" %}
-    {% include card.html title = "RCE Batch Tier Users by School" div = "rc-batch-by-school" %}
+    {% include card.html title = "FAS Social Science Research Computing Researchers by Department and Year" div = "fas-rc-soc-researcher-x-dept-x-year" %}
+    {% include card.html title = "FAS Social Science Research Computing CPU hours by Department and Year" div = "fas-rc-soc-comptime-x-dept-x-year" %}
 </div>
 
 
@@ -23,4 +25,5 @@ title: Research Computing
 <script>
     path = "{{site.baseurl}}assets/data/"
 </script>
-<script src="{{site.baseurl}}assets/js/rc_plots.js"></script>
+
+<!-- <script src="{{site.baseurl}}assets/js/rc_plots.js"></script> -->

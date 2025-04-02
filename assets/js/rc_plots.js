@@ -26,9 +26,11 @@ function generateRCPiePlot(path, div, id, size) {
             .data(data)
             .type("pie")
             .id(id)
+            .color(id)
             .size(size)
-            .legend(true)
-            .draw();
+            .legend({ "labels": true, "size": 25 })
+            .resize(true)
+            .draw()
     });
 };
 
@@ -45,6 +47,7 @@ function generateRCLinePlot(path, div, id, label) {
             .container(div)
             .data(data)
             .id(id)
+            .color(id)
             .x({
                 "value": "Year",
                 "label": "Year",
@@ -54,7 +57,7 @@ function generateRCLinePlot(path, div, id, label) {
                 "value": "Num",
                 label
             })
-
+            .legend({size: 75})
             .resize(true)
             .draw();
     });

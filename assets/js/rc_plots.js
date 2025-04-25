@@ -33,10 +33,11 @@ function generateRCPiePlot(path, div, id, size) {
             .id(id)
             .color(id)
             .size(size)
-            .legend(false)
+            .legend({ labels: true, text: (d) => { return d[`${id}`].substring(0, 3); } })
+            .order({ "value": size, sort: "asc" })
             .format({
                 text: function (text, params) {
-                  if (params.key === "id" && text === "Iqss") return "IQSS";
+                  if (params.key === "id" && text === "Iqss") return "IQ";
                   return text;
                 }
               })
@@ -68,7 +69,7 @@ function generateRCLinePlot(path, div, id, label) {
                 "value": "Num",
                 label
             })
-            .legend(true)
+            .legend({ labels: true, text: (d) => { return d[`${id}`].substring(0, 3); } })
             .resize(true)
             .draw();
     });

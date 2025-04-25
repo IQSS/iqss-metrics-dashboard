@@ -68,7 +68,7 @@ function generateRCLinePlot(path, div, id, label) {
                 "value": "Num",
                 label
             })
-            .legend({ labels: true })
+            .legend(true)
             .resize(true)
             .draw();
     });

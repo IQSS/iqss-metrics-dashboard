@@ -1,4 +1,4 @@
-let rcDataPath = "assets/data/rc";
+let rcDataPath = "assets/data/rc/from_2024";
 
 $(document).ready(function () {
     resize();

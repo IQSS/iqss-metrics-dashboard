@@ -1,0 +1,34 @@
+---
+layout: default
+title: Research Computing live dashboard
+---
+<!--
+    generateRCPiePlot(`${rcDataPath}/cpu.tsv`, '.plot_dept_x_cpu', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/gpu.tsv`, '.plot_dept_x_gpu', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/jobs.tsv`, '.plot_dept_x_jobs', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/dept.tsv`, '.plot_pis_x_dept', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/users_by_dept.tsv`, '.plot_users_x_dept'
+-->
+
+<h3>Social science research computing</h3>
+</p>
+<div class="row">
+    {% include card-d3.html grid_class = "col-md-6" title = "CPU hours consumed" div = "plot_dept_x_cpu" %}
+    {% include card-d3.html grid_class = "col-md-6" title = "GPU hours consumed" div = "plot_dept_x_gpu" %}
+</div>
+
+<div class="row">
+    {% include card-d3.html grid_class = "col-md-6" title = "Compute jobs executed" div = "plot_dept_x_jobs" %}
+    {% include card-d3.html grid_class = "col-md-6" title = "Social science research computing PIs by department" div = "plot_pis_x_dept" %}
+</div>
+<div class="row">
+    {% include card-d3.html grid_class = "col-md-6" title = "Social science research computing users by department" div = "plot_users_x_dept" %}
+</div>
+
+
+<script src="{{site.baseurl}}assets/js/plot.js"></script>
+<script>
+    path = "{{site.baseurl}}assets/data/"
+</script>
+
+<script src="{{site.baseurl}}assets/js/rc_plots_from_2025.js"></script>

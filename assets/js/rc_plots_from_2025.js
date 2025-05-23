@@ -2,22 +2,19 @@ let rcDataPath = "assets/data/rc/from_2025";
 
 $(document).ready(function () {
     resize();
-    generateRCPiePlot(`${rcDataPath}/cpu.tsv`, '.fassocrccpuxdept2024', "Dept", "Num");
-    generateRCPiePlot(`${rcDataPath}/gpu.tsv`, '.fassocrcgpuxdept2024', "Dept", "Num")
-    generateRCPiePlot(`${rcDataPath}/jobs.tsv`, '.fassocrcexecxdept2024', "Dept", "Num")
-    generateRCPiePlot(`${rcDataPath}/dept.tsv`, '.fasssrc2024', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/cpu.tsv`, '.plot_dept_x_cpu', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/gpu.tsv`, '.plot_dept_x_gpu', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/jobs.tsv`, '.plot_dept_x_jobs', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/dept.tsv`, '.plot_pis_x_dept', "Dept", "Num");
+    generateRCPiePlot(`${rcDataPath}/users_by_dept.tsv`, '.plot_users_x_dept', "Dept", "Num");
 });
 
 function generateRcPiePlotFrom2025(path, div, id, size) {
 
     d3.tsv(path, function (data) {
         data.forEach(function (d) {
-            d.CpuHours = +d.CpuHours; // explicitly convert Num to numeric
-            d.GpuHours = +d.GpuHours;
-            d.Jobs = +d.Jobs;
-            d.Pis = +d.Pis
-            d.Num = +d.Num
-            d.Users = +d.Users
+            d.Num = +d.Num;
+            d.Year = ~~(+d.Year);
         });
 
         d3plus.viz()

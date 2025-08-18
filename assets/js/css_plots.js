@@ -8,10 +8,9 @@ $(document).ready(function () {
 function loadCSSPlots(path) {
 
     d3.tsv(path + "css_quarterly_tickets_last_5yr.tsv", function (data) {
-        
+
         let labels = [];
         let dataverse = [];
-        let rce = [];
         let desktop = [];
 
         //    Last 12 quarters
@@ -19,24 +18,19 @@ function loadCSSPlots(path) {
             labels.push(data[i].Year + "-" + data[i].Quarter);
             desktop.push(parseInt(data[i].Desktop));
             dataverse.push(parseInt(data[i].Dataverse));
-            rce.push(parseInt(data[i].RCE));
         }
 
         let datasets = [{
-                label: "Desktop",
-                data: desktop,
-                borderColor: iqss_color_pallette[0],
-            },
-            {
-                label: "RCE",
-                data: rce,
-                borderColor: iqss_color_pallette[1],
-            },
-            {
-                label: "Dataverse",
-                data: dataverse,
-                borderColor: iqss_color_pallette[2],
-            },
+            label: "Desktop",
+            data: desktop,
+            borderColor: iqss_color_pallette[0],
+        },
+
+        {
+            label: "Dataverse",
+            data: dataverse,
+            borderColor: iqss_color_pallette[2],
+        },
 
         ];
 
@@ -50,16 +44,24 @@ function loadCSSPlots(path) {
     })
 
 
-    d3.tsv(path + "css_quarterly_tickets_last_year.tsv", function (data) {
+    d3.tsv(path + "css_quarterly_tickets_last_5yr.tsv", function (data) {
+        // Single-pass (handles ragged rows too)
+        let year = `FY${String(new Date().getFullYear()).slice(-2)}`;
+        let _ticket_count_current_year_table = data.filter(({ Year }) => Year === year).map(({ Desktop, Dataverse }) => {
+            return [Desktop, Dataverse];
+        }).map((l) => {
+            return l.map(Number);
+        });
 
-        let year = data[0]["Year"]
+        const colSums = (arr) => arr[0].map((_, i) => arr.reduce((s, row) => s + row[i], 0));
+
+
         let dataset = {
-            x: ["Desktop", "RCE", "Dataverse"],
-            y: [data[0]["Desktop"], data[0]["RCE"], data[0]["Dataverse"]],
+            x: ["Desktop", "Dataverse"],
+            y: colSums(_ticket_count_current_year_table),
             title: "title"
         }
 
-        // console.log(dataset)
         div = "tickets-by-subject"
         pieChart(div, dataset);
         document.getElementById(div + "-period").innerHTML = year;
@@ -112,8 +114,8 @@ function loadCSSPlots(path) {
 
 
     d3.tsv(path + "css_device_type_last_year.tsv", function (data) {
-        
-        let div ="tickets-by-device-type"
+
+        let div = "tickets-by-device-type"
         let labels = []
         let d = [];
 
@@ -130,22 +132,22 @@ function loadCSSPlots(path) {
             label_y: "Number of Resolved Tickets"
         });
 
-        
+
         document.getElementById(div + "-period").innerHTML = data[0]["year"];
     })
 
     d3.tsv(path + "css_patron_community_last_year.tsv", function (data) {
-        
+
         div = 'patron-community'
         let year = data[0]["Year"]
 
-        let x= [];
+        let x = [];
         let y = [];
-        for(d of data) {
-            
+        for (d of data) {
+
             x.push(d["patron"])
             y.push(d["count"])
-            
+
         }
 
         let dataset = {
@@ -157,8 +159,8 @@ function loadCSSPlots(path) {
             label_y: "Number of Resolved Tickets"
         }
 
-        horizontalBarChart(div+'-bar', dataset);
-        document.getElementById(div + "-bar-period").innerHTML = year;   
+        horizontalBarChart(div + '-bar', dataset);
+        document.getElementById(div + "-bar-period").innerHTML = year;
     })
 
 
@@ -169,9 +171,9 @@ function loadCSSPlots(path) {
         let year = data[0]["Year"]
         let pc = [];
         let mac = [];
-        
 
-        
+
+
         for (var i = 0; i < data.length; i++) {
             labels.push(data[i]["id"]);
             pc.push(parseInt(data[i]["PC"]));
@@ -179,15 +181,15 @@ function loadCSSPlots(path) {
         }
 
         let datasets = [{
-                label: "PC",
-                data: pc,
-                borderColor: iqss_blue,
-            },
-            {
-                label: "Mac",
-                data: mac,
-                borderColor: iqss_orange,
-            }
+            label: "PC",
+            data: pc,
+            borderColor: iqss_blue,
+        },
+        {
+            label: "Mac",
+            data: mac,
+            borderColor: iqss_orange,
+        }
         ];
 
         stackedHorizontalBar(div, {
@@ -198,7 +200,7 @@ function loadCSSPlots(path) {
             title: "Number of ticktes",
         });
 
-        document.getElementById(div + "-period").innerHTML = year;   
+        document.getElementById(div + "-period").innerHTML = year;
     })
     // d3.tsv(path + "css_pc_mac_last_year_total.tsv", function (data) {
     //     console.log(data)   
@@ -206,12 +208,12 @@ function loadCSSPlots(path) {
     d3.tsv(path + "css_pc_mac.tsv", function (data) {
         let div = "mac-pc-years";
         let labels = [];
-        
+
         let pc = [];
         let mac = [];
-        
 
-        
+
+
         for (var i = 0; i < data.length; i++) {
             labels.push(data[i]["year"]);
             pc.push(parseInt(data[i]["PC"]));
@@ -219,15 +221,15 @@ function loadCSSPlots(path) {
         }
 
         let datasets = [{
-                label: "PC",
-                data: pc,
-                borderColor: iqss_blue,
-            },
-            {
-                label: "Mac",
-                data: mac,
-                borderColor: iqss_orange,
-            }
+            label: "PC",
+            data: pc,
+            borderColor: iqss_blue,
+        },
+        {
+            label: "Mac",
+            data: mac,
+            borderColor: iqss_orange,
+        }
         ];
 
         stackedArea(div, {
@@ -243,14 +245,14 @@ function loadCSSPlots(path) {
 
 
 function loadLabPlots(path) {
-    
+
     d3.tsv(path + "lab/lab_request_per_month.tsv", function (error, data) {
         if (error) return console.error(error);
 
         const div = "lab_request_per_quarter";
         let labels = [];
-        let y= [];
-        
+        let y = [];
+
         for (d of data) {
             labels.push(d["year_month"])
             y.push(d["count"])
@@ -264,7 +266,7 @@ function loadLabPlots(path) {
             title: 'Number of Requests',
             color: iqss_orange,
             line_tension: 0
-            });
+        });
     })
 
     d3.tsv(path + "lab/lab_request_school.tsv", function (error, data) {
@@ -274,8 +276,8 @@ function loadLabPlots(path) {
         const period = data[0]["period"]
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
-        let y= [];
-        
+        let y = [];
+
         for (d of data) {
             labels.push(d["School"])
             y.push(d["count"])
@@ -288,7 +290,7 @@ function loadLabPlots(path) {
             y: y,
             title: 'Number of Requests',
             color: iqss_blue
-            });
+        });
     })
 
     d3.tsv(path + "lab/lab_request_status.tsv", function (error, data) {
@@ -298,8 +300,8 @@ function loadLabPlots(path) {
         const period = data[0]["period"]
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
-        let y= [];
-        
+        let y = [];
+
         for (d of data) {
             labels.push(d["Status"])
             y.push(d["count"])
@@ -312,7 +314,7 @@ function loadLabPlots(path) {
             y: y,
             title: 'Number of Requests',
             color: iqss_orange
-            });
+        });
     })
 
     d3.tsv(path + "lab/lab_request_department.tsv", function (error, data) {
@@ -322,8 +324,8 @@ function loadLabPlots(path) {
         const period = data[0]["period"]
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
-        let y= [];
-        
+        let y = [];
+
         for (d of data) {
             labels.push(d["Department/Concentration"])
             y.push(d["count"])
@@ -336,7 +338,7 @@ function loadLabPlots(path) {
             y: y,
             title: 'Number of Requests',
             color: iqss_orange
-            });
+        });
     })
     d3.tsv(path + "lab/lab_request_reason.tsv", function (error, data) {
         if (error) return console.error(error);
@@ -345,8 +347,8 @@ function loadLabPlots(path) {
         const period = data[0]["period"]
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
         let labels = [];
-        let y= [];
-        
+        let y = [];
+
         for (d of data) {
             labels.push(d["Reason for Lab Access"])
             y.push(d["count"])
@@ -359,7 +361,7 @@ function loadLabPlots(path) {
             y: y,
             title: 'Number of Requests',
             color: iqss_orange
-            });
+        });
     })
     d3.tsv(path + "lab/lab_request_discovery.tsv", function (error, data) {
         if (error) return console.error(error);
@@ -369,8 +371,8 @@ function loadLabPlots(path) {
         document.getElementById(`${div}-period`).innerHTML = `(${period})`
 
         let labels = [];
-        let y= [];
-        
+        let y = [];
+
         for (d of data) {
             labels.push(d["Lab Discovery"])
             y.push(d["count"])
@@ -383,9 +385,9 @@ function loadLabPlots(path) {
             y: y,
             title: 'Number of Requests',
             color: iqss_orange
-            });
+        });
     })
-    
+
 }
 
 

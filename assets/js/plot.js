@@ -1,22 +1,31 @@
 // color
 
-var iqss_orange = '#d16103';
-var iqss_blue = '#152844';
-var iqss_dark_blue = '#152844'; // same
-var iqss_dark_grey = '#555555';
-var iqss_lighter_blue = '#215990';
 
-var harvard_red = '#A41034';
-var harvard_crimson = '#A41034';
-var harvard_black = '#000000';
-var harvard_light_grey = '#B6B6B6';
 
-var green = "#2CA02C"
-var purple = "#9467BD"
-var brown = "#7F7F7F"
-var pink = "#E377C2"
-var olive = "#BCBD22"
-var cyan = "#17BECF"
+const iqss_orange = '#d16103';
+const iqss_blue = '#152844';
+const iqss_dark_blue = '#152844'; // same
+const iqss_dark_grey = '#555555';
+const iqss_lighter_blue = '#215990';
+
+const harvard_red = '#A41034';
+const harvard_crimson = '#A41034';
+const harvard_black = '#000000';
+const harvard_light_grey = '#B6B6B6';
+
+const COLOR_BY_LABEL = {
+    Desktop: '#2F3B4A',
+    Dataverse: '#519E3E',   // your green
+    RCE: harvard_light_grey,
+    Other: '#BBBBBB'
+};
+
+const green = "#2CA02C"
+const purple = "#9467BD"
+const brown = "#7F7F7F"
+const pink = "#E377C2"
+const olive = "#BCBD22"
+const cyan = "#17BECF"
 
 // chartJS default settings
 // Chart.defaults.global.defaultFontSize = 14;
@@ -25,18 +34,18 @@ Chart.defaults.global.defaultFontFamily = "Montserrat";
 Chart.defaults.global.defaultFontColor = "#000";
 Chart.defaults.global.elements.point.radius = 0;
 
-Chart.defaults.global.onResize = function() {
+Chart.defaults.global.onResize = function () {
     resize();
 }
 
 function resize() {
     const width = document.body.clientWidth;
 
-    if (width>576) {
+    if (width > 576) {
         Chart.defaults.global.defaultFontSize = 14;
-    } else if (width<=576 && width >470) {
+    } else if (width <= 576 && width > 470) {
         Chart.defaults.global.defaultFontSize = 10;
-    }else {
+    } else {
         Chart.defaults.global.defaultFontSize = 8;
     }
 }
@@ -44,22 +53,22 @@ function resize() {
 /* Always call resize before drawing */
 
 // 12 colors
-var iqss_color_pallette = [iqss_dark_blue, iqss_orange, green, harvard_crimson, purple,
+const iqss_color_pallette = [iqss_dark_blue, iqss_orange, green, harvard_crimson, purple,
     harvard_black, pink, harvard_light_grey, iqss_lighter_blue, brown, olive, cyan, iqss_dark_grey
 ]
 
 // UNIQUE COLORS
 // LIGHTBLUE, DARK BLUE, LIGHT GREEN DARK GREEN
-var cp_qual_3 = ['#a6cee3', '#1f78b4', '#b2df8a']
-var cp_qual_4 = ['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c']
+const cp_qual_3 = ['#a6cee3', '#1f78b4', '#b2df8a']
+const cp_qual_4 = ['#a6cee3', '#1f78b4', '#b2df8a', '#33a02c']
 
 // SEQUENTIAL PALETTE FROM LIGHT TO DARK BLUE AND ORANGE
-var cp_seq_oranges = ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603', '#7f2704']
-var cp_seq_blues = ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']
+const cp_seq_oranges = ['#fff5eb', '#fee6ce', '#fdd0a2', '#fdae6b', '#fd8d3c', '#f16913', '#d94801', '#a63603', '#7f2704']
+const cp_seq_blues = ['#f7fbff', '#deebf7', '#c6dbef', '#9ecae1', '#6baed6', '#4292c6', '#2171b5', '#08519c', '#08306b']
 
 
 // DIVERGING PALETTE RED -> YELLOW -> BLUE
-var cp_div_11 = ['#a50026',
+const cp_div_11 = ['#a50026',
     '#d73027',
     '#f46d43',
     '#fdae61',
@@ -96,7 +105,8 @@ function pieChart(div_id, data) {
             datasets: [{
                 label: data.title,
                 data: data.y,
-                backgroundColor: iqss_color_pallette
+                backgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
+                hoverBackgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
             }]
         },
         options: {
@@ -105,22 +115,21 @@ function pieChart(div_id, data) {
             legend: {
                 position: 'bottom',
                 labels: {
-                    // fontColor: 'rgb(255, 99, 132)',
                     fontSize: 13
                 }
                 // display: false,
             },
             tooltips: {
                 callbacks: {
-                    label: function(tooltipItem, data) {
+                    label: function (tooltipItem, data) {
 
                         total = data.datasets[tooltipItem.datasetIndex].data.reduce(reducer)
                         value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index]
-                        
-                        percentage = Math.round((100 *value) / total)
+
+                        percentage = Math.round((100 * value) / total)
 
                         var label = data.labels[tooltipItem.index] || '';
-    
+
                         if (label) {
                             label += ': ';
                         }
@@ -179,7 +188,7 @@ function barChart(div_id, data) {
                 yAxes: [{
                     ticks: {
                         beginAtZero: true,
-                    },                    
+                    },
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
@@ -242,7 +251,7 @@ function horizontalBarChart(div_id, data) {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
                 }],
                 yAxes: [{
@@ -254,13 +263,13 @@ function horizontalBarChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
                 }],
-                
-               
-                    // gridLines: false,
-                
+
+
+                // gridLines: false,
+
             },
             legend: {
                 // position: 'right',
@@ -311,6 +320,8 @@ function multiLineChart(div_id, data) {
         data: {
             labels: data.x,
             datasets: d2,
+            backgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
+            hoverBackgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
         },
         options: {
             maintainAspectRatio: true,
@@ -332,16 +343,16 @@ function multiLineChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
                     ticks: {
                         beginAtZero: true,
@@ -359,7 +370,7 @@ function multiLineChart(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });
@@ -369,7 +380,7 @@ function stackedArea(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    
+
     // add default settings to the dataset.
     let d2 = []
     let templateObj = {
@@ -380,7 +391,7 @@ function stackedArea(div_id, data) {
     let i = 0
 
     for (d of data.datasets) {
-        if (i==0) {
+        if (i == 0) {
             val = 'origin'
         } else {
             val = "-1"
@@ -388,8 +399,8 @@ function stackedArea(div_id, data) {
         let merged = {
             ...templateObj,
             ...d,
-            fill: val, 
-            backgroundColor: d.borderColor +"66", 
+            fill: val,
+            backgroundColor: d.borderColor + "66",
         };
         d2.push(merged)
         i += 1;
@@ -400,6 +411,8 @@ function stackedArea(div_id, data) {
         data: {
             labels: data.x,
             datasets: d2,
+            backgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
+            hoverBackgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC')
         },
         options: {
             maintainAspectRatio: true,
@@ -421,18 +434,18 @@ function stackedArea(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
-                    stacked:true,
+                    stacked: true,
                     ticks: {
                         beginAtZero: true,
                         callback: function (value, index, values) {
@@ -449,7 +462,7 @@ function stackedArea(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });
@@ -459,13 +472,13 @@ function stackedHorizontalBar(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    
+
     // add default settings to the dataset.
     let d2 = []
     let templateObj = {
         fill: true,
         borderWidth: 4,
-        lineTension: 0        
+        lineTension: 0
     }
     let i = 0
 
@@ -475,7 +488,7 @@ function stackedHorizontalBar(div_id, data) {
             ...templateObj,
             ...d,
 
-            backgroundColor: d.borderColor, 
+            backgroundColor: d.borderColor,
         };
         d2.push(merged)
         i += 1;
@@ -507,19 +520,19 @@ function stackedHorizontalBar(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
-                    stacked:true,
+                    stacked: true,
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
-                    stacked:true,
+                    stacked: true,
                     ticks: {
                         beginAtZero: true,
                         callback: function (value, index, values) {
@@ -536,7 +549,7 @@ function stackedHorizontalBar(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });
@@ -546,13 +559,13 @@ function stackedBar(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     addAccessibilityItems(div_id, data.title);
-    
+
     // add default settings to the dataset.
     let d2 = []
     let templateObj = {
         fill: true,
         borderWidth: 4,
-        lineTension: 0        
+        lineTension: 0
     }
     let i = 0
 
@@ -562,7 +575,7 @@ function stackedBar(div_id, data) {
             ...templateObj,
             ...d,
 
-            backgroundColor: d.borderColor, 
+            backgroundColor: d.borderColor,
         };
         d2.push(merged)
         i += 1;
@@ -594,19 +607,19 @@ function stackedBar(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
-                    stacked:true,
+                    stacked: true,
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
-                    stacked:true,
+                    stacked: true,
                     ticks: {
                         beginAtZero: true,
                         callback: function (value, index, values) {
@@ -623,7 +636,7 @@ function stackedBar(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });
@@ -646,7 +659,7 @@ function lineChart(div_id, data) {
                 borderWidth: 4,
                 lineTension: data.line_tension,
                 // fill: false,
-            }, ],
+            },],
         },
         options: {
             maintainAspectRatio: true,
@@ -667,16 +680,16 @@ function lineChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
                     ticks: {
                         beginAtZero: true,
@@ -694,7 +707,7 @@ function lineChart(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });
@@ -731,16 +744,16 @@ function mixedChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
                     ticks: {
                         beginAtZero: true,
@@ -758,7 +771,7 @@ function mixedChart(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });
@@ -784,7 +797,7 @@ function pointChart(div_id, data) {
                 borderWidth: 4,
                 lineTension: data.line_tension,
                 // fill: false,
-            }, ],
+            },],
         },
         options: {
             maintainAspectRatio: true,
@@ -813,16 +826,16 @@ function pointChart(div_id, data) {
                         display: true,
                         labelString: data.label_x,
                         fontStyle: 'bold',
-                        
+
                     },
                     // gridLines: false,
-                }, ],
+                },],
                 yAxes: [{
                     scaleLabel: {
                         display: true,
                         labelString: data.label_y,
                         fontStyle: 'bold',
-                        
+
                     },
                     ticks: {
                         min: 1,
@@ -841,7 +854,7 @@ function pointChart(div_id, data) {
                         }
                     },
                     // gridLines: true,
-                }, ],
+                },],
             },
         },
     });

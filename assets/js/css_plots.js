@@ -31,7 +31,6 @@ function loadCSSPlots(path) {
             data: dataverse,
             borderColor: iqss_color_pallette[2],
         },
-
         ];
 
         stackedArea("quarterly_tickets", {

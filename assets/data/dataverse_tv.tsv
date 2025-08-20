@@ -1,5 +1,6 @@
 Speakers	Title	Description	YouTube ID
-Santi Thompson	Data retention strategies	Data retention strategies at the Texas Data Repository.	
+Aday Bujeda	Open OnDemand and Dataverse integration: OnDemand Loop demo	"Fast forward to 24:20 in the video to see a demostration of OnDemand Loop, a new open source application that integrates Open OnDemand and Dataverse. This presentation was given at the monthly ""tips and tricks"" call hosted by the Open OnDemand project."	
+Santi Thompson	Data retention strategies	 A discussion of data retention strategies used at the Texas Data Repository (TDR) and beyond.	
 Rok RoÅ¡kar	Renku integration with Dataverse	Reusing published data through the Renku platform	
 BSC	Announcing the 2026 Dataverse Community Meeting		
 BalÃ¡zs Pataki	Dataverse, CEDAR and RO-Crate: The building blocks of ARP	In this demo, BalÃ¡zs Pataki from HUN-REN SZTAKI, DSD presents a comprehensive overview of the HUN-REN ARP research data repository in Hungary and demonstrates how researchers can enhance dataset metadata using modern tools. You'll learn how ARP extends (forks) Dataverse with advanced metadata authoring capabilities via: CEDAR: for easy, drag-and-drop schema editing and creation; AROMA: a visual RO-Crate editor for detailed, structured file-level metadata; ARP Schema Registry: to manage and customize metadata blocks and templates; ARP Federated Search: a powerful search engine built on a knowledge graph to discover datasets using both Dataverse and RO-Crate metadata	o_ENdITtIQg

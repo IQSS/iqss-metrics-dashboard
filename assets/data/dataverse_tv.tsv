@@ -1,4 +1,6 @@
 Speakers	Title	Description	YouTube ID
+Bikramjit Channa	Fighting AI Bots at Borealis	During the Dataverse community call, Bikramjit Channa talked about AI bot traffic at Borealis and other platforms and how he and his colleagues are dealing with it	
+Yijia (Jenna) Qi	Data Retention and Deletion Practices in Dataverse	During the Dataverse community call, Yijia (Jenna) Qi talked about her research about data deletion and retention practices	
 Aday Bujeda	Open OnDemand and Dataverse integration: OnDemand Loop demo	"Fast forward to 24:20 in the video to see a demostration of OnDemand Loop, a new open source application that integrates Open OnDemand and Dataverse. This presentation was given at the monthly ""tips and tricks"" call hosted by the Open OnDemand project."	
 Santi Thompson	Data retention strategies	 A discussion of data retention strategies used at the Texas Data Repository (TDR) and beyond.	
 Rok RoÅ¡kar	Renku integration with Dataverse	Reusing published data through the Renku platform	
@@ -10,7 +12,7 @@ Slava Tykhonov	Dataverse and Croissant: Metadata for AI and Machine Learning Sys
 Charity Everett	Dataverse XR-Spatial	Exploring immersive data visualization	
 Sonia Barbosa, Leonid Andreev	Large Data Support in Harvard Dataverse	This webinar will highlight our services, which are designed to meet the diverse needs of researchers, institutions, and groups handling large datasets.	IptLotFsjpU
 Sonia Barbosa, Gustavo Durand	Using Permissions in Dataverse	Learn how to manage permissions in a Dataverse repository to manage deposit workflows and access to your data. This webinar will provide an overview of the permissions framework, helping you understand roles, access levels, and how to customize permission at the collection, dataset, and file levels.	mx6zuOt-C2A
-Paul Boon	Demo of geographical map for Dataverse	During the community call, Paul demoed a map he's been working on. We also talking about the upcoming community meeting and Dataverse release (6.6).	
+Paul Boon	During the Dataverse community call, Bikramjit Channa spoke about AI bot traffic at Borealis and other platforms and how he and his colleagues are dealing with it	During the community call, Paul demoed a map he's been working on. We also talking about the upcoming community meeting and Dataverse release (6.6).	
 Slava Tykhonov	Ask Dataverse and Large Language Models in the RAG framework		
 Sonia Barbosa, Katie Mika	Intro to Using the Harvard Dataverse & FAIR, and the NIH DMP Harvard Dataverse Guidance Document	Learn about the Harvard Dataverse Repository for data sharing and preservation.	iZHrHokIhLE
 Eric Olson	Specialized Metadata in Generalist Repositories: OSF+CEDAR Integration	CEDAR has been integrated into OSF and forked to work with Dataverse.	

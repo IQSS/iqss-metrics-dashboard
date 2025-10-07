@@ -1899,7 +1899,6 @@ Transaction Created	Transaction Time Worked	Ticket ID	Queue Name	Ticket Requesto
 2/18/25 20:48									Lab Access	GSAS	Government	Graduate Student: Doctorate		Printing	Other							2025	02	2025-2
 2/18/25 21:17									Lab Access	GSD	Urban Planning	Graduate Student: Masters		GIS Programs	Course Instructor							2025	02	2025-2
 2/18/25 21:18									Computer Issue													2025	02	2025-2
-2/18/25 21:18																						2025	02	2025-2
 2/19/25 15:01									Lab Access	HKS	Public Policy	Graduate Student: Masters		GIS Programs	Course Instructor							2025	02	2025-2
 2/19/25 15:48									Lab Access	HKS	Public Policy	Graduate Student: Masters		GIS Programs	Course Instructor							2025	02	2025-2
 2/19/25 19:02									Lab Access	FAS	Economics	Undergraduate Student		GIS Programs	Course Instructor							2025	02	2025-2
@@ -1961,7 +1960,7 @@ Transaction Created	Transaction Time Worked	Ticket ID	Queue Name	Ticket Requesto
 4/8/25 21:08									Lab Access	GSAS	Slavic	Graduate Student: Masters		Powerful Computers	Web Search							2025	04	2025-4
 4/8/25 22:37									Lab Access	FAS	Government	Research Assistant		Research Project	Faculty							2025	04	2025-4
 4/9/25 18:01									Lab Access	FAS	Government	Undergraduate Student		Printing	Faculty							2025	04	2025-4
-4/9/25 19:12										FAS	WCFIA	Research Fellow		Powerful Computers	Fellow Student/Scholar							2025	04	2025-4
+4/9/25 19:12									Lab Access	FAS	WCFIA	Research Fellow		Powerful Computers	Fellow Student/Scholar							2025	04	2025-4
 4/9/25 19:13									Management Issue													2025	04	2025-4
 4/14/25 15:41									Lab Access	FAS	EALC	Other		Research Project	Faculty							2025	04	2025-4
 4/14/25 18:49									Lab Access	FAS	Other	Staff		Multimedia Programs	Web Search							2025	04	2025-4
@@ -1987,7 +1986,7 @@ Transaction Created	Transaction Time Worked	Ticket ID	Queue Name	Ticket Requesto
 5/3/25 14:18									Lab Access	GSD	Urban Design	Graduate Student: Masters	No	GIS Programs;GSD Programs;Multimedia Programs;Place to Work;Powerful Computers;Design Project	Faculty							2025	05	2025-5
 5/6/25 18:14									Lab Access	FAS	Engineering	Undergraduate Student	No	Multimedia Programs;Statistical Programs;Place to Work;Powerful Computers;Design Project	Friends							2025	05	2025-5
 5/6/25 18:14									Lab Access	GSD	Design Studies	Graduate Student: Doctorate	No	Multimedia Programs	Web Search							2025	05	2025-5
-5/6/25 20:05										GSAS	Health Policy	Graduate Student: Doctorate	No	Faculty Support;Place to Work;Research Project	Faculty							2025	05	2025-5
+5/6/25 20:05									Lab Access	GSAS	Health Policy	Graduate Student: Doctorate	No	Faculty Support;Place to Work;Research Project	Faculty							2025	05	2025-5
 5/8/25 20:32									Reservations				No									2025	05	2025-5
 5/8/25 20:32									Lab Access	External	Other	Graduate Student: Doctorate		GIS Programs;Research Project	Faculty							2025	05	2025-5
 5/11/25 23:48									Lab Access	GSD	Design Studies	Graduate Student: Masters	No	GIS Programs;GSD Programs;Powerful Computers;Design Project	Friends							2025	05	2025-5
@@ -2090,3 +2089,62 @@ Transaction Created	Transaction Time Worked	Ticket ID	Queue Name	Ticket Requesto
 8/29/25 20:22									Software Related													2025	08	2025-8
 9/1/25 2:01									Lab Access	DCE	Government	Undergraduate Student		Place to Work;Powerful Computers	Course Instructor							2025	09	2025-9
 9/1/25 2:27									Lab Access	FAS	Government	Undergraduate Student		Place to Work;Powerful Computers	Course Instructor							2025	09	2025-9
+9/2/25 13:55									Lab Access	DCE	Undeclared	Undergraduate Student		Research Project	Web Search							2025	09	2025-9
+9/2/25 13:55									Management Issue													2025	09	2025-9
+9/2/25 13:57									Lab Access	GSD	Design Studies	Graduate Student: Masters		Design Project	Web Search							2025	09	2025-9
+9/2/25 16:39									Lab Access	FAS	Economics	Undergraduate Student		GIS Programs								2025	09	2025-9
+9/2/25 17:01									Lab Access	FAS	Social Studies	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/2/25 17:03									Lab Access	HDS	Other	Graduate Student: Masters		GIS Programs	Course Instructor							2025	09	2025-9
+9/3/25 17:25									Lab Access	GSD	Landscape Architecture	Graduate Student: Doctorate		GSD Programs	Course Instructor							2025	09	2025-9
+9/3/25 17:25									Lab Access	FAS	Government	Research Fellow		Statistical Programs;Powerful Computers	Faculty							2025	09	2025-9
+9/3/25 17:25									Management Issue													2025	09	2025-9
+9/3/25 18:25									Lab Infrastructure													2025	09	2025-9
+9/3/25 18:26									Lab Infrastructure													2025	09	2025-9
+9/3/25 18:27									Lab Infrastructure													2025	09	2025-9
+9/3/25 20:40									Lab Access	GSAS	Government	Graduate Student: Masters		Place to Work;Powerful Computers;Printing	Friends							2025	09	2025-9
+9/4/25 13:48									Lab Access	FAS	Government	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/4/25 13:50									Lab Access	FAS	Sociology	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/4/25 19:37									Lab Access	GSAS	Health Policy	Graduate Student: Masters		GIS Programs;Other	Course Instructor							2025	09	2025-9
+9/8/25 2:33									Lab Access	FAS	Computer Science	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/8/25 13:33									Lab Access	FAS	Government	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/8/25 13:35									Lab Access	FAS	Anthropology	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/8/25 13:36									Lab Access	HMS	GHP	Clinical Fellow		Research Project	Other							2025	09	2025-9
+9/8/25 15:11									Lab Access	FAS	Economics	Post Doc		Powerful Computers	Staff Member							2025	09	2025-9
+9/8/25 17:14									Lab Access	FAS	AAAS	Undergraduate Student		GIS Programs;Statistical Programs	Course Instructor							2025	09	2025-9
+9/9/25 13:49									Lab Access	HKS	Economics	Graduate Student: Masters		GIS Programs;Statistical Programs;Place to Work;Printing	Friends							2025	09	2025-9
+9/9/25 15:45									Lab Access	GSD	Design Studies	Graduate Student: Masters		GIS Programs;GSD Programs	Faculty							2025	09	2025-9
+9/9/25 16:38									Lab Access	FAS	Biology	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/9/25 16:40									Lab Access	FAS	OEB	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/9/25 19:19									Lab Access	GSAS	Sociology	Graduate Student: Doctorate		GIS Programs	Course Instructor							2025	09	2025-9
+9/10/25 13:29									Lab Access	FAS	Government	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/10/25 20:29									Lab Access	FAS	Government	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/11/25 16:34									Lab Access	FAS	Government	Undergraduate Student		Place to Work;Printing	Word of Mouth							2025	09	2025-9
+9/15/25 13:44									Lab Access	GSD	Engineering	Graduate Student: Doctorate		GIS Programs;Powerful Computers	Librarian							2025	09	2025-9
+9/15/25 13:44									Lab Access	FAS	Davis Center	Research Fellow		Place to Work	Walk In							2025	09	2025-9
+9/15/25 13:45									Lab Access	GSAS	Public Policy	Graduate Student: Doctorate		GIS Programs;Place to Work;Powerful Computers;Research Project	Web Search							2025	09	2025-9
+9/15/25 17:43									Lab Access	FAS	Engineering	Undergraduate Student		GIS Programs;Other	Course Instructor							2025	09	2025-9
+9/15/25 18:22									Lab Access	FAS	Economics	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/15/25 19:16									Lab Access	FAS	Government	Undergraduate Student		GIS Programs	Course Instructor							2025	09	2025-9
+9/15/25 20:02									Lab Access	FAS	WCFIA	Research Fellow		Place to Work;Research Project	Faculty							2025	09	2025-9
+9/16/25 17:30									Lab Access	GSAS	Pop Health Science	Graduate Student: Masters		Powerful Computers;Research Project	Fellow Student/Scholar							2025	09	2025-9
+9/16/25 17:46									Software Related													2025	09	2025-9
+9/17/25 16:24									Lab Access	FAS	SAI	Post Doc		Statistical Programs;Place to Work;Powerful Computers;Research Project	Web Search							2025	09	2025-9
+9/18/25 16:08									Lab Access	FAS	WCFIA	Visitor		Place to Work;Printing	Staff Member							2025	09	2025-9
+9/18/25 18:07									Lab Access	GSAS	Engineering	Graduate Student: Masters		GIS Programs	Web Search							2025	09	2025-9
+9/19/25 13:43									Lab Access	HKS	Public Administration	Graduate Student: Masters		Statistical Programs;Powerful Computers;Design Project	Friends							2025	09	2025-9
+9/19/25 17:22									Lab Access	FAS	Slavic	Undergraduate Student		Powerful Computers;Research Project	Web Search							2025	09	2025-9
+9/20/25 22:08									Lab Access	GSAS	Government	Graduate Student: Doctorate		Powerful Computers	Faculty							2025	09	2025-9
+9/24/25 14:30									Lab Access	GSD	Other	Graduate Student: Masters		GSD Programs	Staff Member							2025	09	2025-9
+9/24/25 16:09									Lab Access	GSD	Engineering	Graduate Student: Masters		GIS Programs	Course Instructor							2025	09	2025-9
+9/24/25 21:34									Lab Access	FAS	ESPP	Undergraduate Student		GIS Programs;Research Project	Mentor							2025	09	2025-9
+9/26/25 14:20									Lab Access	GSD	Urban Planning	Graduate Student: Masters		GIS Programs	Course Instructor							2025	09	2025-9
+9/26/25 14:21									Lab Access	FAS	History	Undergraduate Student		Printing	Walk In							2025	09	2025-9
+9/29/25 13:50									Lab Access	FAS	Earth	Undergraduate Student		GIS Programs;Powerful Computers	Course Instructor							2025	09	2025-9
+9/29/25 20:12									Lab Infrastructure													2025	09	2025-9
+9/29/25 20:13									Lab Infrastructure													2025	09	2025-9
+9/29/25 20:13									Lab Infrastructure													2025	09	2025-9
+9/29/25 20:13									Lab Infrastructure													2025	09	2025-9
+9/29/25 20:14									Lab Infrastructure													2025	09	2025-9
+9/29/25 20:14									Lab Infrastructure													2025	09	2025-9
+9/29/25 20:14									Lab Infrastructure													2025	09	2025-9
+9/30/25 20:29									Lab Access	GSD	Urban Planning	Graduate Student: Masters		GIS Programs;Powerful Computers;Design Project	Walk In							2025	09	2025-9

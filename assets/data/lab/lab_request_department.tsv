@@ -1,27 +1,28 @@
 id	Department/Concentration	count	percentage	period
-0	Government	208	13.5	September 2022 - September 2025
-2	Design Studies	108	7.0	September 2022 - September 2025
-3	Landscape Architecture	93	6.0	September 2022 - September 2025
-4	Urban Planning	89	5.8	September 2022 - September 2025
-5	Economics	84	5.4	September 2022 - September 2025
-6	Sociology	82	5.3	September 2022 - September 2025
-7	IQSS	51	3.3	September 2022 - September 2025
-8	Public Policy	42	2.7	September 2022 - September 2025
-9	Computer Science	35	2.3	September 2022 - September 2025
-10	EALC	34	2.2	September 2022 - September 2025
-11	Architecture	33	2.1	September 2022 - September 2025
-12	Medicine	31	2.0	September 2022 - September 2025
-13	History	25	1.6	September 2022 - September 2025
-14	Education Policy	25	1.6	September 2022 - September 2025
-15	Urban Design	24	1.6	September 2022 - September 2025
-16	CGA	23	1.5	September 2022 - September 2025
-17	Social Studies	22	1.4	September 2022 - September 2025
-18	Undeclared	21	1.4	September 2022 - September 2025
-19	WCFIA	21	1.4	September 2022 - September 2025
-20	RSEA	20	1.3	September 2022 - September 2025
-21	Public Administration	19	1.2	September 2022 - September 2025
-22	Biology	17	1.1	September 2022 - September 2025
-23	Anthropology	17	1.1	September 2022 - September 2025
-24	Health Policy	17	1.1	September 2022 - September 2025
-25	Pop Health Science	16	1.0	September 2022 - September 2025
-100	Other	388	25.1	September 2022 - September 2025
+0	Government	217	13.6	September 2022 - July 2021
+2	Design Studies	110	6.9	September 2022 - July 2021
+3	Landscape Architecture	94	5.9	September 2022 - July 2021
+4	Urban Planning	91	5.7	September 2022 - July 2021
+5	Economics	88	5.5	September 2022 - July 2021
+6	Sociology	84	5.3	September 2022 - July 2021
+7	IQSS	51	3.2	September 2022 - July 2021
+8	Public Policy	43	2.7	September 2022 - July 2021
+9	Computer Science	36	2.3	September 2022 - July 2021
+10	EALC	34	2.1	September 2022 - July 2021
+11	Architecture	33	2.1	September 2022 - July 2021
+12	Medicine	31	1.9	September 2022 - July 2021
+13	History	26	1.6	September 2022 - July 2021
+14	Education Policy	25	1.6	September 2022 - July 2021
+15	Urban Design	24	1.5	September 2022 - July 2021
+16	WCFIA	23	1.4	September 2022 - July 2021
+17	Social Studies	23	1.4	September 2022 - July 2021
+18	CGA	23	1.4	September 2022 - July 2021
+19	Undeclared	22	1.4	September 2022 - July 2021
+20	Public Administration	20	1.3	September 2022 - July 2021
+21	RSEA	20	1.3	September 2022 - July 2021
+22	Engineering	18	1.1	September 2022 - July 2021
+23	Biology	18	1.1	September 2022 - July 2021
+24	Health Policy	18	1.1	September 2022 - July 2021
+25	Anthropology	18	1.1	September 2022 - July 2021
+26	Pop Health Science	17	1.1	September 2022 - July 2021
+100	Other	384	24.1	September 2022 - July 2021

@@ -1,10 +1,8 @@
 id	Your primary affiliated school at Harvard	count	fraction	percentage
-1	Graduate School of Arts and Sciences (GSAS)	8	0.17	17%
-2	Harvard School of Public Health (HSPH)	7	0.15	15%
-3	Harvard College	5	0.11	11%
-4	Harvard Kennedy School of Government (HKS)	5	0.11	11%
-5	Harvard Graduate School of Design (GSD)	3	0.07	7%
-6	FAS Science Division	3	0.07	7%
-7	FAS Social Science Division	3	0.07	7%
-8	FAS Division of Continuing Education (DCE)	3	0.07	7%
-0	Other	9	0.17999999999999997	18%
+1	Harvard Graduate School of Design (GSD)	21	0.24	24%
+2	Graduate School of Arts and Sciences (GSAS)	14	0.16	16%
+3	Harvard Kennedy School of Government (HKS)	10	0.11	11%
+4	Harvard College	9	0.1	10%
+5	Harvard School of Public Health (HSPH)	9	0.1	10%
+6	FAS Division of Continuing Education (DCE)	7	0.08	8%
+0	Other	19	0.19	19%

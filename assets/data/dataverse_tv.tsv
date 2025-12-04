@@ -1,4 +1,12 @@
 Speakers	Title	Description	YouTube ID
+Eryk Kulikowski	DDI-CDI previewer/editor and exporter demo	Demo of a DDI-CDI previewer/editor and exporter (both created by Eryk). Skip to 29:00 in the recording.	
+Lautaro Matas	Decentralized Archival Resource Key (dARK)	A decentralized blockchain-based Persistent ID (PID) service as a public good.	
+BalÃ¡zs Pataki	VibeARP: An experimental AI agent for the AdatrepozitÃ³rium Platform (ARP)	Creating and editing datasets with an AI agent.	
+Texas Data Repository	How to Upload Folders	In Part 10 of the Texas Data Repository Training Video Series, we cover how to upload folders in the Texas Data Repository https://dataverse.tdl.org/.	ThltyvRmqdI
+Texas Data Repository	How to Create a Thumbnail	In Part 9 of the Texas Data Repository Training Video Series, we cover how to create a thumbnail in the Texas Data Repository https://dataverse.tdl.org/.	aDwuUys2_vc
+Texas Data Repository	How to Update Metadata	In Part 8 of the Texas Data Repository Training Video Series, we cover how to update metadata in the Texas Data Repository https://dataverse.tdl.org/ .	jnXQpDjo3kw
+Slava Tykhonov	Introduction to Croissant	A talk by Slava Tykhonov, CODATA, for the EOSC Opportunity Area (OA) Group 2: Metadata, Ontologies and Interoperability.	jXD88A7I-jg
+Slava Tykhonov	Semantic Croissant and CDIF for Responsible AI	"Slava Tykhonov's talk for the ""CODATA Convened Session: AI for Science"" during the International Data Week 2025 in Brisbane, Australia."	
 Aday Bujeda	Open OnDemand and Dataverse integration: OnDemand Loop demo	A demonstration of OnDemand Loop, a new open source application that integrates Open OnDemand and Dataverse, allowing researchers to compute on data and then upload results to Dataverse or to download data from Dataverse into their computation environment.	
 Pablo ValÃ©rio PolÃ´nia	Open Journal Systems (OJS) integration with Dataverse	Demo of OJS 3+ integration with Dataverse	
 Texas Data Repository	Using DVUploader for Bulk File Uploads	How to use DVUploader for bulk file uploads to Dataverse	7qINkx38mNg

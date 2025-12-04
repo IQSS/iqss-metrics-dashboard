@@ -1,21 +1,21 @@
 id	PC	Mac	Sum	Year
-Sum	668.0	585.0	1253.0	FY24
-Software Issue	133.0	112.0	245.0	FY24
-System Setup/Re-imaged	93.0	73.0	166.0	FY24
-Printer/Copier	74.0	85.0	159.0	FY24
-Email Related	66.0	52.0	118.0	FY24
-Backup/Restore	49.0	59.0	108.0	FY24
-Hardware Issue/Replacement	48.0	34.0	82.0	FY24
-Purchasing Hardware/Software	32.0	39.0	71.0	FY24
-Software Install	43.0	19.0	62.0	FY24
-Network/Jack related	24.0	30.0	54.0	FY24
-Windows/MacOS	26.0	16.0	42.0	FY24
-Account Related	21.0	17.0	38.0	FY24
-Loaner	9.0	11.0	20.0	FY24
-Recycling Equipment	13.0	6.0	19.0	FY24
-General Inquiry	10.0	7.0	17.0	FY24
-Domain/Drive Mapping	8.0	6.0	14.0	FY24
-Equipment Move	7.0	6.0	13.0	FY24
-Virus/Malware	8.0	5.0	13.0	FY24
-Registering a device	4.0	8.0	12.0	FY24
-Research/Training	0.0	0.0	0.0	FY24
+Sum	515.0	464.0	979.0	FY25
+Software Issue	103.0	96.0	199.0	FY25
+System Setup/Re-imaged	62.0	57.0	119.0	FY25
+Backup/Restore	65.0	47.0	112.0	FY25
+Printer/Copier	44.0	59.0	103.0	FY25
+Email Related	43.0	41.0	84.0	FY25
+Windows/MacOS	46.0	21.0	67.0	FY25
+Hardware Issue/Replacement	36.0	19.0	55.0	FY25
+Purchasing Hardware/Software	22.0	33.0	55.0	FY25
+Account Related	21.0	21.0	42.0	FY25
+Software Install	20.0	17.0	37.0	FY25
+Network/Jack related	13.0	9.0	22.0	FY25
+General Inquiry	7.0	11.0	18.0	FY25
+Virus/Malware	11.0	6.0	17.0	FY25
+Recycling Equipment	9.0	7.0	16.0	FY25
+Loaner	7.0	6.0	13.0	FY25
+Registering a device	2.0	5.0	7.0	FY25
+Equipment Move	2.0	4.0	6.0	FY25
+Domain/Drive Mapping	2.0	4.0	6.0	FY25
+Research/Training	0.0	1.0	1.0	FY25

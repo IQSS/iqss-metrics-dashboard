@@ -1,5 +1,5 @@
 id	value	count	period
-0	Feature Support	1583	FY2025
+0	Feature Support	1584	FY2025
 1	General Dataverse inquiry	277	FY2025
 2	Data request	105	FY2025
 3	Large File Upload	50	FY2025
@@ -7,8 +7,8 @@ id	value	count	period
 5	Account update	29	FY2025
 6	Harvesting	12	FY2025
 7	Installation inquiry	10	FY2025
-8	Download Metrics	7	FY2025
-9	Demo request	6	FY2025
+8	Demo request	7	FY2025
+9	Download Metrics	7	FY2025
 10	Repository Maintenance	4	FY2025
 11	Sensitive Data	4	FY2025
 12	Data Deletion request	3	FY2025

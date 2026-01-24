@@ -1,4 +1,5 @@
 Speakers	Title	Description	YouTube ID
+Philip Durbin	Intro to Zulip	An introduction to Zulip, presented to the Center for Scientific Collaboration and Community Engagement (CSCCE) community, including discussion of how Dataverse uses Zulip.	HZr7TSLlQy8
 Jan Range, Sjaak Derksen	pyDataverse updates and a DCAT exporter	During a community call Jan Range demo'ed the upcoming 0.4.0 release of pyDataverse using a Jupyter notebook. Sjaak Derksen explained the DCAT exporter he created.	
 Eryk Kulikowski	DDI-CDI previewer/editor and exporter demo	Demo of a DDI-CDI previewer/editor and exporter (both created by Eryk). Skip to 29:00 in the recording.	
 Lautaro Matas	Decentralized Archival Resource Key (dARK)	A decentralized blockchain-based Persistent ID (PID) service as a public good.	

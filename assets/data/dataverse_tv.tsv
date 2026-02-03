@@ -1,4 +1,5 @@
 Speakers	Title	Description	YouTube ID
+Traci Snowden, Matt Carson	Simplifying Repository Selection with GREI's Flowchart and Comparison Chart	This webinar introduced two complementary tools designed to make selecting a data repository easier: the Generalist Repository Selection Flowchart (https://doi.org/10.5281/zenodo.11105429) and the Generalist Repository Comparison Chart (https://doi.org/10.5281/zenodo.3946719). 	jmhO9F0P-ts
 Philip Durbin	Intro to Zulip	An introduction to Zulip, presented to the Center for Scientific Collaboration and Community Engagement (CSCCE) community, including discussion of how Dataverse uses Zulip.	HZr7TSLlQy8
 Jan Range, Sjaak Derksen	pyDataverse updates and a DCAT exporter	During a community call Jan Range demo'ed the upcoming 0.4.0 release of pyDataverse using a Jupyter notebook. Sjaak Derksen explained the DCAT exporter he created.	
 Eryk Kulikowski	DDI-CDI previewer/editor and exporter demo	Demo of a DDI-CDI previewer/editor and exporter (both created by Eryk). Skip to 29:00 in the recording.	

@@ -92,11 +92,18 @@ function addAccessibilityItems(div_id, title) {
     elm.setAttribute("role", "img");
 }
 
+function getPieColors(labels) {
+    return labels.map((label, index) =>
+        COLOR_BY_LABEL[label] || iqss_color_pallette[index % iqss_color_pallette.length]
+    );
+}
+
 
 function pieChart(div_id, data) {
 
     var ctx = document.getElementById(div_id).getContext('2d');
     const reducer = (accumulator, currentValue) => parseFloat(accumulator) + parseFloat(currentValue);
+    const colors = getPieColors(data.x);
 
     new Chart(ctx, {
         type: "pie",
@@ -105,8 +112,8 @@ function pieChart(div_id, data) {
             datasets: [{
                 label: data.title,
                 data: data.y,
-                backgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
-                hoverBackgroundColor: data.x.map(l => COLOR_BY_LABEL[l] || '#CCCCCC'),
+                backgroundColor: colors,
+                hoverBackgroundColor: colors,
             }]
         },
         options: {

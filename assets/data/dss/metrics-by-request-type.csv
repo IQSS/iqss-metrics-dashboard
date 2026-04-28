@@ -1,0 +1,77 @@
+financial_year,request_type,total_count
+FY23,Big Data,10
+FY23,Data Inquiry/Request,3
+FY23,Data Visualization,7
+FY23,Database,10
+FY23,Excel,1
+FY23,GIS,5
+FY23,Machine Learning,11
+FY23,Other,9
+FY23,Other Software,4
+FY23,Python,45
+FY23,R,127
+FY23,RCE,5
+FY23,Research Design,14
+FY23,SAS,2
+FY23,SPSS,1
+FY23,Stata,59
+FY23,Statistics Support,215
+FY23,Survey Software,7
+FY23,Text Mining,2
+FY23,Web Scraping,24
+FY23,Workshop Enquiry,5
+FY24,Big Data,4
+FY24,Data Inquiry/Request,1
+FY24,Data Visualization,2
+FY24,Database,4
+FY24,Excel,2
+FY24,GIS,2
+FY24,LaTeX,5
+FY24,Machine Learning,11
+FY24,Other,6
+FY24,Other Software,3
+FY24,Python,25
+FY24,R,121
+FY24,Research Design,19
+FY24,SAS,1
+FY24,SPSS,3
+FY24,Stata,39
+FY24,Statistics Support,250
+FY24,Survey Software,2
+FY24,Text Mining,1
+FY24,Web Scraping,7
+FY24,Workshop Enquiry,2
+FY25,Big Data,3
+FY25,Data Inquiry/Request,2
+FY25,Data Visualization,4
+FY25,Database,4
+FY25,Excel,5
+FY25,LaTeX,2
+FY25,Machine Learning,16
+FY25,Other Software,5
+FY25,Python,37
+FY25,R,141
+FY25,Research Design,22
+FY25,SAS,2
+FY25,SPSS,6
+FY25,Stata,35
+FY25,Statistics Support,242
+FY25,Survey Software,2
+FY25,Text Mining,9
+FY25,Web Scraping,6
+FY25,Workshop Enquiry,1
+FY26,Big Data,2
+FY26,Data Visualization,3
+FY26,Database,1
+FY26,Excel,1
+FY26,GIS,1
+FY26,Machine Learning,10
+FY26,Other,1
+FY26,Python,10
+FY26,R,29
+FY26,Research Design,6
+FY26,SAS,2
+FY26,Statistics Support,88
+FY26,Survey Software,2
+FY26,Text Mining,5
+FY26,Web Scraping,8

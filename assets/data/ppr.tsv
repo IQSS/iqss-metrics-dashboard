@@ -1,10 +1,10 @@
 page	metric	composition	value	unit	icon	color	url	timestamp	source
-scientific-programs	Total Reviews Completed	Overview	111	Reviews	fa fa-book			2024	manual
-scientific-programs	Total Paper Submissions Completed	Overview	90	Submissions	fa fa-book			2024	manual
-scientific-programs	Total Papers	Overview	76	Papers	fa fa-book			2024	manual
-scientific-programs	Published Authors	Overview	10	Authors	fa fa-at			2025	manual
-scientific-programs	Published Papers	Oveview	5	Papers	fa fa-upload			2024	manual
-scientific-programs	Median Review Time	Overview	20	Days	fa fa-clock			2024	manual
-scientific-programs	Authors	Authors	90	Authors	fa fa-at			2024	manual
-scientific-programs	Co-authors	Authors	125	Authors	fa fa-at			2024	manual
-scientific-programs	Distinct Authors	Authors	42	Authors	fa fa-at			2024	manual
+scientific-programs	Total Reviews Completed	Overview	188	Reviews	fa fa-book			2024	manual
+scientific-programs	Total Paper Submissions Completed	Overview	166	Submissions	fa fa-book			2024	manual
+scientific-programs	Total Papers	Overview	152	Papers	fa fa-book			2024	manual
+scientific-programs	Published Authors	Overview	16	Authors	fa fa-at			2025	manual
+scientific-programs	Published Papers	Oveview	9	Papers	fa fa-upload			2024	manual
+scientific-programs	Median Review Time	Overview	13	Days	fa fa-clock			2024	manual
+scientific-programs	Authors	Authors	151	Authors	fa fa-at			2024	manual
+scientific-programs	Co-authors	Authors	112	Authors	fa fa-at			2024	manual
+scientific-programs	Distinct Authors	Authors	74	Authors	fa fa-at			2024	manual

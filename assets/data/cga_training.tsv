@@ -1,11 +1,12 @@
 id	course	registration_count
-0	Cartography Workshop#(Apr 2025)	9
-1	An Introduction to WebAI Technology for Deriving Global Insights#(May 2025)	10
-2	Basic Introduction to GIS#(Sep 2025)	23
-3	GIS for Humanities and Social Sciences#(Dec 2025)	16
-4	Introduction to GIS#(Jan 2026)	10
-5	Basic Introduction to GIS#(Jan 2026)	6
-6	Geocoding with ArcGIS#(Feb 2026)	18
-7	Visual Programming for GIS using KNIME#(Feb 2026)	13
-8	Getting Started Making Maps with QGIS and ArcGIS#(Feb 2026)	12
-9	Getting Started with Spatial Analysis in R#(Mar 2026)	20
+0	An Introduction to WebAI Technology for Deriving Global Insights#(May 2025)	10
+1	Basic Introduction to GIS#(Sep 2025)	23
+2	GIS for Humanities and Social Sciences#(Dec 2025)	16
+3	Introduction to GIS#(Jan 2026)	10
+4	Basic Introduction to GIS#(Jan 2026)	6
+5	Geocoding with ArcGIS#(Feb 2026)	18
+6	Visual Programming for GIS using KNIME#(Feb 2026)	13
+7	Getting Started Making Maps with QGIS and ArcGIS#(Feb 2026)	12
+8	Getting Started with Spatial Analysis in R#(Mar 2026)	20
+9	Satellite Imagery Analysis with Google Earth Engine#(Apr 2026)	20
+10	Getting Started with AI for Spatial Data#(Apr 2026)	26

@@ -1,15 +1,15 @@
 id	value	count	period
 0	Authentication	220	FY2026
-1	Deaccessioning	106	FY2026
-2	Submit for Review	106	FY2026
+1	Submit for Review	106	FY2026
+2	Deaccessioning	106	FY2026
 3	Permissions	92	FY2026
 4	Dataset editing	77	FY2026
 5	File upload	69	FY2026
 6	Dataset publishing	57	FY2026
 7	Return to Author	57	FY2026
 8	File download	39	FY2026
-9	Metadata Inquiry	27	FY2026
-10	Dataverse Creation	27	FY2026
+9	Dataverse Creation	27	FY2026
+10	Metadata Inquiry	27	FY2026
 11	Dataset creation	23	FY2026
 12	Citation	17	FY2026
 13	APIs	14	FY2026
